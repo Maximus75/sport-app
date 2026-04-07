@@ -9,50 +9,41 @@
 <title>Sport Squad</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#1a1a1a;min-height:100vh;max-width:430px;margin:0 auto;position:relative}
-/* NAV */
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#1a1a1a;min-height:100vh;max-width:430px;margin:0 auto}
 .bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:#fff;border-top:1px solid #e5e5e5;display:flex;z-index:100;padding-bottom:env(safe-area-inset-bottom)}
 .nav-btn{flex:1;padding:10px 4px 8px;border:none;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;color:#888;font-size:10px;font-weight:500}
 .nav-btn.active{color:#185FA5}
 .nav-icon{font-size:20px;line-height:1}
-/* SCREENS */
-.screen{display:none;padding:16px 16px 80px;min-height:100vh}
+.screen{display:none;padding:16px 16px 90px;min-height:100vh}
 .screen.active{display:block}
-/* CARDS */
-.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,0.07)}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
 .card-sm{padding:12px 14px}
-/* TYPOGRAPHY */
-.page-title{font-size:22px;font-weight:600;margin-bottom:2px}
+.page-title{font-size:22px;font-weight:700;margin-bottom:2px}
 .page-sub{font-size:13px;color:#888;margin-bottom:16px}
-.section-title{font-size:16px;font-weight:600;margin:16px 0 10px}
-/* BADGES */
+.section-title{font-size:16px;font-weight:700;margin:16px 0 10px}
 .badge{font-size:11px;padding:3px 9px;border-radius:20px;font-weight:600}
 .badge-green{background:#e8f5e9;color:#2e7d32}
 .badge-blue{background:#e3f2fd;color:#1565c0}
 .badge-amber{background:#fff8e1;color:#e65100}
 .badge-purple{background:#f3e5f5;color:#6a1b9a}
 .badge-gray{background:#f5f5f5;color:#666}
-/* BUTTONS */
+.badge-red{background:#fce4ec;color:#b71c1c}
 .btn{display:block;width:100%;padding:14px;border-radius:12px;border:1.5px solid #ddd;background:#fff;font-size:15px;font-weight:600;cursor:pointer;text-align:center;transition:all .15s;color:#1a1a1a}
-.btn:active{transform:scale(0.98)}
+.btn:active{transform:scale(.98)}
 .btn-blue{background:#185FA5;color:#fff;border-color:#185FA5}
-.btn-blue:active{background:#0C447C}
-.btn-purple{background:#534AB7;color:#fff;border-color:#534AB7}
 .btn-green{background:#2e7d32;color:#fff;border-color:#2e7d32}
+.btn-purple{background:#534AB7;color:#fff;border-color:#534AB7}
 .btn-sm{padding:8px 14px;font-size:13px;width:auto;display:inline-block;border-radius:20px}
-/* AVATAR */
-.avatar{border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0}
-.av-moi{background:#ede7f6;color:#4527a0}
-.av-alex{background:#e3f2fd;color:#1565c0}
-.av-sam{background:#e8f5e9;color:#2e7d32}
-.av-lea{background:#fff8e1;color:#e65100}
-/* DOT */
+.avatar{border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.av-mus{background:#fce4ec;color:#880e4f}
+.av-belaid{background:#e3f2fd;color:#1565c0}
+.av-quentin{background:#e8f5e9;color:#2e7d32}
+.av-seb{background:#fff8e1;color:#e65100}
 .dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex-shrink:0}
-.dot-moi{background:#7c4dff}
-.dot-alex{background:#1e88e5}
-.dot-sam{background:#43a047}
-.dot-lea{background:#fb8c00}
-/* EXERCISE ROW */
+.dot-mus{background:#e91e63}
+.dot-belaid{background:#1e88e5}
+.dot-quentin{background:#43a047}
+.dot-seb{background:#fb8c00}
 .ex-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f0f0f0}
 .ex-row:last-child{border-bottom:none}
 .ex-icon{width:44px;height:44px;border-radius:12px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
@@ -61,23 +52,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .ex-detail{font-size:12px;color:#888;margin-top:2px}
 .ex-reps{font-size:15px;font-weight:700;color:#185FA5;text-align:right}
 .ex-reps-sub{font-size:10px;color:#aaa;text-align:right}
-/* STAT BOX */
 .stat-box{background:#f8f9fa;border-radius:12px;padding:12px;text-align:center}
 .stat-val{font-size:22px;font-weight:700}
 .stat-lbl{font-size:11px;color:#888;margin-top:2px}
-/* PROGRESS */
 .prog-bar{height:5px;background:#eee;border-radius:3px;overflow:hidden}
 .prog-fill{height:100%;border-radius:3px;transition:width .4s}
-/* TABS */
 .tabs{display:flex;background:#f0f0f0;border-radius:10px;padding:3px;margin-bottom:14px}
 .tab{flex:1;padding:7px;font-size:12px;font-weight:600;text-align:center;border-radius:8px;cursor:pointer;color:#888;border:none;background:none;transition:all .15s}
-.tab.active{background:#fff;color:#1a1a1a;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-/* NOTIF BANNER */
+.tab.active{background:#fff;color:#1a1a1a;box-shadow:0 1px 3px rgba(0,0,0,.1)}
 .notif-banner{background:#e3f2fd;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:12px}
-/* FRIEND ROW */
 .friend-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f0f0}
 .friend-row:last-child{border-bottom:none}
-/* CALENDAR */
 .cal-header{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
 .cal-day-label{text-align:center;font-size:10px;font-weight:600;color:#aaa;padding:4px 0}
@@ -86,9 +71,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .cal-num:hover{background:#f0f0f0}
 .cal-num.today{background:#185FA5;color:#fff}
 .cal-dots{display:flex;justify-content:center;gap:2px;margin-top:3px;min-height:9px}
-/* COACH SCREEN */
-.coach-video{background:#f0f0f0;border-radius:16px;height:170px;display:flex;align-items:center;justify-content:center;margin:12px 0;position:relative;overflow:hidden}
-.play-btn{width:56px;height:56px;border-radius:50%;background:rgba(24,95,165,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;border:none}
+.coach-video{background:#f0f4f8;border-radius:16px;margin:12px 0;overflow:hidden}
 .timer-ring{position:relative;width:160px;height:160px;margin:0 auto}
 .timer-ring svg{transform:rotate(-90deg)}
 .timer-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
@@ -98,44 +81,55 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .step-dot-el{width:8px;height:8px;border-radius:50%;background:#ddd}
 .step-dot-el.done{background:#185FA5}
 .step-dot-el.current{width:24px;border-radius:4px;background:#185FA5}
-/* SLIDER */
 .slider-row{display:flex;align-items:center;gap:10px;margin:8px 0}
 .slider-row label{font-size:13px;color:#888;width:100px;flex-shrink:0}
 .slider-row input[type=range]{flex:1;accent-color:#185FA5}
 .slider-row span{font-size:13px;font-weight:600;min-width:44px;text-align:right}
-/* MAP */
 .map-box{background:#e8f4f8;border-radius:14px;height:185px;position:relative;overflow:hidden;margin-bottom:12px}
-/* ZONE BAR */
 .zone-bar{height:8px;border-radius:4px;display:flex;overflow:hidden;margin:6px 0}
-.zone-seg{flex:1;transition:opacity .3s}
-/* BREATH */
+.zone-seg{flex:1}
 .breath-circle{width:100px;height:100px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;margin:0 auto;transition:all 3s ease-in-out;border:2px solid #ddd}
-/* POSE GRID */
 .pose-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
 .pose-card{background:#fff;border:1.5px solid #eee;border-radius:14px;padding:12px;cursor:pointer;transition:all .15s}
 .pose-card:hover{border-color:#7c4dff}
 .pose-card.selected{border-color:#7c4dff;border-width:2px}
-/* DONE SCREEN */
 .done-circle{width:80px;height:80px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:36px}
-/* RUNNING HISTORY ROW */
 .run-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f0f0f0}
 .run-row:last-child{border-bottom:none}
-/* PULSE ANIM */
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .pulse{animation:pulse 1.2s ease-in-out infinite}
-/* BREATH ANIM */
-@keyframes breathe-in{from{width:90px;height:90px}to{width:130px;height:130px}}
-@keyframes breathe-out{from{width:130px;height:130px}to{width:90px;height:90px}}
+/* INSTR CARD */
+.instr-card{padding:14px}
+.instr-step{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start}
+.instr-num{width:22px;height:22px;border-radius:50%;background:#185FA5;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px}
+.instr-text{font-size:13px;line-height:1.5}
+.instr-warn{background:#fff8e1;border-radius:8px;padding:8px 10px;font-size:12px;color:#e65100;margin-top:8px}
+.muscles{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.muscle-tag{font-size:11px;padding:3px 8px;border-radius:20px;background:#f0f0f0;color:#555}
+/* STATS SCREEN */
+.stat-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0f0f0}
+.stat-row:last-child{border-bottom:none}
+.progress-ring{position:relative;width:56px;height:56px}
+.progress-ring svg{transform:rotate(-90deg)}
+/* STREAK */
+.streak-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px}
+.streak-day{width:100%;aspect-ratio:1;border-radius:6px;background:#f0f0f0}
+.streak-day.done{background:#185FA5}
+.streak-day.today{background:#185FA5;box-shadow:0 0 0 2px #fff,0 0 0 3px #185FA5}
+/* CHART */
+.bar-chart{display:flex;align-items:flex-end;gap:6px;height:80px;margin:12px 0 4px}
+.bar{flex:1;border-radius:4px 4px 0 0;background:#e3f2fd;position:relative;min-height:4px;transition:height .3s}
+.bar.active-bar{background:#185FA5}
+.bar-label{font-size:10px;color:#aaa;text-align:center;margin-top:4px}
 </style>
 </head>
 <body>
 
-<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <button class="nav-btn active" onclick="showScreen('home')"><span class="nav-icon">🏠</span>Accueil</button>
   <button class="nav-btn" onclick="showScreen('calendar')"><span class="nav-icon">📅</span>Calendrier</button>
   <button class="nav-btn" onclick="showScreen('exercises')"><span class="nav-icon">🏋️</span>Exercices</button>
-  <button class="nav-btn" onclick="showScreen('friends')"><span class="nav-icon">👥</span>Amis</button>
+  <button class="nav-btn" onclick="showScreen('stats')"><span class="nav-icon">📊</span>Stats</button>
   <button class="nav-btn" onclick="showScreen('profile')"><span class="nav-icon">👤</span>Profil</button>
 </nav>
 
@@ -143,17 +137,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <div id="screen-home" class="screen active">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
     <div>
-      <div class="page-title">Bonjour, Maximus 👋</div>
-      <div class="page-sub">Mardi 7 avril · Jour 12 de ton programme</div>
+      <div class="page-title">Bonjour, Mus 👋</div>
+      <div class="page-sub" id="home-date">Chargement...</div>
     </div>
-    <div class="avatar av-moi" style="width:44px;height:44px;font-size:16px">MA</div>
+    <div class="avatar av-mus" style="width:44px;height:44px;font-size:16px">MU</div>
   </div>
 
-  <div class="notif-banner">
-    <div class="avatar av-alex" style="width:30px;height:30px;font-size:12px">AL</div>
-    <div style="flex:1;font-size:13px;color:#1565c0">Alex a terminé sa séance <strong>il y a 23 min</strong> 💪</div>
-  </div>
+  <div id="notif-area"></div>
 
+  <!-- Séance du jour -->
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
       <div>
@@ -161,47 +153,53 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div style="font-size:18px;font-weight:700">Circuit Force + Cardio</div>
         <div style="font-size:12px;color:#888;margin-top:3px">6 exercices · ~35 min · Adapté pour toi</div>
       </div>
-      <span class="badge badge-gray">À faire</span>
+      <span class="badge" id="seance-badge" style="background:#f5f5f5;color:#666">À faire</span>
     </div>
     <div style="margin-bottom:14px">
       <div class="ex-row">
         <div class="ex-icon">💪</div>
         <div class="ex-info"><div class="ex-name">Pompes classiques</div><div class="ex-detail">Repos 60s</div></div>
-        <div><div class="ex-reps">12 reps</div><div class="ex-reps-sub">ton max: 20</div></div>
+        <div><div class="ex-reps">18 reps</div><div class="ex-reps-sub">max: 30</div></div>
       </div>
       <div class="ex-row">
         <div class="ex-icon">🏋️</div>
-        <div class="ex-info"><div class="ex-name">Kettlebell swing</div><div class="ex-detail">16 kg · Repos 90s</div></div>
+        <div class="ex-info"><div class="ex-name">Kettlebell swing</div><div class="ex-detail">12 kg · Repos 90s</div></div>
         <div><div class="ex-reps">15 reps</div><div class="ex-reps-sub">60%</div></div>
       </div>
       <div class="ex-row">
         <div class="ex-icon">📐</div>
         <div class="ex-info"><div class="ex-name">Planche</div><div class="ex-detail">Isométrique</div></div>
-        <div><div class="ex-reps">45 sec</div><div class="ex-reps-sub">max: 75s</div></div>
+        <div><div class="ex-reps">45 sec</div><div class="ex-reps-sub">60%</div></div>
       </div>
-      <div class="ex-row" style="opacity:.4">
+      <div class="ex-row" style="opacity:.4;border-bottom:none">
         <div class="ex-icon" style="font-size:14px">···</div>
         <div class="ex-info"><div class="ex-name" style="font-size:13px;color:#888">3 autres exercices</div><div class="ex-detail">Crunch · Tractions · Burpees</div></div>
       </div>
     </div>
-    <button class="btn btn-blue" onclick="showCoach()">🏃 Démarrer la séance</button>
+    <button class="btn btn-blue" id="seance-btn" onclick="showCoach()">🏃 Démarrer la séance</button>
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
-    <div class="card card-sm" style="text-align:center;margin-bottom:0">
-      <div style="font-size:22px;font-weight:700;color:#185FA5">5</div>
-      <div style="font-size:11px;color:#888">séances</div>
+  <!-- Amis aujourd'hui -->
+  <div class="section-title">Amis aujourd'hui</div>
+  <div class="card card-sm" id="friends-today">
+    <div class="friend-row">
+      <div class="avatar av-belaid" style="width:36px;height:36px;font-size:13px">BE</div>
+      <div style="flex:1"><div style="font-weight:600;font-size:14px">Belaid</div><div style="font-size:12px;color:#888">Séance terminée · 1h</div></div>
+      <span class="badge badge-green">✓ Fait</span>
     </div>
-    <div class="card card-sm" style="text-align:center;margin-bottom:0">
-      <div style="font-size:22px;font-weight:700;color:#43a047">3/4</div>
-      <div style="font-size:11px;color:#888">amis actifs</div>
+    <div class="friend-row">
+      <div class="avatar av-quentin" style="width:36px;height:36px;font-size:13px">QU</div>
+      <div style="flex:1"><div style="font-weight:600;font-size:14px">Quentin</div><div style="font-size:12px;color:#888">Pas encore aujourd'hui</div></div>
+      <span class="badge badge-gray">En attente</span>
     </div>
-    <div class="card card-sm" style="text-align:center;margin-bottom:0">
-      <div style="font-size:22px;font-weight:700;color:#fb8c00">12</div>
-      <div style="font-size:11px;color:#888">jours suite</div>
+    <div class="friend-row" style="border-bottom:none">
+      <div class="avatar av-seb" style="width:36px;height:36px;font-size:13px">SE</div>
+      <div style="flex:1"><div style="font-weight:600;font-size:14px">Seb</div><div style="font-size:12px;color:#888">Pas encore aujourd'hui</div></div>
+      <span class="badge badge-gray">En attente</span>
     </div>
   </div>
 
+  <!-- Activités rapides -->
   <div class="section-title">Autres activités</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
     <button class="card card-sm" style="border:none;cursor:pointer;text-align:left" onclick="showScreen('running')">
@@ -218,34 +216,35 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </div>
 
 <!-- ===== COACH ===== -->
-<div id="screen-coach" class="screen" style="padding:16px 16px 80px">
+<div id="screen-coach" class="screen">
   <div id="coach-main">
     <div style="text-align:center;margin-bottom:8px">
       <div style="font-size:12px;color:#888;margin-bottom:8px" id="coach-step-lbl">Exercice 1 / 6</div>
       <div class="step-dots" id="coach-dots"></div>
     </div>
-    <div class="card" style="text-align:center">
-      <div style="font-size:44px;margin-bottom:8px" id="coach-icon">💪</div>
-      <div style="font-size:20px;font-weight:700;margin-bottom:4px" id="coach-name">Pompes classiques</div>
-      <div style="font-size:13px;color:#888;margin-bottom:12px" id="coach-tip">Bras largeur épaules · Dos droit · Descente contrôlée</div>
-      <div class="coach-video" id="coach-video">
-        <button class="play-btn" onclick="toggleVideo()">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="#185FA5"><polygon points="7,4 18,11 7,18"/></svg>
-        </button>
-        <div style="position:absolute;bottom:10px;font-size:12px;color:#666" id="video-lbl">Voir la démo</div>
+    <div class="card">
+      <div style="text-align:center">
+        <div style="font-size:44px;margin-bottom:8px" id="coach-icon">💪</div>
+        <div style="font-size:20px;font-weight:700;margin-bottom:4px" id="coach-name">Pompes classiques</div>
+        <div style="font-size:13px;color:#888;margin-bottom:4px" id="coach-perc">18 reps · 60% de ton max</div>
       </div>
-      <div style="padding:16px 0 8px">
+
+      <!-- Instructions texte -->
+      <div class="coach-video" id="coach-instr-box">
+        <div class="instr-card" id="coach-instr-content"></div>
+      </div>
+
+      <div style="padding:16px 0 8px;text-align:center">
         <div class="timer-ring">
           <svg width="160" height="160" viewBox="0 0 160 160">
             <circle cx="80" cy="80" r="68" fill="none" stroke="#f0f0f0" stroke-width="10"/>
             <circle id="timer-arc" cx="80" cy="80" r="68" fill="none" stroke="#185FA5" stroke-width="10" stroke-linecap="round" stroke-dasharray="427" stroke-dashoffset="0" style="transition:stroke-dashoffset 1s linear"/>
           </svg>
           <div class="timer-num">
-            <div class="timer-big" id="timer-display">12</div>
+            <div class="timer-big" id="timer-display">18</div>
             <div class="timer-lbl" id="timer-type">reps</div>
           </div>
         </div>
-        <div style="font-size:13px;color:#888;margin-top:8px" id="coach-perc">60% de ton max</div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px">
         <button class="btn" id="start-btn" onclick="startExercise()">▶ Démarrer</button>
@@ -254,6 +253,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <button class="btn" style="margin-top:8px;color:#888;font-size:13px" onclick="showScreen('home')">← Quitter</button>
     </div>
   </div>
+
   <div id="coach-rest" style="display:none">
     <div class="card" style="text-align:center;padding:32px 20px">
       <div style="font-size:44px;margin-bottom:12px">😮‍💨</div>
@@ -264,6 +264,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <button class="btn btn-blue" style="margin-top:20px" onclick="skipRest()">Passer →</button>
     </div>
   </div>
+
   <div id="coach-done" style="display:none">
     <div class="card" style="text-align:center;padding:32px 20px">
       <div class="done-circle">🎉</div>
@@ -271,11 +272,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div style="font-size:14px;color:#888;margin-bottom:24px">Tu as tout déchiré aujourd'hui 💪</div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:24px">
         <div class="stat-box"><div class="stat-val">6</div><div class="stat-lbl">exercices</div></div>
-        <div class="stat-box"><div class="stat-val">34</div><div class="stat-lbl">minutes</div></div>
-        <div class="stat-box"><div class="stat-val">↑</div><div class="stat-lbl">PB pompes</div></div>
+        <div class="stat-box"><div class="stat-val" id="done-time">34</div><div class="stat-lbl">minutes</div></div>
+        <div class="stat-box"><div class="stat-val">🔥</div><div class="stat-lbl">Série +1</div></div>
       </div>
       <div style="font-size:13px;color:#888;margin-bottom:16px">Tes amis sont notifiés 🔔</div>
-      <button class="btn btn-blue" onclick="showScreen('home')">Retour à l'accueil</button>
+      <button class="btn btn-blue" onclick="finishSeance()">Retour à l'accueil</button>
     </div>
   </div>
 </div>
@@ -283,15 +284,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <!-- ===== CALENDAR ===== -->
 <div id="screen-calendar" class="screen">
   <div class="page-title">Calendrier</div>
-  <div class="page-sub">Avril 2025</div>
-
+  <div class="page-sub" id="cal-month-title">Avril 2025</div>
   <div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap">
-    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-moi"></span>Moi</span>
-    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-alex"></span>Alex</span>
-    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-sam"></span>Sam</span>
-    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-lea"></span>Léa</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-mus"></span>Mus</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-belaid"></span>Belaid</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-quentin"></span>Quentin</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-seb"></span>Seb</span>
   </div>
-
   <div class="card card-sm">
     <div class="cal-header">
       <div class="cal-day-label">Lu</div><div class="cal-day-label">Ma</div><div class="cal-day-label">Me</div>
@@ -299,18 +298,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
     <div class="cal-grid" id="cal-grid"></div>
   </div>
-
   <div id="cal-detail" class="card card-sm" style="display:none">
     <div style="font-weight:700;margin-bottom:10px" id="cal-detail-title"></div>
     <div id="cal-detail-body"></div>
   </div>
-
   <div class="section-title">À venir</div>
   <div class="card card-sm">
     <div class="ex-row">
-      <div class="ex-icon" style="background:#e3f2fd;font-size:14px;font-weight:700;color:#1565c0">7</div>
+      <div class="ex-icon" style="background:#e3f2fd;font-size:14px;font-weight:700;color:#1565c0" id="today-num">7</div>
       <div class="ex-info"><div class="ex-name">Circuit Force + Cardio</div><div class="ex-detail">Aujourd'hui</div></div>
-      <span class="badge badge-gray">À faire</span>
+      <span class="badge" id="today-badge" style="background:#f5f5f5;color:#666">À faire</span>
     </div>
     <div class="ex-row">
       <div class="ex-icon" style="font-size:14px;font-weight:700">9</div>
@@ -340,56 +337,89 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <button class="btn" style="margin-top:4px">+ Ajouter un exercice</button>
 </div>
 
-<!-- ===== FRIENDS ===== -->
-<div id="screen-friends" class="screen">
-  <div class="page-title">Amis</div>
-  <div class="page-sub">Ton groupe · 4 membres</div>
+<!-- ===== STATS ===== -->
+<div id="screen-stats" class="screen">
+  <div class="page-title">Mes stats</div>
+  <div class="page-sub">Avril 2025</div>
+
+  <!-- KPIs -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px">
+    <div class="stat-box"><div class="stat-val" id="stat-seances">5</div><div class="stat-lbl">Séances ce mois</div></div>
+    <div class="stat-box"><div class="stat-val">2h47</div><div class="stat-lbl">Temps total</div></div>
+    <div class="stat-box"><div class="stat-val" style="color:#e91e63" id="stat-streak">12🔥</div><div class="stat-lbl">Série actuelle</div></div>
+    <div class="stat-box"><div class="stat-val" style="color:#43a047">+8%</div><div class="stat-lbl">Progression</div></div>
+  </div>
+
+  <!-- Activité semaine -->
+  <div class="section-title">Activité cette semaine</div>
   <div class="card card-sm">
-    <div class="friend-row">
-      <div class="avatar av-alex" style="width:40px;height:40px;font-size:15px">AL</div>
-      <div style="flex:1"><div style="font-weight:600;font-size:14px">Alex</div><div style="font-size:12px;color:#888">Séance terminée · il y a 23 min</div></div>
-      <span class="badge badge-green">✓ Fait</span>
-    </div>
-    <div class="friend-row">
-      <div class="avatar av-sam" style="width:40px;height:40px;font-size:15px">SA</div>
-      <div style="flex:1"><div style="font-weight:600;font-size:14px">Sam</div><div style="font-size:12px;color:#888">Séance terminée · il y a 2h</div></div>
-      <span class="badge badge-green">✓ Fait</span>
-    </div>
-    <div class="friend-row">
-      <div class="avatar av-lea" style="width:40px;height:40px;font-size:15px">LE</div>
-      <div style="flex:1"><div style="font-weight:600;font-size:14px">Léa</div><div style="font-size:12px;color:#888">Pas encore aujourd'hui</div></div>
-      <span class="badge badge-gray">En attente</span>
+    <div class="bar-chart" id="week-chart"></div>
+    <div style="display:flex;justify-content:space-between" id="week-labels"></div>
+  </div>
+
+  <!-- Série de jours -->
+  <div class="section-title">Régularité · 4 dernières semaines</div>
+  <div class="card card-sm">
+    <div class="streak-grid" id="streak-grid"></div>
+    <div style="display:flex;gap:12px;margin-top:10px">
+      <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:3px;background:#185FA5;display:inline-block"></span>Séance faite</span>
+      <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:3px;background:#f0f0f0;display:inline-block"></span>Repos</span>
     </div>
   </div>
-  <div class="section-title">Notifications récentes</div>
+
+  <!-- Records personnels -->
+  <div class="section-title">Records personnels</div>
   <div class="card card-sm">
-    <div class="ex-row"><div style="font-size:20px">💪</div><div style="flex:1"><div style="font-size:13px"><strong>Alex</strong> a terminé Circuit Force + Cardio</div><div style="font-size:11px;color:#aaa;margin-top:2px">Il y a 23 min</div></div></div>
-    <div class="ex-row"><div style="font-size:20px">💪</div><div style="flex:1"><div style="font-size:13px"><strong>Sam</strong> a terminé Circuit Force + Cardio</div><div style="font-size:11px;color:#aaa;margin-top:2px">Il y a 2h</div></div></div>
-    <div class="ex-row"><div style="font-size:20px">🔥</div><div style="flex:1"><div style="font-size:13px"><strong>Alex</strong> a battu son record de pompes (32 reps !)</div><div style="font-size:11px;color:#aaa;margin-top:2px">Hier</div></div></div>
-    <div class="ex-row" style="border-bottom:none"><div style="font-size:20px">💪</div><div style="flex:1"><div style="font-size:13px"><strong>Léa</strong> a terminé HIIT Interval</div><div style="font-size:11px;color:#aaa;margin-top:2px">Il y a 2 jours</div></div></div>
+    <div class="stat-row">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:20px">💪</span>
+        <div><div style="font-size:14px;font-weight:600">Pompes</div><div style="font-size:12px;color:#888">Max en une série</div></div>
+      </div>
+      <div style="text-align:right"><div style="font-size:18px;font-weight:700" id="rec-pompes">30</div><div style="font-size:11px;color:#888">reps</div></div>
+    </div>
+    <div class="stat-row">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:20px">🧗</span>
+        <div><div style="font-size:14px;font-weight:600">Tractions</div><div style="font-size:12px;color:#888">Max en une série</div></div>
+      </div>
+      <div style="text-align:right"><div style="font-size:18px;font-weight:700" id="rec-trac">6</div><div style="font-size:11px;color:#888">reps</div></div>
+    </div>
+    <div class="stat-row">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:20px">🔄</span>
+        <div><div style="font-size:14px;font-weight:600">Crunchs</div><div style="font-size:12px;color:#888">Max en une série</div></div>
+      </div>
+      <div style="text-align:right"><div style="font-size:18px;font-weight:700" id="rec-crunch">50</div><div style="font-size:11px;color:#888">reps</div></div>
+    </div>
+    <div class="stat-row" style="border-bottom:none">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:20px">🏃</span>
+        <div><div style="font-size:14px;font-weight:600">Running</div><div style="font-size:12px;color:#888">Distance max</div></div>
+      </div>
+      <div style="text-align:right"><div style="font-size:18px;font-weight:700">7.2</div><div style="font-size:11px;color:#888">km</div></div>
+    </div>
   </div>
-  <button class="btn" style="margin-top:4px">+ Inviter un ami</button>
+
+  <!-- Comparaison amis (sans classement) -->
+  <div class="section-title">Activité du groupe</div>
+  <div class="card card-sm">
+    <div style="font-size:12px;color:#888;margin-bottom:10px">Séances complétées ce mois · Sans classement</div>
+    <div id="group-activity"></div>
+  </div>
 </div>
 
 <!-- ===== PROFILE ===== -->
 <div id="screen-profile" class="screen">
   <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
-    <div class="avatar av-moi" style="width:60px;height:60px;font-size:22px">MA</div>
-    <div><div style="font-size:20px;font-weight:700">Maximus</div><div style="font-size:13px;color:#888">Membre depuis mars 2025</div></div>
+    <div class="avatar av-mus" style="width:60px;height:60px;font-size:22px">MU</div>
+    <div><div style="font-size:20px;font-weight:700">Mus</div><div style="font-size:13px;color:#888">Membre depuis mars 2025</div></div>
   </div>
   <div style="font-size:16px;font-weight:700;margin-bottom:10px">Mes capacités</div>
   <div class="card card-sm">
-    <div class="slider-row"><label>Max pompes</label><input type="range" min="5" max="60" value="20" oninput="updStat('sp',this.value)"><span id="sp">20 reps</span></div>
-    <div class="slider-row"><label>Max crunchs</label><input type="range" min="5" max="100" value="40" oninput="updStat('sc',this.value)"><span id="sc">40 reps</span></div>
-    <div class="slider-row"><label>Max tractions</label><input type="range" min="0" max="30" value="5" oninput="updStat('st',this.value)"><span id="st">5 reps</span></div>
-    <div class="slider-row"><label>Kettlebell</label><input type="range" min="8" max="48" step="4" value="16" oninput="updStat('sk',this.value,'kg')"><span id="sk">16 kg</span></div>
-  </div>
-  <div style="font-size:16px;font-weight:700;margin:16px 0 10px">Stats du mois</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-    <div class="stat-box"><div class="stat-val">5</div><div class="stat-lbl">Séances</div></div>
-    <div class="stat-box"><div class="stat-val">2h47</div><div class="stat-lbl">Temps total</div></div>
-    <div class="stat-box"><div class="stat-val">+4</div><div class="stat-lbl">Pompes max</div></div>
-    <div class="stat-box"><div class="stat-val" style="color:#fb8c00">12🔥</div><div class="stat-lbl">Série actuelle</div></div>
+    <div class="slider-row"><label>Max pompes</label><input type="range" min="5" max="80" value="30" oninput="updStat('sp',this.value,'reps')"><span id="sp">30 reps</span></div>
+    <div class="slider-row"><label>Max crunchs</label><input type="range" min="5" max="150" value="50" oninput="updStat('sc',this.value,'reps')"><span id="sc">50 reps</span></div>
+    <div class="slider-row"><label>Max tractions</label><input type="range" min="0" max="30" value="6" oninput="updStat('st',this.value,'reps')"><span id="st">6 reps</span></div>
+    <div class="slider-row"><label>Kettlebell</label><input type="range" min="8" max="48" step="4" value="12" oninput="updStat('sk',this.value,'kg')"><span id="sk">12 kg</span></div>
   </div>
   <div style="font-size:16px;font-weight:700;margin:16px 0 10px">Objectif</div>
   <div class="card card-sm">
@@ -399,6 +429,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <button class="btn btn-sm" id="obj-force" onclick="selObj('force')">Force</button>
     </div>
   </div>
+  <div style="font-size:16px;font-weight:700;margin:16px 0 10px">Amis</div>
+  <div class="card card-sm">
+    <div class="friend-row">
+      <div class="avatar av-belaid" style="width:36px;height:36px;font-size:13px">BE</div>
+      <div style="flex:1"><div style="font-weight:600">Belaid</div><div style="font-size:12px;color:#888">Actif · 5 séances ce mois</div></div>
+      <span class="dot dot-belaid"></span>
+    </div>
+    <div class="friend-row">
+      <div class="avatar av-quentin" style="width:36px;height:36px;font-size:13px">QU</div>
+      <div style="flex:1"><div style="font-weight:600">Quentin</div><div style="font-size:12px;color:#888">Actif · 4 séances ce mois</div></div>
+      <span class="dot dot-quentin"></span>
+    </div>
+    <div class="friend-row" style="border-bottom:none">
+      <div class="avatar av-seb" style="width:36px;height:36px;font-size:13px">SE</div>
+      <div style="flex:1"><div style="font-weight:600">Seb</div><div style="font-size:12px;color:#888">Actif · 3 séances ce mois</div></div>
+      <span class="dot dot-seb"></span>
+    </div>
+  </div>
+  <button class="btn" style="margin-top:4px">+ Inviter un ami</button>
 </div>
 
 <!-- ===== RUNNING ===== -->
@@ -410,22 +459,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <button class="tab" onclick="showRunTab('prog',this)">Programmes</button>
     <button class="tab" onclick="showRunTab('hist',this)">Historique</button>
   </div>
-  <!-- LIVE -->
   <div id="rtab-live">
     <div class="map-box">
       <svg width="100%" height="185" viewBox="0 0 400 185">
         <rect width="400" height="185" fill="#e8f4f8"/>
-        <line x1="0" y1="62" x2="400" y2="62" stroke="#cde" stroke-width="0.7"/>
-        <line x1="0" y1="104" x2="400" y2="104" stroke="#cde" stroke-width="0.7"/>
-        <line x1="0" y1="146" x2="400" y2="146" stroke="#cde" stroke-width="0.7"/>
-        <line x1="80" y1="0" x2="80" y2="185" stroke="#cde" stroke-width="0.7"/>
-        <line x1="200" y1="0" x2="200" y2="185" stroke="#cde" stroke-width="0.7"/>
-        <line x1="320" y1="0" x2="320" y2="185" stroke="#cde" stroke-width="0.7"/>
+        <line x1="0" y1="62" x2="400" y2="62" stroke="#cde" stroke-width=".7"/><line x1="0" y1="104" x2="400" y2="104" stroke="#cde" stroke-width=".7"/><line x1="0" y1="146" x2="400" y2="146" stroke="#cde" stroke-width=".7"/>
+        <line x1="80" y1="0" x2="80" y2="185" stroke="#cde" stroke-width=".7"/><line x1="200" y1="0" x2="200" y2="185" stroke="#cde" stroke-width=".7"/><line x1="320" y1="0" x2="320" y2="185" stroke="#cde" stroke-width=".7"/>
         <path d="M40 145 C80 125,120 92,160 82 C200 72,240 65,275 72 C310 80,340 100,365 92" fill="none" stroke="#bbdff5" stroke-width="4" stroke-linecap="round"/>
         <path d="M40 145 C80 125,120 92,160 82 C185 75,205 70,218 68" fill="none" stroke="#185FA5" stroke-width="4" stroke-linecap="round"/>
         <circle cx="40" cy="145" r="6" fill="#43a047"/>
-        <circle cx="218" cy="68" r="11" fill="#185FA5" opacity=".2"/>
-        <circle cx="218" cy="68" r="6" fill="#185FA5"/>
+        <circle cx="218" cy="68" r="11" fill="#185FA5" opacity=".2"/><circle cx="218" cy="68" r="6" fill="#185FA5"/>
         <circle cx="113" cy="95" r="4" fill="#fff" stroke="#185FA5" stroke-width="2"/>
         <text x="113" y="87" text-anchor="middle" font-size="10" fill="#185FA5" font-family="sans-serif">1km</text>
         <rect x="350" y="84" width="16" height="16" rx="3" fill="#e53935" opacity=".9"/>
@@ -446,38 +489,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="card card-sm" style="margin-bottom:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
         <span style="font-size:13px;font-weight:600">Zone cardiaque</span>
-        <span class="badge badge-amber" id="zone-lbl">Zone 3 · Aérobie</span>
+        <span class="badge badge-amber">Zone 3 · Aérobie</span>
       </div>
       <div class="zone-bar">
-        <div class="zone-seg" style="background:#e8f5e9"></div>
-        <div class="zone-seg" style="background:#c8e6c9"></div>
-        <div class="zone-seg" style="background:#fb8c00;opacity:1;flex:1.5"></div>
-        <div class="zone-seg" style="background:#ffccbc;opacity:.5"></div>
+        <div class="zone-seg" style="background:#e8f5e9"></div><div class="zone-seg" style="background:#c8e6c9"></div>
+        <div class="zone-seg" style="background:#fb8c00;flex:1.5"></div><div class="zone-seg" style="background:#ffccbc;opacity:.5"></div>
         <div class="zone-seg" style="background:#ffcdd2;opacity:.3"></div>
       </div>
-      <div style="display:flex;justify-content:space-between;font-size:10px;color:#aaa;margin-top:5px">
-        <span>Z1</span><span>Z2</span><span>Z3</span><span>Z4</span><span>Z5</span>
-      </div>
-    </div>
-    <div class="card card-sm" style="margin-bottom:12px">
-      <div style="font-size:13px;font-weight:600;margin-bottom:8px">Amis sur le parcours</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <div style="display:flex;align-items:center;gap:5px;background:#f5f5f5;padding:5px 10px;border-radius:20px;font-size:12px"><span class="dot dot-alex"></span>Alex · 3.4 km</div>
-        <div style="display:flex;align-items:center;gap:5px;background:#f5f5f5;padding:5px 10px;border-radius:20px;font-size:12px"><span class="dot dot-sam"></span>Sam · 1.8 km</div>
-      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:#aaa;margin-top:5px"><span>Z1</span><span>Z2</span><span>Z3</span><span>Z4</span><span>Z5</span></div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
       <button class="btn" id="run-pause-btn" onclick="toggleRun()">⏸ Pause</button>
       <button class="btn" style="color:#888" onclick="showScreen('home')">⏹ Arrêter</button>
     </div>
   </div>
-  <!-- PROGRAMMES -->
   <div id="rtab-prog" style="display:none">
     <div class="card card-sm" style="margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-        <div><div style="font-weight:700;font-size:14px">Endurance de base</div><div style="font-size:12px;color:#888;margin-top:2px">Course continue · Zone 2</div></div>
-        <span class="badge badge-green">Recommandé</span>
-      </div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Endurance de base</div><div style="font-size:12px;color:#888;margin-top:2px">Course continue · Zone 2</div></div><span class="badge badge-green">Recommandé</span></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px">
         <div class="stat-box" style="padding:8px"><div style="font-size:15px;font-weight:700">5 km</div><div style="font-size:11px;color:#888">distance</div></div>
         <div class="stat-box" style="padding:8px"><div style="font-size:15px;font-weight:700">6:10</div><div style="font-size:11px;color:#888">allure</div></div>
@@ -486,24 +514,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <button class="btn btn-blue">Lancer ce parcours</button>
     </div>
     <div class="card card-sm" style="margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-        <div><div style="font-weight:700;font-size:14px">Fractionné 30/30</div><div style="font-size:12px;color:#888;margin-top:2px">Sprint 30s · Marche 30s · x10</div></div>
-        <span class="badge badge-amber">Intensif</span>
-      </div>
-      <div style="font-size:12px;color:#888;margin-bottom:10px">Guidage audio automatique · Zone 4-5 sur les sprints</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Fractionné 30/30</div><div style="font-size:12px;color:#888;margin-top:2px">Sprint 30s · Marche 30s · x10</div></div><span class="badge badge-amber">Intensif</span></div>
       <button class="btn">Lancer ce parcours</button>
     </div>
     <div class="card card-sm">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-        <div><div style="font-weight:700;font-size:14px">Plan 10 km</div><div style="font-size:12px;color:#888;margin-top:2px">Programme 8 semaines</div></div>
-        <span class="badge badge-blue">Plan long</span>
-      </div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Plan 10 km</div><div style="font-size:12px;color:#888;margin-top:2px">Programme 8 semaines</div></div><span class="badge badge-blue">Plan long</span></div>
       <div class="prog-bar" style="margin-bottom:6px"><div class="prog-fill" style="width:35%;background:#185FA5"></div></div>
-      <div style="font-size:11px;color:#888;margin-bottom:10px">Semaine 3 / 8 · 35% complété</div>
-      <button class="btn">Continuer le plan</button>
+      <div style="font-size:11px;color:#888;margin-bottom:10px">Semaine 3 / 8</div>
+      <button class="btn">Continuer</button>
     </div>
   </div>
-  <!-- HISTORIQUE -->
   <div id="rtab-hist" style="display:none">
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px">
       <div class="stat-box"><div class="stat-val">23.4</div><div class="stat-lbl">km ce mois</div></div>
@@ -511,21 +531,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="stat-box"><div class="stat-val" style="color:#43a047">+12%</div><div class="stat-lbl">progression</div></div>
     </div>
     <div class="card card-sm">
-      <div class="run-row">
-        <div class="ex-icon" style="background:#e3f2fd;font-weight:700;color:#185FA5;font-size:14px">5km</div>
-        <div style="flex:1"><div style="font-size:14px;font-weight:600">Endurance</div><div style="font-size:12px;color:#888">Vendredi · 28 min 12s</div></div>
-        <div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#185FA5">5:38</div><div style="font-size:10px;color:#aaa">min/km</div></div>
-      </div>
-      <div class="run-row">
-        <div class="ex-icon" style="background:#fff8e1;font-weight:700;color:#e65100;font-size:13px">3km</div>
-        <div style="flex:1"><div style="font-size:14px;font-weight:600">Fractionné 30/30</div><div style="font-size:12px;color:#888">Mardi · 22 min</div></div>
-        <div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#fb8c00">4:52</div><div style="font-size:10px;color:#aaa">min/km</div></div>
-      </div>
-      <div class="run-row" style="border-bottom:none">
-        <div class="ex-icon" style="background:#e8f5e9;font-weight:700;color:#2e7d32;font-size:13px">7km</div>
-        <div style="flex:1"><div style="font-size:14px;font-weight:600">Long run</div><div style="font-size:12px;color:#888">Dimanche · 41 min</div></div>
-        <div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#43a047">5:52</div><div style="font-size:10px;color:#aaa">min/km</div></div>
-      </div>
+      <div class="run-row"><div class="ex-icon" style="background:#e3f2fd;font-weight:700;color:#185FA5;font-size:13px">5km</div><div style="flex:1"><div style="font-size:14px;font-weight:600">Endurance</div><div style="font-size:12px;color:#888">Vendredi · 28 min 12s</div></div><div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#185FA5">5:38</div><div style="font-size:10px;color:#aaa">min/km</div></div></div>
+      <div class="run-row"><div class="ex-icon" style="background:#fff8e1;font-weight:700;color:#e65100;font-size:13px">3km</div><div style="flex:1"><div style="font-size:14px;font-weight:600">Fractionné 30/30</div><div style="font-size:12px;color:#888">Mardi · 22 min</div></div><div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#fb8c00">4:52</div><div style="font-size:10px;color:#aaa">min/km</div></div></div>
+      <div class="run-row" style="border-bottom:none"><div class="ex-icon" style="background:#e8f5e9;font-weight:700;color:#2e7d32;font-size:13px">7km</div><div style="flex:1"><div style="font-size:14px;font-weight:600">Long run</div><div style="font-size:12px;color:#888">Dimanche · 41 min</div></div><div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#43a047">5:52</div><div style="font-size:10px;color:#aaa">min/km</div></div></div>
     </div>
   </div>
 </div>
@@ -539,55 +547,31 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <button class="tab" onclick="showYogaTab('poses',this)">Postures</button>
     <button class="tab" onclick="showYogaTab('breath',this)">Respiration</button>
   </div>
-  <!-- SESSION -->
   <div id="ytab-session">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
-      <div onclick="selYoga('flex',this)" id="ycard-flex" class="card card-sm" style="cursor:pointer;border:2px solid #7c4dff">
-        <div style="font-size:26px;margin-bottom:5px">🌿</div>
-        <div style="font-weight:700;font-size:13px">Flexibilité</div>
-        <div style="font-size:11px;color:#888;margin-top:2px">Étirements · Hatha</div>
-      </div>
-      <div onclick="selYoga('strength',this)" id="ycard-strength" class="card card-sm" style="cursor:pointer">
-        <div style="font-size:26px;margin-bottom:5px">🔥</div>
-        <div style="font-weight:700;font-size:13px">Force & gainage</div>
-        <div style="font-size:11px;color:#888;margin-top:2px">Power · Vinyasa</div>
-      </div>
-      <div onclick="selYoga('relax',this)" id="ycard-relax" class="card card-sm" style="cursor:pointer">
-        <div style="font-size:26px;margin-bottom:5px">🌙</div>
-        <div style="font-weight:700;font-size:13px">Relaxation</div>
-        <div style="font-size:11px;color:#888;margin-top:2px">Yin · Restoratif</div>
-      </div>
-      <div onclick="selYoga('morning',this)" id="ycard-morning" class="card card-sm" style="cursor:pointer">
-        <div style="font-size:26px;margin-bottom:5px">☀️</div>
-        <div style="font-weight:700;font-size:13px">Réveil matinal</div>
-        <div style="font-size:11px;color:#888;margin-top:2px">Salutation soleil</div>
-      </div>
+      <div onclick="selYoga('flex',this)" id="ycard-flex" class="card card-sm" style="cursor:pointer;border:2px solid #7c4dff"><div style="font-size:26px;margin-bottom:5px">🌿</div><div style="font-weight:700;font-size:13px">Flexibilité</div><div style="font-size:11px;color:#888;margin-top:2px">Hatha · 35 min</div></div>
+      <div onclick="selYoga('strength',this)" id="ycard-strength" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">🔥</div><div style="font-weight:700;font-size:13px">Force</div><div style="font-size:11px;color:#888;margin-top:2px">Vinyasa · 40 min</div></div>
+      <div onclick="selYoga('relax',this)" id="ycard-relax" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">🌙</div><div style="font-weight:700;font-size:13px">Relaxation</div><div style="font-size:11px;color:#888;margin-top:2px">Yin · 30 min</div></div>
+      <div onclick="selYoga('morning',this)" id="ycard-morning" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">☀️</div><div style="font-weight:700;font-size:13px">Réveil</div><div style="font-size:11px;color:#888;margin-top:2px">Salutation · 20 min</div></div>
     </div>
     <div class="card card-sm">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <div><div style="font-weight:700">Flexibilité · 35 min</div><div style="font-size:12px;color:#888;margin-top:2px">8 postures · Adapté</div></div>
-        <span class="badge badge-purple">Hatha</span>
-      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><div><div style="font-weight:700">Flexibilité · 35 min</div><div style="font-size:12px;color:#888;margin-top:2px">8 postures · Adapté</div></div><span class="badge badge-purple">Hatha</span></div>
       <div class="ex-row"><div class="ex-icon" style="background:#f3e5f5">🧘</div><div class="ex-info"><div class="ex-name">Enfant (Balasana)</div><div class="ex-detail">Dos · Hanches</div></div><div style="font-size:13px;font-weight:700;color:#6a1b9a">90 sec</div></div>
-      <div class="ex-row"><div class="ex-icon" style="background:#f3e5f5">🌊</div><div class="ex-info"><div class="ex-name">Chat-vache</div><div class="ex-detail">Colonne vertébrale</div></div><div style="font-size:13px;font-weight:700;color:#6a1b9a">60 sec</div></div>
+      <div class="ex-row"><div class="ex-icon" style="background:#f3e5f5">🌊</div><div class="ex-info"><div class="ex-name">Chat-vache</div><div class="ex-detail">Colonne</div></div><div style="font-size:13px;font-weight:700;color:#6a1b9a">60 sec</div></div>
       <div class="ex-row"><div class="ex-icon" style="background:#f3e5f5">🐕</div><div class="ex-info"><div class="ex-name">Chien tête en bas</div><div class="ex-detail">Ischio · Mollets</div></div><div style="font-size:13px;font-weight:700;color:#6a1b9a">120 sec</div></div>
       <div class="ex-row" style="border-bottom:none;opacity:.4"><div class="ex-icon" style="font-size:14px">···</div><div class="ex-info"><div style="font-size:13px;color:#888">5 autres postures...</div></div></div>
       <button class="btn btn-purple" style="margin-top:10px">🧘 Démarrer la séance yoga</button>
     </div>
   </div>
-  <!-- POSTURES -->
   <div id="ytab-poses" style="display:none">
     <div class="pose-grid">
       <div class="pose-card selected"><div style="font-size:28px;margin-bottom:5px">🧘</div><div style="font-weight:700;font-size:13px">Lotus</div><div style="font-size:11px;color:#888;margin-top:2px">Méditation</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div>
       <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🌳</div><div style="font-weight:700;font-size:13px">Arbre</div><div style="font-size:11px;color:#888;margin-top:2px">Équilibre</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div>
       <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">⚔️</div><div style="font-weight:700;font-size:13px">Guerrier II</div><div style="font-size:11px;color:#888;margin-top:2px">Cuisses</div><div style="margin-top:6px"><span class="badge badge-amber" style="font-size:10px">Intermédiaire</span></div></div>
       <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🐍</div><div style="font-weight:700;font-size:13px">Cobra</div><div style="font-size:11px;color:#888;margin-top:2px">Dos · Abdos</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div>
-      <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🌙</div><div style="font-weight:700;font-size:13px">Demi-lune</div><div style="font-size:11px;color:#888;margin-top:2px">Équilibre · Côté</div><div style="margin-top:6px"><span class="badge badge-amber" style="font-size:10px">Intermédiaire</span></div></div>
-      <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🦅</div><div style="font-weight:700;font-size:13px">Aigle</div><div style="font-size:11px;color:#888;margin-top:2px">Épaules</div><div style="margin-top:6px"><span class="badge badge-green" style="font-size:10px">Avancé</span></div></div>
     </div>
     <button class="btn">+ Ajouter une posture</button>
   </div>
-  <!-- RESPIRATION -->
   <div id="ytab-breath" style="display:none">
     <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
       <button class="btn btn-sm" id="btype-478" onclick="selBreath('478',this)" style="background:#ede7f6;color:#4527a0;border-color:#7c4dff">4-7-8</button>
@@ -609,71 +593,143 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </div>
 
 <script>
-// ---- DATA ----
-const exercises={
-  pompes:[
-    {name:'Pompes classiques',icon:'💪',detail:'Bras largeur épaules · Dos droit',type:'reps'},
-    {name:'Pompes diamant',icon:'💎',detail:'Index et pouces se touchent',type:'reps'},
-    {name:'Pompes inclinées',icon:'⬆️',detail:'Mains surélevées',type:'reps'},
-    {name:'Pompes déclinées',icon:'⬇️',detail:'Pieds surélevés',type:'reps'},
-    {name:'Pompes archer',icon:'🏹',detail:'Extension latérale alternée',type:'reps',extra:true},
-    {name:'Pompes explosives',icon:'💥',detail:'Décollage des mains',type:'reps',extra:true},
-  ],
-  abdos:[
-    {name:'Crunch',icon:'🔄',detail:'Dos ancré · Montée contrôlée',type:'reps'},
-    {name:'Relevés de jambes',icon:'🦵',detail:'Lombaires au sol',type:'reps'},
-    {name:'Planche',icon:'📐',detail:'Corps aligné · Hanches neutres',type:'time'},
-    {name:'Russian twist',icon:'🔀',detail:'Rotation du buste',type:'reps'},
-    {name:'Bicycle crunch',icon:'🚲',detail:'Rotation opposée',type:'reps',extra:true},
-    {name:'Hollow hold',icon:'🌊',detail:'Corps creusé',type:'time',extra:true},
-  ],
-  traction:[
-    {name:'Pronation',icon:'👐',detail:'Prise large dessus',type:'reps'},
-    {name:'Supination (chin-up)',icon:'🙌',detail:'Prise étroite dessous',type:'reps'},
-    {name:'Négatives',icon:'⬇️',detail:'Descente lente 5 sec',type:'reps'},
-    {name:'Assistées élastique',icon:'🟢',detail:'Élastique sous les pieds',type:'reps'},
-    {name:'Isométriques',icon:'🔒',detail:'Menton au-dessus barre',type:'time',extra:true},
-  ],
-  kb:[
-    {name:'Swing',icon:'⚡',detail:'Propulsion des hanches',type:'reps'},
-    {name:'Goblet squat',icon:'🏆',detail:'KB à deux mains',type:'reps'},
-    {name:'Clean',icon:'🚀',detail:'Montée en rack',type:'reps'},
-    {name:'Snatch',icon:'🌟',detail:'Extension complète overhead',type:'reps'},
-    {name:'Turkish get-up',icon:'🌀',detail:'Mouvement complet debout/sol',type:'reps',extra:true},
-    {name:'Deadlift KB',icon:'📦',detail:'Charnière hanche · Dos droit',type:'reps',extra:true},
-  ],
-  hiit:[
-    {name:'Burpees',icon:'🔥',detail:'Squat → planche → saut',type:'time'},
-    {name:'Mountain climbers',icon:'🏔️',detail:'Alternance rapide genoux',type:'time'},
-    {name:'Jump squats',icon:'🐇',detail:'Accroupi → saut explosif',type:'reps'},
-    {name:'High knees',icon:'🏃',detail:'Genoux à hauteur hanches',type:'time'},
-    {name:'Jump lunges',icon:'⚔️',detail:'Alternance explosive',type:'reps',extra:true},
-    {name:'Skaters',icon:'⛸️',detail:'Sauts latéraux',type:'reps',extra:true},
-    {name:'Box jumps',icon:'📦',detail:'Saut sur caisse',type:'reps',extra:true},
-    {name:'Plank jacks',icon:'🎿',detail:'Écarts jambes en planche',type:'time',extra:true},
-  ],
+// ---- STATE ----
+const state = {
+  seanceDone: false,
+  seancesToday: [],
+  totalSeances: 5,
+  streak: 12,
+  streakData: [1,1,0,1,1,0,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1,0,1,1],
+  weekData: [1,0,1,1,0,1,0],
 };
 
-const calData={
-  1:{sessions:['alex','sam'],name:'Pompes & Tractions'},
-  3:{sessions:['alex','sam','lea'],name:'HIIT Circuit'},
-  5:{sessions:['moi','alex'],name:'Kettlebell Focus'},
-  7:{sessions:['alex','sam'],name:'Circuit Force + Cardio',today:true},
+const USER = { name:'Mus', initials:'MU', maxPompes:30, maxCrunchs:50, maxTractions:6, kb:12 };
+
+const calData = {
+  1:{sessions:['belaid','quentin'],name:'Pompes & Tractions'},
+  3:{sessions:['belaid','quentin','seb'],name:'HIIT Circuit'},
+  5:{sessions:['mus','belaid'],name:'Kettlebell Focus'},
+  7:{sessions:['belaid'],name:'Circuit Force + Cardio',today:true},
   9:{sessions:[],name:'HIIT Interval',future:true},
   12:{sessions:[],name:'Tractions + Abdos',future:true},
 };
 
-const coachExs=[
-  {name:'Pompes classiques',icon:'💪',tip:'Bras largeur épaules · Dos droit',display:'12',type:'reps',rest:60,perc:'60% de ton max (20 reps)'},
-  {name:'Kettlebell swing',icon:'🏋️',tip:'Propulsion des hanches · Dos droit',display:'15',type:'reps',rest:90,perc:'60% · 16 kg'},
-  {name:'Planche',icon:'📐',tip:'Corps aligné · Hanches neutres',display:'45',type:'time',rest:60,perc:'60% de ton max (75 sec)'},
-  {name:'Crunch',icon:'🔄',tip:'Lombaires ancrées · Expire en montant',display:'24',type:'reps',rest:60,perc:'60% de ton max (40 reps)'},
-  {name:'Tractions négatives',icon:'🧗',tip:'Montée lente · Descente contrôlée 5s',display:'3',type:'reps',rest:120,perc:'Adapté à ton niveau'},
-  {name:'Burpees',icon:'🔥',tip:'Rythme constant · Qualité > vitesse',display:'30',type:'time',rest:90,perc:'HIIT cardio final'},
+const exercises = {
+  pompes:[
+    {name:'Pompes classiques',icon:'💪',detail:'Bras largeur épaules · Dos droit',type:'reps',
+     instrs:['Mains à largeur d\'épaules, bras tendus, corps aligné tête-pieds','Descends lentement jusqu\'à ce que la poitrine frôle le sol','Pousse fort pour remonter, expire en montant'],
+     warn:'Ne laisse pas les hanches s\'affaisser',muscles:['Pectoraux','Triceps','Épaules','Gainage']},
+    {name:'Pompes diamant',icon:'💎',detail:'Index et pouces se touchent',type:'reps',
+     instrs:['Place les mains au centre, index et pouces formant un diamant','Descends en gardant les coudes près du corps','Remonte en contractant les triceps'],
+     warn:'Évite d\'ouvrir les coudes',muscles:['Triceps','Pectoraux internes']},
+    {name:'Pompes inclinées',icon:'⬆️',detail:'Mains surélevées sur un banc',type:'reps',
+     instrs:['Mains sur une surface surélevée (chaise, banc)','Corps droit, descends la poitrine vers la surface','Pousse et reviens à la position initiale'],
+     warn:'Garde le dos droit, pas cambré',muscles:['Pectoraux inférieurs','Épaules']},
+    {name:'Pompes déclinées',icon:'⬇️',detail:'Pieds surélevés',type:'reps',
+     instrs:['Pieds sur une surface surélevée, mains au sol','Corps bien droit, descends lentement','Pousse fort en expirant'],
+     warn:'Ne laisse pas le dos se creuser',muscles:['Pectoraux supérieurs','Épaules avant']},
+    {name:'Pompes archer',icon:'🏹',detail:'Extension latérale alternée',type:'reps',extra:true,
+     instrs:['Mains très écartées','En descendant, plie un bras et étends l\'autre','Alterne côté gauche et droit'],
+     warn:'Mouvement lent et contrôlé',muscles:['Pectoraux','Triceps','Épaules']},
+    {name:'Pompes explosives',icon:'💥',detail:'Décollage des mains',type:'reps',extra:true,
+     instrs:['Position pompes standard','Descends lentement','Pousse fort et vite pour décoller les mains'],
+     warn:'Réception souple, genoux non bloqués',muscles:['Pectoraux','Triceps','Explosivité']},
+  ],
+  abdos:[
+    {name:'Crunch',icon:'🔄',detail:'Dos ancré · Montée contrôlée',type:'reps',
+     instrs:['Allongé sur le dos, genoux pliés, pieds au sol','Mains derrière la tête (sans tirer)','Lève les épaules en contractant les abdos, expire en montant'],
+     warn:'Ne tire pas sur le cou',muscles:['Grand droit','Abdos']},
+    {name:'Relevés de jambes',icon:'🦵',detail:'Lombaires au sol',type:'reps',
+     instrs:['Allongé sur le dos, mains sous les fesses','Jambes tendues, monte-les à 90°','Redescends lentement sans toucher le sol'],
+     warn:'Garde les lombaires collées au sol',muscles:['Bas abdos','Hip flexors']},
+    {name:'Planche',icon:'📐',detail:'Corps aligné · Isométrique',type:'time',
+     instrs:['Sur les avant-bras et les orteils','Corps parfaitement aligné de la tête aux talons','Contracte abdos et fessiers, respire normalement'],
+     warn:'Ne laisse pas les hanches monter ou descendre',muscles:['Gainage','Épaules','Fessiers']},
+    {name:'Russian twist',icon:'🔀',detail:'Rotation du buste',type:'reps',
+     instrs:['Assis, genoux pliés, pieds légèrement levés','Torse incliné à 45°, mains jointes','Tourne le buste de gauche à droite en touchant le sol'],
+     warn:'Garde le dos droit',muscles:['Obliques','Abdos']},
+    {name:'Bicycle crunch',icon:'🚲',detail:'Rotation opposée',type:'reps',extra:true,
+     instrs:['Allongé, mains derrière la tête','Amène le genou droit vers le coude gauche','Alterne de façon fluide'],
+     warn:'Mouvement lent et contrôlé',muscles:['Obliques','Grand droit']},
+    {name:'Hollow hold',icon:'🌊',detail:'Corps creusé · Statique',type:'time',extra:true,
+     instrs:['Allongé sur le dos, bras tendus au-dessus de la tête','Lève les épaules et les jambes à quelques cm du sol','Corps en forme de banane creusée, tiens la position'],
+     warn:'Lombaires ancrées au sol en permanence',muscles:['Gainage complet','Abdos profonds']},
+  ],
+  traction:[
+    {name:'Pronation',icon:'👐',detail:'Prise large dessus',type:'reps',
+     instrs:['Prise au-dessus (paumes vers l\'avant), plus large que les épaules','Tire en amenant les coudes vers les hanches','Monte jusqu\'au menton au-dessus de la barre'],
+     warn:'Évite de balancer le corps',muscles:['Grand dorsal','Biceps','Épaules']},
+    {name:'Supination (chin-up)',icon:'🙌',detail:'Prise étroite dessous',type:'reps',
+     instrs:['Prise en dessous (paumes vers toi), largeur épaules','Tire en contractant les biceps','Menton au-dessus de la barre'],
+     warn:'Mouvement complet, ne triche pas avec l\'amplitude',muscles:['Biceps','Grand dorsal']},
+    {name:'Négatives',icon:'⬇️',detail:'Descente lente · 5 secondes',type:'reps',
+     instrs:['Commence en haut de la barre (saute ou utilise une chaise)','Descends très lentement sur 5 secondes','Compte 1, 2, 3, 4, 5 pendant la descente'],
+     warn:'Idéal si tu ne fais pas encore de vraies tractions',muscles:['Grand dorsal','Biceps','Gainage']},
+    {name:'Assistées élastique',icon:'🟢',detail:'Élastique sous les pieds',type:'reps',
+     instrs:['Accroche un élastique épais à la barre','Pose un genou ou les deux pieds dedans','Effectue des tractions normales avec l\'aide de l\'élastique'],
+     warn:'Choisis un élastique adapté à ton niveau',muscles:['Grand dorsal','Biceps']},
+    {name:'Isométriques',icon:'🔒',detail:'Tenir le menton au-dessus',type:'time',extra:true,
+     instrs:['Monte jusqu\'en haut de la barre','Tiens la position, menton au-dessus de la barre','Respire normalement et maintiens le plus longtemps possible'],
+     warn:'Descends contrôlé quand tu n\'en peux plus',muscles:['Grand dorsal','Biceps','Avant-bras']},
+  ],
+  kb:[
+    {name:'Swing',icon:'⚡',detail:'Propulsion des hanches',type:'reps',
+     instrs:['Pieds largeur épaules, KB entre les jambes','Charnière des hanches (pas un squat), descends le KB','Propulse les hanches vers l\'avant, KB monte à hauteur des épaules'],
+     warn:'Les bras sont passifs, la force vient des hanches',muscles:['Fessiers','Ischios','Dos','Gainage']},
+    {name:'Goblet squat',icon:'🏆',detail:'KB contre la poitrine',type:'reps',
+     instrs:['Tiens le KB à deux mains contre la poitrine','Pieds légèrement écartés et tournés vers l\'extérieur','Squat profond en gardant le dos droit et les genoux dans l\'axe'],
+     warn:'Genoux dans l\'axe des orteils',muscles:['Quadriceps','Fessiers','Dos']},
+    {name:'Clean',icon:'🚀',detail:'Montée en rack position',type:'reps',
+     instrs:['KB au sol, prise pronation','Propulse les hanches et tire le KB vers le haut','Amène le KB en rack position (coude contre le corps)'],
+     warn:'Ne laisse pas le KB slapper ton avant-bras',muscles:['Épaules','Dos','Fessiers']},
+    {name:'Snatch',icon:'🌟',detail:'Extension complète overhead',type:'reps',
+     instrs:['Comme un swing mais en une seule trajectoire','Le KB monte directement au-dessus de la tête','Verrouille le bras tendu en haut'],
+     warn:'Exercice technique, apprends d\'abord le swing',muscles:['Corps entier','Épaules','Fessiers']},
+    {name:'Turkish get-up',icon:'🌀',detail:'Mouvement complet debout/sol',type:'reps',extra:true,
+     instrs:['Allongé, KB au-dessus à un bras tendu','Lève-toi debout en maintenant le KB en l\'air','Redescends au sol en contrôlant'],
+     warn:'Mouvement lent et technique, commence sans KB',muscles:['Corps entier','Stabilisation','Gainage']},
+    {name:'Deadlift KB',icon:'📦',detail:'Soulevé de terre',type:'reps',extra:true,
+     instrs:['KB au sol entre les pieds','Charnière des hanches, dos droit, attrape le KB','Pousse dans le sol et redresse-toi'],
+     warn:'Ne pas arrondir le dos',muscles:['Ischios','Fessiers','Dos','Quadriceps']},
+  ],
+  hiit:[
+    {name:'Burpees',icon:'🔥',detail:'Squat → planche → saut',type:'time',
+     instrs:['Debout, descends les mains au sol','Saute les pieds en arrière en position planche','Ramène les pieds, saute en l\'air les bras levés'],
+     warn:'Rythme constant, qualité avant vitesse',muscles:['Corps entier','Cardio']},
+    {name:'Mountain climbers',icon:'🏔️',detail:'Alternance rapide des genoux',type:'time',
+     instrs:['Position planche haute, bras tendus','Ramène le genou droit vers la poitrine','Alterne rapidement gauche/droit en gardant les hanches basses'],
+     warn:'Garde les hanches à hauteur des épaules',muscles:['Abdos','Épaules','Cardio']},
+    {name:'Jump squats',icon:'🐇',detail:'Squat explosif',type:'reps',
+     instrs:['Pieds largeur épaules, descends en squat profond','Explose vers le haut, saute le plus haut possible','Réception souple, enchaîne immédiatement'],
+     warn:'Réception genoux légèrement fléchis',muscles:['Quadriceps','Fessiers','Mollets']},
+    {name:'High knees',icon:'🏃',detail:'Genoux à la hauteur des hanches',type:'time',
+     instrs:['Debout, cours sur place','Monte les genoux à hauteur des hanches','Bras en mouvement naturel de course'],
+     warn:'Garde le dos droit, ne te penche pas',muscles:['Hip flexors','Cardio','Mollets']},
+    {name:'Jump lunges',icon:'⚔️',detail:'Fentes sautées',type:'reps',extra:true,
+     instrs:['Position fente, genou arrière proche du sol','Saute et échange les jambes en l\'air','Réception en fente, genou avant à 90°'],
+     warn:'Réception contrôlée',muscles:['Quadriceps','Fessiers','Équilibre']},
+    {name:'Skaters',icon:'⛸️',detail:'Sauts latéraux',type:'reps',extra:true,
+     instrs:['Saut latéral sur le pied droit, buste penché','Balance la jambe gauche vers l\'arrière','Saute à gauche et alterne'],
+     warn:'Réception sur un seul pied, équilibre 1 sec',muscles:['Fessiers','Équilibre','Cardio']},
+    {name:'Box jumps',icon:'📦',detail:'Saut sur caisse',type:'reps',extra:true,
+     instrs:['Debout face à la caisse, pieds largeur épaules','Fléchis les genoux, propulse-toi sur la caisse','Réception souple sur les deux pieds, debout'],
+     warn:'Réception souple, descends prudemment',muscles:['Quadriceps','Fessiers','Explosivité']},
+    {name:'Plank jacks',icon:'🎿',detail:'Écarts en planche',type:'time',extra:true,
+     instrs:['Position planche haute, bras tendus','Écarte les pieds simultanément (comme un jumping jack)','Ramène les pieds ensemble et recommence'],
+     warn:'Garde les hanches stables',muscles:['Gainage','Épaules','Cardio']},
+  ],
+};
+
+const coachExs = [
+  {name:'Pompes classiques',icon:'💪',display:'18',type:'reps',rest:60,perc:'18 reps · 60% de ton max (30)',cat:'pompes',idx:0},
+  {name:'Kettlebell swing',icon:'🏋️',display:'15',type:'reps',rest:90,perc:'15 reps · 12 kg',cat:'kb',idx:0},
+  {name:'Planche',icon:'📐',display:'45',type:'time',rest:60,perc:'45 sec · 60% de ton max',cat:'abdos',idx:2},
+  {name:'Crunch',icon:'🔄',display:'30',type:'reps',rest:60,perc:'30 reps · 60% de ton max (50)',cat:'abdos',idx:0},
+  {name:'Tractions négatives',icon:'🧗',display:'4',type:'reps',rest:120,perc:'4 reps · adapté à ton niveau (max: 6)',cat:'traction',idx:2},
+  {name:'Burpees',icon:'🔥',display:'30',type:'time',rest:90,perc:'30 sec · HIIT cardio final',cat:'hiit',idx:0},
 ];
 
 let showingAll={};
-let currentCat='pompes';
 let coachStep=0;
 let timerInterval=null;
 let restInterval=null;
@@ -686,28 +742,54 @@ let breathCycles=0;
 let breathPhaseIdx=0;
 let breathPhaseT=0;
 let currentBreath='478';
+let coachStartTime=null;
 
 const breathTypes={
-  '478':{title:'Respiration 4-7-8',desc:'Inspirer 4s · Retenir 7s · Expirer 8s · Apaisement',phases:[{name:'Inspirer',dur:4,sz:'130px',bg:'#ede7f6'},{name:'Retenir',dur:7,sz:'130px',bg:'#e3f2fd'},{name:'Expirer',dur:8,sz:'90px',bg:'#e8f5e9'}]},
-  'box':{title:'Box breathing',desc:'Inspirer 4s · Retenir 4s · Expirer 4s · Retenir 4s',phases:[{name:'Inspirer',dur:4,sz:'130px',bg:'#ede7f6'},{name:'Retenir',dur:4,sz:'130px',bg:'#e3f2fd'},{name:'Expirer',dur:4,sz:'90px',bg:'#e8f5e9'},{name:'Pause',dur:4,sz:'90px',bg:'#f5f5f5'}]},
-  'ujjayi':{title:'Ujjayi · Ocean breath',desc:'Inspirer 4s · Expirer 6s · Légère contraction gorge',phases:[{name:'Inspirer',dur:4,sz:'130px',bg:'#ede7f6'},{name:'Expirer',dur:6,sz:'90px',bg:'#e8f5e9'}]},
+  '478':{title:'Respiration 4-7-8',desc:'Inspirer 4s · Retenir 7s · Expirer 8s · Apaisement profond',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Retenir',dur:7,sz:'140px',bg:'#e3f2fd'},{name:'Expirer',dur:8,sz:'90px',bg:'#e8f5e9'}]},
+  'box':{title:'Box breathing',desc:'Inspirer 4s · Retenir 4s · Expirer 4s · Retenir 4s',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Retenir',dur:4,sz:'140px',bg:'#e3f2fd'},{name:'Expirer',dur:4,sz:'90px',bg:'#e8f5e9'},{name:'Pause',dur:4,sz:'90px',bg:'#f5f5f5'}]},
+  'ujjayi':{title:'Ujjayi · Ocean breath',desc:'Inspirer 4s · Expirer 6s · Légère contraction de la gorge',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Expirer',dur:6,sz:'90px',bg:'#e8f5e9'}]},
 };
+
+// ---- DATE ----
+function initDate(){
+  const d=new Date();
+  const days=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+  const months=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  const el=document.getElementById('home-date');
+  if(el) el.textContent=days[d.getDay()]+' '+d.getDate()+' '+months[d.getMonth()]+' · Jour 12';
+  const calTitle=document.getElementById('cal-month-title');
+  if(calTitle) calTitle.textContent=months[d.getMonth()]+' '+d.getFullYear();
+}
 
 // ---- SCREENS ----
 function showScreen(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('screen-'+id).classList.add('active');
-  const map={home:0,calendar:1,exercises:2,friends:3,profile:4};
+  const map={home:0,calendar:1,exercises:2,stats:3,profile:4};
   if(map[id]!==undefined) document.querySelectorAll('.nav-btn')[map[id]].classList.add('active');
   if(id==='calendar') buildCal();
-  if(id==='exercises') showCat('pompes',document.querySelector('.tab.active'));
+  if(id==='exercises') showCat('pompes',document.querySelector('#screen-exercises .tab'));
+  if(id==='stats') buildStats();
   if(id==='running') startRunTimer();
+  updateHomeNotif();
+}
+
+// ---- NOTIFS HOME ----
+function updateHomeNotif(){
+  const area=document.getElementById('notif-area');
+  if(!area) return;
+  if(state.seanceDone){
+    area.innerHTML='<div class="notif-banner" style="background:#e8f5e9"><span style="font-size:18px">✅</span><div style="flex:1;font-size:13px;color:#2e7d32">Tu as terminé ta séance aujourd\'hui 💪 Tes amis ont été notifiés !</div></div>';
+  } else {
+    area.innerHTML='<div class="notif-banner"><div class="avatar av-belaid" style="width:30px;height:30px;font-size:12px">BE</div><div style="flex:1;font-size:13px;color:#1565c0">Belaid a terminé sa séance <strong>il y a 1h</strong> 💪</div></div>';
+  }
 }
 
 // ---- COACH ----
 function showCoach(){
   coachStep=0;
+  coachStartTime=Date.now();
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById('screen-coach').classList.add('active');
   document.getElementById('coach-rest').style.display='none';
@@ -722,13 +804,25 @@ function loadCoachStep(){
   document.getElementById('coach-step-lbl').textContent='Exercice '+(coachStep+1)+' / '+coachExs.length;
   document.getElementById('coach-icon').textContent=ex.icon;
   document.getElementById('coach-name').textContent=ex.name;
-  document.getElementById('coach-tip').textContent=ex.tip;
+  document.getElementById('coach-perc').textContent=ex.perc;
   document.getElementById('timer-display').textContent=ex.display;
   document.getElementById('timer-type').textContent=ex.type==='reps'?'reps':'sec';
-  document.getElementById('coach-perc').textContent=ex.perc;
+  document.getElementById('timer-arc').style.strokeDashoffset=0;
   document.getElementById('start-btn').style.display='';
   document.getElementById('next-btn').style.display='none';
-  document.getElementById('timer-arc').style.strokeDashoffset=0;
+
+  // Instructions
+  const exData=exercises[ex.cat][ex.idx];
+  if(exData){
+    let html='';
+    exData.instrs.forEach((step,i)=>{
+      html+='<div class="instr-step"><div class="instr-num">'+(i+1)+'</div><div class="instr-text">'+step+'</div></div>';
+    });
+    if(exData.warn) html+='<div class="instr-warn">⚠️ '+exData.warn+'</div>';
+    if(exData.muscles) html+='<div class="muscles">'+exData.muscles.map(m=>'<span class="muscle-tag">'+m+'</span>').join('')+'</div>';
+    document.getElementById('coach-instr-content').innerHTML=html;
+  }
+
   let dots='';
   coachExs.forEach((_,i)=>{
     if(i<coachStep) dots+='<div class="step-dot-el done"></div>';
@@ -771,6 +865,8 @@ function nextExercise(){
       if(rest<=0){clearInterval(restInterval);coachStep++;document.getElementById('coach-main').style.display='block';document.getElementById('coach-rest').style.display='none';loadCoachStep();}
     },1000);
   } else {
+    const elapsed=coachStartTime?Math.round((Date.now()-coachStartTime)/60000):34;
+    document.getElementById('done-time').textContent=elapsed;
     document.getElementById('coach-main').style.display='none';
     document.getElementById('coach-done').style.display='block';
   }
@@ -784,28 +880,47 @@ function skipRest(){
   loadCoachStep();
 }
 
-function toggleVideo(){
-  const lbl=document.getElementById('video-lbl');
-  lbl.textContent=lbl.textContent==='Voir la démo'?'● En lecture...':'Voir la démo';
+function finishSeance(){
+  // Marque la séance comme faite
+  state.seanceDone=true;
+  state.totalSeances++;
+  state.streak++;
+  // Ajoute le point mus dans le calendrier
+  const today=new Date().getDate();
+  if(calData[today]){
+    if(!calData[today].sessions.includes('mus')) calData[today].sessions.push('mus');
+  } else {
+    calData[today]={sessions:['mus'],name:'Circuit Force + Cardio'};
+  }
+  // Mise à jour badge séance
+  const badge=document.getElementById('seance-badge');
+  if(badge){badge.textContent='✓ Fait';badge.style.background='#e8f5e9';badge.style.color='#2e7d32';}
+  const btn=document.getElementById('seance-btn');
+  if(btn){btn.textContent='✅ Séance terminée';btn.style.background='#e8f5e9';btn.style.color='#2e7d32';btn.style.border='none';btn.disabled=true;}
+  const todayBadge=document.getElementById('today-badge');
+  if(todayBadge){todayBadge.textContent='✓ Fait';todayBadge.style.background='#e8f5e9';todayBadge.style.color='#2e7d32';}
+  showScreen('home');
 }
 
 // ---- CALENDAR ----
 function buildCal(){
   const grid=document.getElementById('cal-grid');
+  if(!grid) return;
   grid.innerHTML='';
-  const offset=1;
+  const today=new Date().getDate();
+  const offset=1; // avril 2025 commence un mardi
   for(let i=0;i<offset;i++) grid.appendChild(document.createElement('div'));
   for(let d=1;d<=30;d++){
     const day=document.createElement('div');
     day.className='cal-day';
     const num=document.createElement('div');
-    num.className='cal-num'+(d===7?' today':'');
+    num.className='cal-num'+(d===today?' today':'');
     num.textContent=d;
     num.onclick=()=>showCalDetail(d);
     day.appendChild(num);
     const dots=document.createElement('div');
     dots.className='cal-dots';
-    if(calData[d]) calData[d].sessions.forEach(u=>{const dot=document.createElement('span');dot.className='dot dot-'+u;dots.appendChild(dot);});
+    if(calData[d]) calData[d].sessions.forEach(u=>{const dot=document.createElement('span');dot.className='dot dot-'+u;dot.style.marginTop='1px';dots.appendChild(dot);});
     day.appendChild(dots);
     grid.appendChild(day);
   }
@@ -813,14 +928,17 @@ function buildCal(){
 
 function showCalDetail(d){
   const det=document.getElementById('cal-detail');
+  const names={mus:'Mus',belaid:'Belaid',quentin:'Quentin',seb:'Seb'};
   document.getElementById('cal-detail-title').textContent=d+' avril 2025';
   const body=document.getElementById('cal-detail-body');
-  if(!calData[d]){body.innerHTML='<div style="font-size:13px;color:#888">Pas de séance ce jour.</div>';}
-  else{
-    const map={moi:'Moi',alex:'Alex',sam:'Sam',lea:'Léa'};
+  if(!calData[d]){
+    body.innerHTML='<div style="font-size:13px;color:#888">Pas de séance ce jour.</div>';
+  } else {
     let html='<div style="font-size:13px;font-weight:700;margin-bottom:8px">'+calData[d].name+'</div>';
-    if(calData[d].sessions.length) html+=calData[d].sessions.map(u=>'<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:13px"><span class="dot dot-'+u+'"></span>'+map[u]+' a complété ✓</div>').join('');
-    if(calData[d].future) html+='<div style="font-size:12px;color:#888">Séance programmée</div>';
+    if(calData[d].sessions.length){
+      html+=calData[d].sessions.map(u=>'<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:13px"><span class="dot dot-'+u+'"></span>'+names[u]+' a complété ✓</div>').join('');
+    }
+    if(calData[d].future) html+='<div style="font-size:12px;color:#888;margin-top:4px">Séance programmée</div>';
     body.innerHTML=html;
   }
   det.style.display='block';
@@ -828,29 +946,104 @@ function showCalDetail(d){
 
 // ---- EXERCISES ----
 function showCat(cat,btn){
-  currentCat=cat;
-  if(btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
+  if(btn){document.querySelectorAll('#screen-exercises .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
   const list=exercises[cat];
   const showAll=showingAll[cat];
   const shown=showAll?list:list.slice(0,4);
   let html='<div class="card card-sm">';
-  shown.forEach(ex=>{
-    html+='<div class="ex-row"><div class="ex-icon">'+ex.icon+'</div><div class="ex-info"><div class="ex-name">'+ex.name+'</div><div class="ex-detail">'+ex.detail+' · '+(ex.type==='reps'?'Répétitions':'Temps')+'</div></div><span class="badge badge-'+(ex.type==='reps'?'blue':'amber')+'" style="font-size:10px">'+(ex.type==='reps'?'↻ reps':'⏱ temps')+'</span></div>';
+  shown.forEach((ex,i)=>{
+    html+='<div class="ex-row" style="cursor:pointer" onclick="showExDetail(\''+cat+'\','+i+')">';
+    html+='<div class="ex-icon">'+ex.icon+'</div>';
+    html+='<div class="ex-info"><div class="ex-name">'+ex.name+'</div><div class="ex-detail">'+ex.detail+'</div></div>';
+    html+='<span class="badge badge-'+(ex.type==='reps'?'blue':'amber')+'" style="font-size:10px">'+(ex.type==='reps'?'reps':'temps')+'</span>';
+    html+='</div>';
   });
   if(!showAll&&list.length>4) html+='<div style="text-align:center;padding:8px 0"><button class="btn btn-sm" style="border-color:#ddd" onclick="toggleAllEx(\''+cat+'\')">Voir '+(list.length-4)+' de plus</button></div>';
   html+='</div>';
   document.getElementById('ex-list').innerHTML=html;
 }
 
+function showExDetail(cat,idx){
+  const ex=exercises[cat][idx];
+  const el=document.getElementById('ex-list');
+  let html='<div class="card"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:36px">'+ex.icon+'</div><div><div style="font-size:18px;font-weight:700">'+ex.name+'</div><div style="font-size:12px;color:#888;margin-top:2px">'+ex.detail+'</div></div></div>';
+  html+='<div style="font-size:13px;font-weight:600;margin-bottom:8px">Comment faire :</div>';
+  ex.instrs.forEach((step,i)=>{html+='<div class="instr-step"><div class="instr-num">'+(i+1)+'</div><div class="instr-text">'+step+'</div></div>';});
+  if(ex.warn) html+='<div class="instr-warn" style="margin-top:8px">⚠️ '+ex.warn+'</div>';
+  if(ex.muscles) html+='<div class="muscles" style="margin-top:10px">'+ex.muscles.map(m=>'<span class="muscle-tag">'+m+'</span>').join('')+'</div>';
+  if(ex.type==='reps'){
+    const maxVal=cat==='pompes'?USER.maxPompes:cat==='abdos'&&idx===0?USER.maxCrunchs:cat==='traction'?USER.maxTractions:20;
+    const seance=Math.round(maxVal*0.6);
+    html+='<div style="background:#e3f2fd;border-radius:10px;padding:10px 12px;margin-top:12px;font-size:13px;color:#1565c0"><strong>Ton objectif aujourd\'hui :</strong> '+seance+' reps (60% de ton max: '+maxVal+')</div>';
+  }
+  html+='<button class="btn" style="margin-top:12px" onclick="showCat(\''+cat+'\',null)">← Retour</button></div>';
+  el.innerHTML=html;
+}
+
 function toggleAllEx(cat){showingAll[cat]=!showingAll[cat];showCat(cat,null);}
 
-// ---- PROFILE ----
-function updStat(id,val,unit){
-  document.getElementById(id).textContent=val+(unit?' '+unit:' reps');
+// ---- STATS ----
+function buildStats(){
+  // Bar chart semaine
+  const days=['Lu','Ma','Me','Je','Ve','Sa','Di'];
+  const today=new Date().getDay();
+  const todayIdx=today===0?6:today-1;
+  let bars='',labels='';
+  const heights=[40,0,65,80,0,50,0];
+  days.forEach((d,i)=>{
+    const h=state.weekData[i]?heights[i]:0;
+    bars+='<div class="bar'+(i===todayIdx?' active-bar':'')+'" style="height:'+(h||4)+'px"></div>';
+    labels+='<div class="bar-label">'+d+'</div>';
+  });
+  const wc=document.getElementById('week-chart');
+  const wl=document.getElementById('week-labels');
+  if(wc) wc.innerHTML=bars;
+  if(wl) wl.innerHTML=labels;
+
+  // Streak grid
+  const sg=document.getElementById('streak-grid');
+  if(sg){
+    let html='';
+    state.streakData.forEach((done,i)=>{
+      html+='<div class="streak-day'+(done?' done':'')+(i===state.streakData.length-1?' today':'')+'"></div>';
+    });
+    sg.innerHTML=html;
+  }
+
+  // Stats counter
+  const ss=document.getElementById('stat-seances');
+  if(ss) ss.textContent=state.totalSeances;
+  const sk=document.getElementById('stat-streak');
+  if(sk) sk.textContent=state.streak+'🔥';
+
+  // Group activity
+  const ga=document.getElementById('group-activity');
+  if(ga){
+    const members=[
+      {name:'Mus',init:'MU',cls:'av-mus',seances:state.totalSeances,color:'#e91e63'},
+      {name:'Belaid',init:'BE',cls:'av-belaid',seances:5,color:'#1e88e5'},
+      {name:'Quentin',init:'QU',cls:'av-quentin',seances:4,color:'#43a047'},
+      {name:'Seb',init:'SE',cls:'av-seb',seances:3,color:'#fb8c00'},
+    ];
+    const maxS=Math.max(...members.map(m=>m.seances));
+    let html='';
+    members.forEach(m=>{
+      const pct=Math.round(m.seances/maxS*100);
+      html+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">';
+      html+='<div class="avatar '+m.cls+'" style="width:32px;height:32px;font-size:11px">'+m.init+'</div>';
+      html+='<div style="flex:1"><div style="font-size:13px;font-weight:600;margin-bottom:4px">'+m.name+' · '+m.seances+' séances</div>';
+      html+='<div class="prog-bar"><div class="prog-fill" style="width:'+pct+'%;background:'+m.color+'"></div></div></div>';
+      html+='</div>';
+    });
+    ga.innerHTML=html;
+  }
 }
+
+// ---- PROFILE ----
+function updStat(id,val,unit){document.getElementById(id).textContent=val+' '+unit;}
 function selObj(o){
-  ['forme','end','force'].forEach(k=>{const b=document.getElementById('obj-'+k);b.style.background='';b.style.color='';b.style.borderColor='';});
-  const b=document.getElementById('obj-'+o);b.style.background='#e3f2fd';b.style.color='#1565c0';b.style.borderColor='#1565c0';
+  ['forme','end','force'].forEach(k=>{const b=document.getElementById('obj-'+k);if(b){b.style.background='';b.style.color='';b.style.borderColor='';}});
+  const b=document.getElementById('obj-'+o);if(b){b.style.background='#e3f2fd';b.style.color='#1565c0';b.style.borderColor='#1565c0';}
 }
 
 // ---- RUNNING ----
@@ -860,34 +1053,40 @@ function startRunTimer(){
     if(!runPaused){
       runSec++;
       const m=Math.floor(runSec/60),s=runSec%60;
-      document.getElementById('run-time').textContent=m+':'+(s<10?'0':'')+s;
-      document.getElementById('run-dist').textContent=(2.1+runSec*0.003).toFixed(1);
-      document.getElementById('run-hr').textContent=145+Math.round(Math.sin(runSec/8)*6);
+      const rt=document.getElementById('run-time');
+      if(rt) rt.textContent=m+':'+(s<10?'0':'')+s;
+      const rd=document.getElementById('run-dist');
+      if(rd) rd.textContent=(2.1+runSec*0.003).toFixed(1);
+      const rh=document.getElementById('run-hr');
+      if(rh) rh.textContent=145+Math.round(Math.sin(runSec/8)*6);
     }
   },1000);
 }
 function toggleRun(){
   runPaused=!runPaused;
-  document.getElementById('run-pause-btn').textContent=runPaused?'▶ Reprendre':'⏸ Pause';
+  const btn=document.getElementById('run-pause-btn');
+  if(btn) btn.textContent=runPaused?'▶ Reprendre':'⏸ Pause';
 }
 function showRunTab(id,btn){
-  ['live','prog','hist'].forEach(t=>{document.getElementById('rtab-'+t).style.display='none';});
-  document.getElementById('rtab-'+id).style.display='block';
+  ['live','prog','hist'].forEach(t=>{const el=document.getElementById('rtab-'+t);if(el)el.style.display='none';});
+  const el=document.getElementById('rtab-'+id);if(el)el.style.display='block';
   if(btn){document.querySelectorAll('#screen-running .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
 }
+
+// ---- YOGA ----
 function showYogaTab(id,btn){
-  ['session','poses','breath'].forEach(t=>{document.getElementById('ytab-'+t).style.display='none';});
-  document.getElementById('ytab-'+id).style.display='block';
+  ['session','poses','breath'].forEach(t=>{const el=document.getElementById('ytab-'+t);if(el)el.style.display='none';});
+  const el=document.getElementById('ytab-'+id);if(el)el.style.display='block';
   if(btn){document.querySelectorAll('#screen-yoga .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
 }
 function selYoga(type,el){
-  ['flex','strength','relax','morning'].forEach(t=>{const c=document.getElementById('ycard-'+t);c.style.border='1.5px solid #eee';});
+  ['flex','strength','relax','morning'].forEach(t=>{const c=document.getElementById('ycard-'+t);if(c)c.style.border='1.5px solid #eee';});
   el.style.border='2px solid #7c4dff';
 }
 
 // ---- BREATH ----
 function selBreath(type,btn){
-  ['478','box','ujjayi'].forEach(t=>{const b=document.getElementById('btype-'+t);b.style.background='';b.style.color='';b.style.borderColor='';});
+  ['478','box','ujjayi'].forEach(t=>{const b=document.getElementById('btype-'+t);if(b){b.style.background='';b.style.color='';b.style.borderColor='';}});
   btn.style.background='#ede7f6';btn.style.color='#4527a0';btn.style.borderColor='#7c4dff';
   currentBreath=type;
   const bt=breathTypes[type];
@@ -913,24 +1112,27 @@ function runBreath(){
     document.getElementById('breath-circle').style.height=phase.sz;
     document.getElementById('breath-circle').style.background=phase.bg;
     breathPhaseT++;
-    if(breathPhaseT>=phase.dur){breathPhaseT=0;breathPhaseIdx=(breathPhaseIdx+1)%bt.phases.length;if(breathPhaseIdx===0){breathCycles++;document.getElementById('breath-cycles').textContent=breathCycles+(breathCycles>1?' cycles':' cycle');}}
+    if(breathPhaseT>=phase.dur){
+      breathPhaseT=0;breathPhaseIdx=(breathPhaseIdx+1)%bt.phases.length;
+      if(breathPhaseIdx===0){breathCycles++;document.getElementById('breath-cycles').textContent=breathCycles+(breathCycles>1?' cycles':' cycle');}
+    }
   },1000);
 }
 function resetBreath(){
   breathRunning=false;
   if(breathInterval){clearInterval(breathInterval);breathInterval=null;}
   breathCycles=0;breathPhaseIdx=0;breathPhaseT=0;
-  document.getElementById('breath-btn').textContent='▶ Démarrer';
-  document.getElementById('breath-phase').textContent='Prêt';
-  document.getElementById('breath-count').textContent='—';
-  document.getElementById('breath-cycles').textContent='0 cycles';
-  const c=document.getElementById('breath-circle');
-  c.style.width='100px';c.style.height='100px';c.style.background='#f0f0f0';
+  const btn=document.getElementById('breath-btn');if(btn) btn.textContent='▶ Démarrer';
+  const bp=document.getElementById('breath-phase');if(bp) bp.textContent='Prêt';
+  const bc=document.getElementById('breath-count');if(bc) bc.textContent='—';
+  const bcy=document.getElementById('breath-cycles');if(bcy) bcy.textContent='0 cycles';
+  const circle=document.getElementById('breath-circle');
+  if(circle){circle.style.width='100px';circle.style.height='100px';circle.style.background='#f0f0f0';}
 }
 
 // ---- INIT ----
-buildCal();
-showCat('pompes',null);
+initDate();
+updateHomeNotif();
 </script>
 </body>
 </html>
