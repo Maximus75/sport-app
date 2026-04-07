@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#185FA5">
+<title>Sport Squad</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#1a1a1a;min-height:100vh;max-width:430px;margin:0 auto;position:relative}
+/* NAV */
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:#fff;border-top:1px solid #e5e5e5;display:flex;z-index:100;padding-bottom:env(safe-area-inset-bottom)}
+.nav-btn{flex:1;padding:10px 4px 8px;border:none;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;color:#888;font-size:10px;font-weight:500}
+.nav-btn.active{color:#185FA5}
+.nav-icon{font-size:20px;line-height:1}
+/* SCREENS */
+.screen{display:none;padding:16px 16px 80px;min-height:100vh}
+.screen.active{display:block}
+/* CARDS */
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,0.07)}
+.card-sm{padding:12px 14px}
+/* TYPOGRAPHY */
+.page-title{font-size:22px;font-weight:600;margin-bottom:2px}
+.page-sub{font-size:13px;color:#888;margin-bottom:16px}
+.section-title{font-size:16px;font-weight:600;margin:16px 0 10px}
+/* BADGES */
+.badge{font-size:11px;padding:3px 9px;border-radius:20px;font-weight:600}
+.badge-green{background:#e8f5e9;color:#2e7d32}
+.badge-blue{background:#e3f2fd;color:#1565c0}
+.badge-amber{background:#fff8e1;color:#e65100}
+.badge-purple{background:#f3e5f5;color:#6a1b9a}
+.badge-gray{background:#f5f5f5;color:#666}
+/* BUTTONS */
+.btn{display:block;width:100%;padding:14px;border-radius:12px;border:1.5px solid #ddd;background:#fff;font-size:15px;font-weight:600;cursor:pointer;text-align:center;transition:all .15s;color:#1a1a1a}
+.btn:active{transform:scale(0.98)}
+.btn-blue{background:#185FA5;color:#fff;border-color:#185FA5}
+.btn-blue:active{background:#0C447C}
+.btn-purple{background:#534AB7;color:#fff;border-color:#534AB7}
+.btn-green{background:#2e7d32;color:#fff;border-color:#2e7d32}
+.btn-sm{padding:8px 14px;font-size:13px;width:auto;display:inline-block;border-radius:20px}
+/* AVATAR */
+.avatar{border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0}
+.av-moi{background:#ede7f6;color:#4527a0}
+.av-alex{background:#e3f2fd;color:#1565c0}
+.av-sam{background:#e8f5e9;color:#2e7d32}
+.av-lea{background:#fff8e1;color:#e65100}
+/* DOT */
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dot-moi{background:#7c4dff}
+.dot-alex{background:#1e88e5}
+.dot-sam{background:#43a047}
+.dot-lea{background:#fb8c00}
+/* EXERCISE ROW */
+.ex-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f0f0f0}
+.ex-row:last-child{border-bottom:none}
+.ex-icon{width:44px;height:44px;border-radius:12px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ex-info{flex:1}
+.ex-name{font-size:14px;font-weight:600}
+.ex-detail{font-size:12px;color:#888;margin-top:2px}
+.ex-reps{font-size:15px;font-weight:700;color:#185FA5;text-align:right}
+.ex-reps-sub{font-size:10px;color:#aaa;text-align:right}
+/* STAT BOX */
+.stat-box{background:#f8f9fa;border-radius:12px;padding:12px;text-align:center}
+.stat-val{font-size:22px;font-weight:700}
+.stat-lbl{font-size:11px;color:#888;margin-top:2px}
+/* PROGRESS */
+.prog-bar{height:5px;background:#eee;border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;border-radius:3px;transition:width .4s}
+/* TABS */
+.tabs{display:flex;background:#f0f0f0;border-radius:10px;padding:3px;margin-bottom:14px}
+.tab{flex:1;padding:7px;font-size:12px;font-weight:600;text-align:center;border-radius:8px;cursor:pointer;color:#888;border:none;background:none;transition:all .15s}
+.tab.active{background:#fff;color:#1a1a1a;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+/* NOTIF BANNER */
+.notif-banner{background:#e3f2fd;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+/* FRIEND ROW */
+.friend-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f0f0}
+.friend-row:last-child{border-bottom:none}
+/* CALENDAR */
+.cal-header{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-day-label{text-align:center;font-size:10px;font-weight:600;color:#aaa;padding:4px 0}
+.cal-day{text-align:center;padding:4px 2px}
+.cal-num{font-size:13px;font-weight:600;padding:5px 3px;border-radius:8px;cursor:pointer;transition:background .1s}
+.cal-num:hover{background:#f0f0f0}
+.cal-num.today{background:#185FA5;color:#fff}
+.cal-dots{display:flex;justify-content:center;gap:2px;margin-top:3px;min-height:9px}
+/* COACH SCREEN */
+.coach-video{background:#f0f0f0;border-radius:16px;height:170px;display:flex;align-items:center;justify-content:center;margin:12px 0;position:relative;overflow:hidden}
+.play-btn{width:56px;height:56px;border-radius:50%;background:rgba(24,95,165,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;border:none}
+.timer-ring{position:relative;width:160px;height:160px;margin:0 auto}
+.timer-ring svg{transform:rotate(-90deg)}
+.timer-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.timer-big{font-size:38px;font-weight:700;line-height:1}
+.timer-lbl{font-size:12px;color:#888;margin-top:3px}
+.step-dots{display:flex;gap:4px;justify-content:center;margin:12px 0}
+.step-dot-el{width:8px;height:8px;border-radius:50%;background:#ddd}
+.step-dot-el.done{background:#185FA5}
+.step-dot-el.current{width:24px;border-radius:4px;background:#185FA5}
+/* SLIDER */
+.slider-row{display:flex;align-items:center;gap:10px;margin:8px 0}
+.slider-row label{font-size:13px;color:#888;width:100px;flex-shrink:0}
+.slider-row input[type=range]{flex:1;accent-color:#185FA5}
+.slider-row span{font-size:13px;font-weight:600;min-width:44px;text-align:right}
+/* MAP */
+.map-box{background:#e8f4f8;border-radius:14px;height:185px;position:relative;overflow:hidden;margin-bottom:12px}
+/* ZONE BAR */
+.zone-bar{height:8px;border-radius:4px;display:flex;overflow:hidden;margin:6px 0}
+.zone-seg{flex:1;transition:opacity .3s}
+/* BREATH */
+.breath-circle{width:100px;height:100px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;margin:0 auto;transition:all 3s ease-in-out;border:2px solid #ddd}
+/* POSE GRID */
+.pose-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.pose-card{background:#fff;border:1.5px solid #eee;border-radius:14px;padding:12px;cursor:pointer;transition:all .15s}
+.pose-card:hover{border-color:#7c4dff}
+.pose-card.selected{border-color:#7c4dff;border-width:2px}
+/* DONE SCREEN */
+.done-circle{width:80px;height:80px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:36px}
+/* RUNNING HISTORY ROW */
+.run-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f0f0f0}
+.run-row:last-child{border-bottom:none}
+/* PULSE ANIM */
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.pulse{animation:pulse 1.2s ease-in-out infinite}
+/* BREATH ANIM */
+@keyframes breathe-in{from{width:90px;height:90px}to{width:130px;height:130px}}
+@keyframes breathe-out{from{width:130px;height:130px}to{width:90px;height:90px}}
+</style>
+</head>
+<body>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button class="nav-btn active" onclick="showScreen('home')"><span class="nav-icon">🏠</span>Accueil</button>
+  <button class="nav-btn" onclick="showScreen('calendar')"><span class="nav-icon">📅</span>Calendrier</button>
+  <button class="nav-btn" onclick="showScreen('exercises')"><span class="nav-icon">🏋️</span>Exercices</button>
+  <button class="nav-btn" onclick="showScreen('friends')"><span class="nav-icon">👥</span>Amis</button>
+  <button class="nav-btn" onclick="showScreen('profile')"><span class="nav-icon">👤</span>Profil</button>
+</nav>
+
+<!-- ===== HOME ===== -->
+<div id="screen-home" class="screen active">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+    <div>
+      <div class="page-title">Bonjour, Maximus 👋</div>
+      <div class="page-sub">Mardi 7 avril · Jour 12 de ton programme</div>
+    </div>
+    <div class="avatar av-moi" style="width:44px;height:44px;font-size:16px">MA</div>
+  </div>
+
+  <div class="notif-banner">
+    <div class="avatar av-alex" style="width:30px;height:30px;font-size:12px">AL</div>
+    <div style="flex:1;font-size:13px;color:#1565c0">Alex a terminé sa séance <strong>il y a 23 min</strong> 💪</div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;color:#185FA5;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">Séance du jour</div>
+        <div style="font-size:18px;font-weight:700">Circuit Force + Cardio</div>
+        <div style="font-size:12px;color:#888;margin-top:3px">6 exercices · ~35 min · Adapté pour toi</div>
+      </div>
+      <span class="badge badge-gray">À faire</span>
+    </div>
+    <div style="margin-bottom:14px">
+      <div class="ex-row">
+        <div class="ex-icon">💪</div>
+        <div class="ex-info"><div class="ex-name">Pompes classiques</div><div class="ex-detail">Repos 60s</div></div>
+        <div><div class="ex-reps">12 reps</div><div class="ex-reps-sub">ton max: 20</div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-icon">🏋️</div>
+        <div class="ex-info"><div class="ex-name">Kettlebell swing</div><div class="ex-detail">16 kg · Repos 90s</div></div>
+        <div><div class="ex-reps">15 reps</div><div class="ex-reps-sub">60%</div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-icon">📐</div>
+        <div class="ex-info"><div class="ex-name">Planche</div><div class="ex-detail">Isométrique</div></div>
+        <div><div class="ex-reps">45 sec</div><div class="ex-reps-sub">max: 75s</div></div>
+      </div>
+      <div class="ex-row" style="opacity:.4">
+        <div class="ex-icon" style="font-size:14px">···</div>
+        <div class="ex-info"><div class="ex-name" style="font-size:13px;color:#888">3 autres exercices</div><div class="ex-detail">Crunch · Tractions · Burpees</div></div>
+      </div>
+    </div>
+    <button class="btn btn-blue" onclick="showCoach()">🏃 Démarrer la séance</button>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+    <div class="card card-sm" style="text-align:center;margin-bottom:0">
+      <div style="font-size:22px;font-weight:700;color:#185FA5">5</div>
+      <div style="font-size:11px;color:#888">séances</div>
+    </div>
+    <div class="card card-sm" style="text-align:center;margin-bottom:0">
+      <div style="font-size:22px;font-weight:700;color:#43a047">3/4</div>
+      <div style="font-size:11px;color:#888">amis actifs</div>
+    </div>
+    <div class="card card-sm" style="text-align:center;margin-bottom:0">
+      <div style="font-size:22px;font-weight:700;color:#fb8c00">12</div>
+      <div style="font-size:11px;color:#888">jours suite</div>
+    </div>
+  </div>
+
+  <div class="section-title">Autres activités</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <button class="card card-sm" style="border:none;cursor:pointer;text-align:left" onclick="showScreen('running')">
+      <div style="font-size:28px;margin-bottom:6px">🏃</div>
+      <div style="font-weight:700;font-size:14px">Running GPS</div>
+      <div style="font-size:12px;color:#888;margin-top:2px">Démarrer une sortie</div>
+    </button>
+    <button class="card card-sm" style="border:none;cursor:pointer;text-align:left" onclick="showScreen('yoga')">
+      <div style="font-size:28px;margin-bottom:6px">🧘</div>
+      <div style="font-weight:700;font-size:14px">Yoga</div>
+      <div style="font-size:12px;color:#888;margin-top:2px">Flexibilité · Zen</div>
+    </button>
+  </div>
+</div>
+
+<!-- ===== COACH ===== -->
+<div id="screen-coach" class="screen" style="padding:16px 16px 80px">
+  <div id="coach-main">
+    <div style="text-align:center;margin-bottom:8px">
+      <div style="font-size:12px;color:#888;margin-bottom:8px" id="coach-step-lbl">Exercice 1 / 6</div>
+      <div class="step-dots" id="coach-dots"></div>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-size:44px;margin-bottom:8px" id="coach-icon">💪</div>
+      <div style="font-size:20px;font-weight:700;margin-bottom:4px" id="coach-name">Pompes classiques</div>
+      <div style="font-size:13px;color:#888;margin-bottom:12px" id="coach-tip">Bras largeur épaules · Dos droit · Descente contrôlée</div>
+      <div class="coach-video" id="coach-video">
+        <button class="play-btn" onclick="toggleVideo()">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="#185FA5"><polygon points="7,4 18,11 7,18"/></svg>
+        </button>
+        <div style="position:absolute;bottom:10px;font-size:12px;color:#666" id="video-lbl">Voir la démo</div>
+      </div>
+      <div style="padding:16px 0 8px">
+        <div class="timer-ring">
+          <svg width="160" height="160" viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="68" fill="none" stroke="#f0f0f0" stroke-width="10"/>
+            <circle id="timer-arc" cx="80" cy="80" r="68" fill="none" stroke="#185FA5" stroke-width="10" stroke-linecap="round" stroke-dasharray="427" stroke-dashoffset="0" style="transition:stroke-dashoffset 1s linear"/>
+          </svg>
+          <div class="timer-num">
+            <div class="timer-big" id="timer-display">12</div>
+            <div class="timer-lbl" id="timer-type">reps</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:#888;margin-top:8px" id="coach-perc">60% de ton max</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px">
+        <button class="btn" id="start-btn" onclick="startExercise()">▶ Démarrer</button>
+        <button class="btn btn-blue" id="next-btn" onclick="nextExercise()" style="display:none">Suivant →</button>
+      </div>
+      <button class="btn" style="margin-top:8px;color:#888;font-size:13px" onclick="showScreen('home')">← Quitter</button>
+    </div>
+  </div>
+  <div id="coach-rest" style="display:none">
+    <div class="card" style="text-align:center;padding:32px 20px">
+      <div style="font-size:44px;margin-bottom:12px">😮‍💨</div>
+      <div style="font-size:20px;font-weight:700;margin-bottom:6px">Repos</div>
+      <div style="font-size:13px;color:#888;margin-bottom:20px">Bien joué ! Prépare-toi pour le suivant.</div>
+      <div style="font-size:52px;font-weight:700;color:#185FA5;margin-bottom:16px" id="rest-count">60</div>
+      <div class="prog-bar"><div class="prog-fill" id="rest-bar" style="width:100%;background:#185FA5"></div></div>
+      <button class="btn btn-blue" style="margin-top:20px" onclick="skipRest()">Passer →</button>
+    </div>
+  </div>
+  <div id="coach-done" style="display:none">
+    <div class="card" style="text-align:center;padding:32px 20px">
+      <div class="done-circle">🎉</div>
+      <div style="font-size:22px;font-weight:700;margin-bottom:6px">Séance terminée !</div>
+      <div style="font-size:14px;color:#888;margin-bottom:24px">Tu as tout déchiré aujourd'hui 💪</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:24px">
+        <div class="stat-box"><div class="stat-val">6</div><div class="stat-lbl">exercices</div></div>
+        <div class="stat-box"><div class="stat-val">34</div><div class="stat-lbl">minutes</div></div>
+        <div class="stat-box"><div class="stat-val">↑</div><div class="stat-lbl">PB pompes</div></div>
+      </div>
+      <div style="font-size:13px;color:#888;margin-bottom:16px">Tes amis sont notifiés 🔔</div>
+      <button class="btn btn-blue" onclick="showScreen('home')">Retour à l'accueil</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CALENDAR ===== -->
+<div id="screen-calendar" class="screen">
+  <div class="page-title">Calendrier</div>
+  <div class="page-sub">Avril 2025</div>
+
+  <div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap">
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-moi"></span>Moi</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-alex"></span>Alex</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-sam"></span>Sam</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-lea"></span>Léa</span>
+  </div>
+
+  <div class="card card-sm">
+    <div class="cal-header">
+      <div class="cal-day-label">Lu</div><div class="cal-day-label">Ma</div><div class="cal-day-label">Me</div>
+      <div class="cal-day-label">Je</div><div class="cal-day-label">Ve</div><div class="cal-day-label">Sa</div><div class="cal-day-label">Di</div>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+  </div>
+
+  <div id="cal-detail" class="card card-sm" style="display:none">
+    <div style="font-weight:700;margin-bottom:10px" id="cal-detail-title"></div>
+    <div id="cal-detail-body"></div>
+  </div>
+
+  <div class="section-title">À venir</div>
+  <div class="card card-sm">
+    <div class="ex-row">
+      <div class="ex-icon" style="background:#e3f2fd;font-size:14px;font-weight:700;color:#1565c0">7</div>
+      <div class="ex-info"><div class="ex-name">Circuit Force + Cardio</div><div class="ex-detail">Aujourd'hui</div></div>
+      <span class="badge badge-gray">À faire</span>
+    </div>
+    <div class="ex-row">
+      <div class="ex-icon" style="font-size:14px;font-weight:700">9</div>
+      <div class="ex-info"><div class="ex-name">HIIT Interval</div><div class="ex-detail">Jeudi 9 avril</div></div>
+      <span class="badge badge-gray">Programmé</span>
+    </div>
+    <div class="ex-row" style="border-bottom:none">
+      <div class="ex-icon" style="font-size:14px;font-weight:700">12</div>
+      <div class="ex-info"><div class="ex-name">Tractions + Abdos</div><div class="ex-detail">Dimanche 12 avril</div></div>
+      <span class="badge badge-gray">Programmé</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EXERCISES ===== -->
+<div id="screen-exercises" class="screen">
+  <div class="page-title">Exercices</div>
+  <div class="page-sub">Base complète · Adaptée à ton niveau</div>
+  <div class="tabs">
+    <button class="tab active" onclick="showCat('pompes',this)">💪 Pompes</button>
+    <button class="tab" onclick="showCat('abdos',this)">🔄 Abdos</button>
+    <button class="tab" onclick="showCat('traction',this)">🧗 Tract.</button>
+    <button class="tab" onclick="showCat('kb',this)">🏋️ KB</button>
+    <button class="tab" onclick="showCat('hiit',this)">🔥 HIIT</button>
+  </div>
+  <div id="ex-list"></div>
+  <button class="btn" style="margin-top:4px">+ Ajouter un exercice</button>
+</div>
+
+<!-- ===== FRIENDS ===== -->
+<div id="screen-friends" class="screen">
+  <div class="page-title">Amis</div>
+  <div class="page-sub">Ton groupe · 4 membres</div>
+  <div class="card card-sm">
+    <div class="friend-row">
+      <div class="avatar av-alex" style="width:40px;height:40px;font-size:15px">AL</div>
+      <div style="flex:1"><div style="font-weight:600;font-size:14px">Alex</div><div style="font-size:12px;color:#888">Séance terminée · il y a 23 min</div></div>
+      <span class="badge badge-green">✓ Fait</span>
+    </div>
+    <div class="friend-row">
+      <div class="avatar av-sam" style="width:40px;height:40px;font-size:15px">SA</div>
+      <div style="flex:1"><div style="font-weight:600;font-size:14px">Sam</div><div style="font-size:12px;color:#888">Séance terminée · il y a 2h</div></div>
+      <span class="badge badge-green">✓ Fait</span>
+    </div>
+    <div class="friend-row">
+      <div class="avatar av-lea" style="width:40px;height:40px;font-size:15px">LE</div>
+      <div style="flex:1"><div style="font-weight:600;font-size:14px">Léa</div><div style="font-size:12px;color:#888">Pas encore aujourd'hui</div></div>
+      <span class="badge badge-gray">En attente</span>
+    </div>
+  </div>
+  <div class="section-title">Notifications récentes</div>
+  <div class="card card-sm">
+    <div class="ex-row"><div style="font-size:20px">💪</div><div style="flex:1"><div style="font-size:13px"><strong>Alex</strong> a terminé Circuit Force + Cardio</div><div style="font-size:11px;color:#aaa;margin-top:2px">Il y a 23 min</div></div></div>
+    <div class="ex-row"><div style="font-size:20px">💪</div><div style="flex:1"><div style="font-size:13px"><strong>Sam</strong> a terminé Circuit Force + Cardio</div><div style="font-size:11px;color:#aaa;margin-top:2px">Il y a 2h</div></div></div>
+    <div class="ex-row"><div style="font-size:20px">🔥</div><div style="flex:1"><div style="font-size:13px"><strong>Alex</strong> a battu son record de pompes (32 reps !)</div><div style="font-size:11px;color:#aaa;margin-top:2px">Hier</div></div></div>
+    <div class="ex-row" style="border-bottom:none"><div style="font-size:20px">💪</div><div style="flex:1"><div style="font-size:13px"><strong>Léa</strong> a terminé HIIT Interval</div><div style="font-size:11px;color:#aaa;margin-top:2px">Il y a 2 jours</div></div></div>
+  </div>
+  <button class="btn" style="margin-top:4px">+ Inviter un ami</button>
+</div>
+
+<!-- ===== PROFILE ===== -->
+<div id="screen-profile" class="screen">
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
+    <div class="avatar av-moi" style="width:60px;height:60px;font-size:22px">MA</div>
+    <div><div style="font-size:20px;font-weight:700">Maximus</div><div style="font-size:13px;color:#888">Membre depuis mars 2025</div></div>
+  </div>
+  <div style="font-size:16px;font-weight:700;margin-bottom:10px">Mes capacités</div>
+  <div class="card card-sm">
+    <div class="slider-row"><label>Max pompes</label><input type="range" min="5" max="60" value="20" oninput="updStat('sp',this.value)"><span id="sp">20 reps</span></div>
+    <div class="slider-row"><label>Max crunchs</label><input type="range" min="5" max="100" value="40" oninput="updStat('sc',this.value)"><span id="sc">40 reps</span></div>
+    <div class="slider-row"><label>Max tractions</label><input type="range" min="0" max="30" value="5" oninput="updStat('st',this.value)"><span id="st">5 reps</span></div>
+    <div class="slider-row"><label>Kettlebell</label><input type="range" min="8" max="48" step="4" value="16" oninput="updStat('sk',this.value,'kg')"><span id="sk">16 kg</span></div>
+  </div>
+  <div style="font-size:16px;font-weight:700;margin:16px 0 10px">Stats du mois</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div class="stat-box"><div class="stat-val">5</div><div class="stat-lbl">Séances</div></div>
+    <div class="stat-box"><div class="stat-val">2h47</div><div class="stat-lbl">Temps total</div></div>
+    <div class="stat-box"><div class="stat-val">+4</div><div class="stat-lbl">Pompes max</div></div>
+    <div class="stat-box"><div class="stat-val" style="color:#fb8c00">12🔥</div><div class="stat-lbl">Série actuelle</div></div>
+  </div>
+  <div style="font-size:16px;font-weight:700;margin:16px 0 10px">Objectif</div>
+  <div class="card card-sm">
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-sm" id="obj-forme" onclick="selObj('forme')" style="background:#e3f2fd;color:#1565c0;border-color:#1565c0">Remise en forme</button>
+      <button class="btn btn-sm" id="obj-end" onclick="selObj('end')">Endurance</button>
+      <button class="btn btn-sm" id="obj-force" onclick="selObj('force')">Force</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== RUNNING ===== -->
+<div id="screen-running" class="screen">
+  <button onclick="showScreen('home')" style="background:none;border:none;font-size:13px;color:#888;cursor:pointer;margin-bottom:12px">← Retour</button>
+  <div class="page-title">Running GPS 🏃</div>
+  <div class="tabs">
+    <button class="tab active" onclick="showRunTab('live',this)">En direct</button>
+    <button class="tab" onclick="showRunTab('prog',this)">Programmes</button>
+    <button class="tab" onclick="showRunTab('hist',this)">Historique</button>
+  </div>
+  <!-- LIVE -->
+  <div id="rtab-live">
+    <div class="map-box">
+      <svg width="100%" height="185" viewBox="0 0 400 185">
+        <rect width="400" height="185" fill="#e8f4f8"/>
+        <line x1="0" y1="62" x2="400" y2="62" stroke="#cde" stroke-width="0.7"/>
+        <line x1="0" y1="104" x2="400" y2="104" stroke="#cde" stroke-width="0.7"/>
+        <line x1="0" y1="146" x2="400" y2="146" stroke="#cde" stroke-width="0.7"/>
+        <line x1="80" y1="0" x2="80" y2="185" stroke="#cde" stroke-width="0.7"/>
+        <line x1="200" y1="0" x2="200" y2="185" stroke="#cde" stroke-width="0.7"/>
+        <line x1="320" y1="0" x2="320" y2="185" stroke="#cde" stroke-width="0.7"/>
+        <path d="M40 145 C80 125,120 92,160 82 C200 72,240 65,275 72 C310 80,340 100,365 92" fill="none" stroke="#bbdff5" stroke-width="4" stroke-linecap="round"/>
+        <path d="M40 145 C80 125,120 92,160 82 C185 75,205 70,218 68" fill="none" stroke="#185FA5" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="40" cy="145" r="6" fill="#43a047"/>
+        <circle cx="218" cy="68" r="11" fill="#185FA5" opacity=".2"/>
+        <circle cx="218" cy="68" r="6" fill="#185FA5"/>
+        <circle cx="113" cy="95" r="4" fill="#fff" stroke="#185FA5" stroke-width="2"/>
+        <text x="113" y="87" text-anchor="middle" font-size="10" fill="#185FA5" font-family="sans-serif">1km</text>
+        <rect x="350" y="84" width="16" height="16" rx="3" fill="#e53935" opacity=".9"/>
+        <text x="358" y="95" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">F</text>
+      </svg>
+      <div style="position:absolute;top:10px;left:10px;background:#fff;border-radius:20px;padding:4px 10px;display:flex;align-items:center;gap:5px;box-shadow:0 1px 3px rgba(0,0,0,.15)">
+        <span class="pulse" style="width:7px;height:7px;border-radius:50%;background:#e53935;display:inline-block"></span>
+        <span style="font-size:12px;font-weight:600;color:#c62828">En course</span>
+      </div>
+      <div style="position:absolute;bottom:8px;right:10px;font-size:11px;color:#666">↑ +47m dénivelé</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px">
+      <div class="stat-box"><div class="stat-val" style="font-size:20px" id="run-dist">2.1</div><div class="stat-lbl">km</div></div>
+      <div class="stat-box"><div class="stat-val" style="font-size:20px" id="run-pace">5:42</div><div class="stat-lbl">min/km</div></div>
+      <div class="stat-box"><div class="stat-val" style="font-size:20px" id="run-time">12:04</div><div class="stat-lbl">durée</div></div>
+      <div class="stat-box"><div class="stat-val" style="font-size:20px" id="run-hr">148</div><div class="stat-lbl">bpm</div></div>
+    </div>
+    <div class="card card-sm" style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <span style="font-size:13px;font-weight:600">Zone cardiaque</span>
+        <span class="badge badge-amber" id="zone-lbl">Zone 3 · Aérobie</span>
+      </div>
+      <div class="zone-bar">
+        <div class="zone-seg" style="background:#e8f5e9"></div>
+        <div class="zone-seg" style="background:#c8e6c9"></div>
+        <div class="zone-seg" style="background:#fb8c00;opacity:1;flex:1.5"></div>
+        <div class="zone-seg" style="background:#ffccbc;opacity:.5"></div>
+        <div class="zone-seg" style="background:#ffcdd2;opacity:.3"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:#aaa;margin-top:5px">
+        <span>Z1</span><span>Z2</span><span>Z3</span><span>Z4</span><span>Z5</span>
+      </div>
+    </div>
+    <div class="card card-sm" style="margin-bottom:12px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px">Amis sur le parcours</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:5px;background:#f5f5f5;padding:5px 10px;border-radius:20px;font-size:12px"><span class="dot dot-alex"></span>Alex · 3.4 km</div>
+        <div style="display:flex;align-items:center;gap:5px;background:#f5f5f5;padding:5px 10px;border-radius:20px;font-size:12px"><span class="dot dot-sam"></span>Sam · 1.8 km</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <button class="btn" id="run-pause-btn" onclick="toggleRun()">⏸ Pause</button>
+      <button class="btn" style="color:#888" onclick="showScreen('home')">⏹ Arrêter</button>
+    </div>
+  </div>
+  <!-- PROGRAMMES -->
+  <div id="rtab-prog" style="display:none">
+    <div class="card card-sm" style="margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-weight:700;font-size:14px">Endurance de base</div><div style="font-size:12px;color:#888;margin-top:2px">Course continue · Zone 2</div></div>
+        <span class="badge badge-green">Recommandé</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px">
+        <div class="stat-box" style="padding:8px"><div style="font-size:15px;font-weight:700">5 km</div><div style="font-size:11px;color:#888">distance</div></div>
+        <div class="stat-box" style="padding:8px"><div style="font-size:15px;font-weight:700">6:10</div><div style="font-size:11px;color:#888">allure</div></div>
+        <div class="stat-box" style="padding:8px"><div style="font-size:15px;font-weight:700">~31 min</div><div style="font-size:11px;color:#888">durée</div></div>
+      </div>
+      <button class="btn btn-blue">Lancer ce parcours</button>
+    </div>
+    <div class="card card-sm" style="margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-weight:700;font-size:14px">Fractionné 30/30</div><div style="font-size:12px;color:#888;margin-top:2px">Sprint 30s · Marche 30s · x10</div></div>
+        <span class="badge badge-amber">Intensif</span>
+      </div>
+      <div style="font-size:12px;color:#888;margin-bottom:10px">Guidage audio automatique · Zone 4-5 sur les sprints</div>
+      <button class="btn">Lancer ce parcours</button>
+    </div>
+    <div class="card card-sm">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-weight:700;font-size:14px">Plan 10 km</div><div style="font-size:12px;color:#888;margin-top:2px">Programme 8 semaines</div></div>
+        <span class="badge badge-blue">Plan long</span>
+      </div>
+      <div class="prog-bar" style="margin-bottom:6px"><div class="prog-fill" style="width:35%;background:#185FA5"></div></div>
+      <div style="font-size:11px;color:#888;margin-bottom:10px">Semaine 3 / 8 · 35% complété</div>
+      <button class="btn">Continuer le plan</button>
+    </div>
+  </div>
+  <!-- HISTORIQUE -->
+  <div id="rtab-hist" style="display:none">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px">
+      <div class="stat-box"><div class="stat-val">23.4</div><div class="stat-lbl">km ce mois</div></div>
+      <div class="stat-box"><div class="stat-val">5:38</div><div class="stat-lbl">allure moy.</div></div>
+      <div class="stat-box"><div class="stat-val" style="color:#43a047">+12%</div><div class="stat-lbl">progression</div></div>
+    </div>
+    <div class="card card-sm">
+      <div class="run-row">
+        <div class="ex-icon" style="background:#e3f2fd;font-weight:700;color:#185FA5;font-size:14px">5km</div>
+        <div style="flex:1"><div style="font-size:14px;font-weight:600">Endurance</div><div style="font-size:12px;color:#888">Vendredi · 28 min 12s</div></div>
+        <div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#185FA5">5:38</div><div style="font-size:10px;color:#aaa">min/km</div></div>
+      </div>
+      <div class="run-row">
+        <div class="ex-icon" style="background:#fff8e1;font-weight:700;color:#e65100;font-size:13px">3km</div>
+        <div style="flex:1"><div style="font-size:14px;font-weight:600">Fractionné 30/30</div><div style="font-size:12px;color:#888">Mardi · 22 min</div></div>
+        <div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#fb8c00">4:52</div><div style="font-size:10px;color:#aaa">min/km</div></div>
+      </div>
+      <div class="run-row" style="border-bottom:none">
+        <div class="ex-icon" style="background:#e8f5e9;font-weight:700;color:#2e7d32;font-size:13px">7km</div>
+        <div style="flex:1"><div style="font-size:14px;font-weight:600">Long run</div><div style="font-size:12px;color:#888">Dimanche · 41 min</div></div>
+        <div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#43a047">5:52</div><div style="font-size:10px;color:#aaa">min/km</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== YOGA ===== -->
+<div id="screen-yoga" class="screen">
+  <button onclick="showScreen('home')" style="background:none;border:none;font-size:13px;color:#888;cursor:pointer;margin-bottom:12px">← Retour</button>
+  <div class="page-title">Yoga 🧘</div>
+  <div class="tabs">
+    <button class="tab active" onclick="showYogaTab('session',this)">Séance</button>
+    <button class="tab" onclick="showYogaTab('poses',this)">Postures</button>
+    <button class="tab" onclick="showYogaTab('breath',this)">Respiration</button>
+  </div>
+  <!-- SESSION -->
+  <div id="ytab-session">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
+      <div onclick="selYoga('flex',this)" id="ycard-flex" class="card card-sm" style="cursor:pointer;border:2px solid #7c4dff">
+        <div style="font-size:26px;margin-bottom:5px">🌿</div>
+        <div style="font-weight:700;font-size:13px">Flexibilité</div>
+        <div style="font-size:11px;color:#888;margin-top:2px">Étirements · Hatha</div>
+      </div>
+      <div onclick="selYoga('strength',this)" id="ycard-strength" class="card card-sm" style="cursor:pointer">
+        <div style="font-size:26px;margin-bottom:5px">🔥</div>
+        <div style="font-weight:700;font-size:13px">Force & gainage</div>
+        <div style="font-size:11px;color:#888;margin-top:2px">Power · Vinyasa</div>
+      </div>
+      <div onclick="selYoga('relax',this)" id="ycard-relax" class="card card-sm" style="cursor:pointer">
+        <div style="font-size:26px;margin-bottom:5px">🌙</div>
+        <div style="font-weight:700;font-size:13px">Relaxation</div>
+        <div style="font-size:11px;color:#888;margin-top:2px">Yin · Restoratif</div>
+      </div>
+      <div onclick="selYoga('morning',this)" id="ycard-morning" class="card card-sm" style="cursor:pointer">
+        <div style="font-size:26px;margin-bottom:5px">☀️</div>
+        <div style="font-weight:700;font-size:13px">Réveil matinal</div>
+        <div style="font-size:11px;color:#888;margin-top:2px">Salutation soleil</div>
+      </div>
+    </div>
+    <div class="card card-sm">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <div><div style="font-weight:700">Flexibilité · 35 min</div><div style="font-size:12px;color:#888;margin-top:2px">8 postures · Adapté</div></div>
+        <span class="badge badge-purple">Hatha</span>
+      </div>
+      <div class="ex-row"><div class="ex-icon" style="background:#f3e5f5">🧘</div><div class="ex-info"><div class="ex-name">Enfant (Balasana)</div><div class="ex-detail">Dos · Hanches</div></div><div style="font-size:13px;font-weight:700;color:#6a1b9a">90 sec</div></div>
+      <div class="ex-row"><div class="ex-icon" style="background:#f3e5f5">🌊</div><div class="ex-info"><div class="ex-name">Chat-vache</div><div class="ex-detail">Colonne vertébrale</div></div><div style="font-size:13px;font-weight:700;color:#6a1b9a">60 sec</div></div>
+      <div class="ex-row"><div class="ex-icon" style="background:#f3e5f5">🐕</div><div class="ex-info"><div class="ex-name">Chien tête en bas</div><div class="ex-detail">Ischio · Mollets</div></div><div style="font-size:13px;font-weight:700;color:#6a1b9a">120 sec</div></div>
+      <div class="ex-row" style="border-bottom:none;opacity:.4"><div class="ex-icon" style="font-size:14px">···</div><div class="ex-info"><div style="font-size:13px;color:#888">5 autres postures...</div></div></div>
+      <button class="btn btn-purple" style="margin-top:10px">🧘 Démarrer la séance yoga</button>
+    </div>
+  </div>
+  <!-- POSTURES -->
+  <div id="ytab-poses" style="display:none">
+    <div class="pose-grid">
+      <div class="pose-card selected"><div style="font-size:28px;margin-bottom:5px">🧘</div><div style="font-weight:700;font-size:13px">Lotus</div><div style="font-size:11px;color:#888;margin-top:2px">Méditation</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div>
+      <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🌳</div><div style="font-weight:700;font-size:13px">Arbre</div><div style="font-size:11px;color:#888;margin-top:2px">Équilibre</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div>
+      <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">⚔️</div><div style="font-weight:700;font-size:13px">Guerrier II</div><div style="font-size:11px;color:#888;margin-top:2px">Cuisses</div><div style="margin-top:6px"><span class="badge badge-amber" style="font-size:10px">Intermédiaire</span></div></div>
+      <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🐍</div><div style="font-weight:700;font-size:13px">Cobra</div><div style="font-size:11px;color:#888;margin-top:2px">Dos · Abdos</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div>
+      <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🌙</div><div style="font-weight:700;font-size:13px">Demi-lune</div><div style="font-size:11px;color:#888;margin-top:2px">Équilibre · Côté</div><div style="margin-top:6px"><span class="badge badge-amber" style="font-size:10px">Intermédiaire</span></div></div>
+      <div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🦅</div><div style="font-weight:700;font-size:13px">Aigle</div><div style="font-size:11px;color:#888;margin-top:2px">Épaules</div><div style="margin-top:6px"><span class="badge badge-green" style="font-size:10px">Avancé</span></div></div>
+    </div>
+    <button class="btn">+ Ajouter une posture</button>
+  </div>
+  <!-- RESPIRATION -->
+  <div id="ytab-breath" style="display:none">
+    <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+      <button class="btn btn-sm" id="btype-478" onclick="selBreath('478',this)" style="background:#ede7f6;color:#4527a0;border-color:#7c4dff">4-7-8</button>
+      <button class="btn btn-sm" id="btype-box" onclick="selBreath('box',this)">Box breathing</button>
+      <button class="btn btn-sm" id="btype-ujjayi" onclick="selBreath('ujjayi',this)">Ujjayi</button>
+    </div>
+    <div class="card" style="text-align:center;padding:24px 20px">
+      <div style="font-size:16px;font-weight:700;margin-bottom:4px" id="breath-title">Respiration 4-7-8</div>
+      <div style="font-size:12px;color:#888;margin-bottom:20px" id="breath-desc">Inspirer 4s · Retenir 7s · Expirer 8s</div>
+      <div class="breath-circle" id="breath-circle"><div style="font-size:13px;font-weight:600;color:#888" id="breath-phase">Prêt</div></div>
+      <div style="font-size:40px;font-weight:700;margin:16px 0 4px;color:#185FA5" id="breath-count">—</div>
+      <div style="font-size:13px;color:#888;margin-bottom:20px" id="breath-cycles">0 cycles</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <button class="btn" id="breath-btn" onclick="toggleBreath()">▶ Démarrer</button>
+        <button class="btn" onclick="resetBreath()">↺ Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---- DATA ----
+const exercises={
+  pompes:[
+    {name:'Pompes classiques',icon:'💪',detail:'Bras largeur épaules · Dos droit',type:'reps'},
+    {name:'Pompes diamant',icon:'💎',detail:'Index et pouces se touchent',type:'reps'},
+    {name:'Pompes inclinées',icon:'⬆️',detail:'Mains surélevées',type:'reps'},
+    {name:'Pompes déclinées',icon:'⬇️',detail:'Pieds surélevés',type:'reps'},
+    {name:'Pompes archer',icon:'🏹',detail:'Extension latérale alternée',type:'reps',extra:true},
+    {name:'Pompes explosives',icon:'💥',detail:'Décollage des mains',type:'reps',extra:true},
+  ],
+  abdos:[
+    {name:'Crunch',icon:'🔄',detail:'Dos ancré · Montée contrôlée',type:'reps'},
+    {name:'Relevés de jambes',icon:'🦵',detail:'Lombaires au sol',type:'reps'},
+    {name:'Planche',icon:'📐',detail:'Corps aligné · Hanches neutres',type:'time'},
+    {name:'Russian twist',icon:'🔀',detail:'Rotation du buste',type:'reps'},
+    {name:'Bicycle crunch',icon:'🚲',detail:'Rotation opposée',type:'reps',extra:true},
+    {name:'Hollow hold',icon:'🌊',detail:'Corps creusé',type:'time',extra:true},
+  ],
+  traction:[
+    {name:'Pronation',icon:'👐',detail:'Prise large dessus',type:'reps'},
+    {name:'Supination (chin-up)',icon:'🙌',detail:'Prise étroite dessous',type:'reps'},
+    {name:'Négatives',icon:'⬇️',detail:'Descente lente 5 sec',type:'reps'},
+    {name:'Assistées élastique',icon:'🟢',detail:'Élastique sous les pieds',type:'reps'},
+    {name:'Isométriques',icon:'🔒',detail:'Menton au-dessus barre',type:'time',extra:true},
+  ],
+  kb:[
+    {name:'Swing',icon:'⚡',detail:'Propulsion des hanches',type:'reps'},
+    {name:'Goblet squat',icon:'🏆',detail:'KB à deux mains',type:'reps'},
+    {name:'Clean',icon:'🚀',detail:'Montée en rack',type:'reps'},
+    {name:'Snatch',icon:'🌟',detail:'Extension complète overhead',type:'reps'},
+    {name:'Turkish get-up',icon:'🌀',detail:'Mouvement complet debout/sol',type:'reps',extra:true},
+    {name:'Deadlift KB',icon:'📦',detail:'Charnière hanche · Dos droit',type:'reps',extra:true},
+  ],
+  hiit:[
+    {name:'Burpees',icon:'🔥',detail:'Squat → planche → saut',type:'time'},
+    {name:'Mountain climbers',icon:'🏔️',detail:'Alternance rapide genoux',type:'time'},
+    {name:'Jump squats',icon:'🐇',detail:'Accroupi → saut explosif',type:'reps'},
+    {name:'High knees',icon:'🏃',detail:'Genoux à hauteur hanches',type:'time'},
+    {name:'Jump lunges',icon:'⚔️',detail:'Alternance explosive',type:'reps',extra:true},
+    {name:'Skaters',icon:'⛸️',detail:'Sauts latéraux',type:'reps',extra:true},
+    {name:'Box jumps',icon:'📦',detail:'Saut sur caisse',type:'reps',extra:true},
+    {name:'Plank jacks',icon:'🎿',detail:'Écarts jambes en planche',type:'time',extra:true},
+  ],
+};
+
+const calData={
+  1:{sessions:['alex','sam'],name:'Pompes & Tractions'},
+  3:{sessions:['alex','sam','lea'],name:'HIIT Circuit'},
+  5:{sessions:['moi','alex'],name:'Kettlebell Focus'},
+  7:{sessions:['alex','sam'],name:'Circuit Force + Cardio',today:true},
+  9:{sessions:[],name:'HIIT Interval',future:true},
+  12:{sessions:[],name:'Tractions + Abdos',future:true},
+};
+
+const coachExs=[
+  {name:'Pompes classiques',icon:'💪',tip:'Bras largeur épaules · Dos droit',display:'12',type:'reps',rest:60,perc:'60% de ton max (20 reps)'},
+  {name:'Kettlebell swing',icon:'🏋️',tip:'Propulsion des hanches · Dos droit',display:'15',type:'reps',rest:90,perc:'60% · 16 kg'},
+  {name:'Planche',icon:'📐',tip:'Corps aligné · Hanches neutres',display:'45',type:'time',rest:60,perc:'60% de ton max (75 sec)'},
+  {name:'Crunch',icon:'🔄',tip:'Lombaires ancrées · Expire en montant',display:'24',type:'reps',rest:60,perc:'60% de ton max (40 reps)'},
+  {name:'Tractions négatives',icon:'🧗',tip:'Montée lente · Descente contrôlée 5s',display:'3',type:'reps',rest:120,perc:'Adapté à ton niveau'},
+  {name:'Burpees',icon:'🔥',tip:'Rythme constant · Qualité > vitesse',display:'30',type:'time',rest:90,perc:'HIIT cardio final'},
+];
+
+let showingAll={};
+let currentCat='pompes';
+let coachStep=0;
+let timerInterval=null;
+let restInterval=null;
+let runInterval=null;
+let runPaused=false;
+let runSec=724;
+let breathRunning=false;
+let breathInterval=null;
+let breathCycles=0;
+let breathPhaseIdx=0;
+let breathPhaseT=0;
+let currentBreath='478';
+
+const breathTypes={
+  '478':{title:'Respiration 4-7-8',desc:'Inspirer 4s · Retenir 7s · Expirer 8s · Apaisement',phases:[{name:'Inspirer',dur:4,sz:'130px',bg:'#ede7f6'},{name:'Retenir',dur:7,sz:'130px',bg:'#e3f2fd'},{name:'Expirer',dur:8,sz:'90px',bg:'#e8f5e9'}]},
+  'box':{title:'Box breathing',desc:'Inspirer 4s · Retenir 4s · Expirer 4s · Retenir 4s',phases:[{name:'Inspirer',dur:4,sz:'130px',bg:'#ede7f6'},{name:'Retenir',dur:4,sz:'130px',bg:'#e3f2fd'},{name:'Expirer',dur:4,sz:'90px',bg:'#e8f5e9'},{name:'Pause',dur:4,sz:'90px',bg:'#f5f5f5'}]},
+  'ujjayi':{title:'Ujjayi · Ocean breath',desc:'Inspirer 4s · Expirer 6s · Légère contraction gorge',phases:[{name:'Inspirer',dur:4,sz:'130px',bg:'#ede7f6'},{name:'Expirer',dur:6,sz:'90px',bg:'#e8f5e9'}]},
+};
+
+// ---- SCREENS ----
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('screen-'+id).classList.add('active');
+  const map={home:0,calendar:1,exercises:2,friends:3,profile:4};
+  if(map[id]!==undefined) document.querySelectorAll('.nav-btn')[map[id]].classList.add('active');
+  if(id==='calendar') buildCal();
+  if(id==='exercises') showCat('pompes',document.querySelector('.tab.active'));
+  if(id==='running') startRunTimer();
+}
+
+// ---- COACH ----
+function showCoach(){
+  coachStep=0;
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('screen-coach').classList.add('active');
+  document.getElementById('coach-rest').style.display='none';
+  document.getElementById('coach-done').style.display='none';
+  document.getElementById('coach-main').style.display='block';
+  loadCoachStep();
+}
+
+function loadCoachStep(){
+  if(timerInterval) clearInterval(timerInterval);
+  const ex=coachExs[coachStep];
+  document.getElementById('coach-step-lbl').textContent='Exercice '+(coachStep+1)+' / '+coachExs.length;
+  document.getElementById('coach-icon').textContent=ex.icon;
+  document.getElementById('coach-name').textContent=ex.name;
+  document.getElementById('coach-tip').textContent=ex.tip;
+  document.getElementById('timer-display').textContent=ex.display;
+  document.getElementById('timer-type').textContent=ex.type==='reps'?'reps':'sec';
+  document.getElementById('coach-perc').textContent=ex.perc;
+  document.getElementById('start-btn').style.display='';
+  document.getElementById('next-btn').style.display='none';
+  document.getElementById('timer-arc').style.strokeDashoffset=0;
+  let dots='';
+  coachExs.forEach((_,i)=>{
+    if(i<coachStep) dots+='<div class="step-dot-el done"></div>';
+    else if(i===coachStep) dots+='<div class="step-dot-el current"></div>';
+    else dots+='<div class="step-dot-el"></div>';
+  });
+  document.getElementById('coach-dots').innerHTML=dots;
+}
+
+function startExercise(){
+  const ex=coachExs[coachStep];
+  document.getElementById('start-btn').style.display='none';
+  if(ex.type==='time'){
+    let t=parseInt(ex.display);
+    const total=t;
+    timerInterval=setInterval(()=>{
+      t--;
+      document.getElementById('timer-display').textContent=t;
+      document.getElementById('timer-arc').style.strokeDashoffset=((total-t)/total)*427;
+      if(t<=0){clearInterval(timerInterval);document.getElementById('next-btn').style.display='';}
+    },1000);
+  } else {
+    document.getElementById('next-btn').style.display='';
+  }
+}
+
+function nextExercise(){
+  if(timerInterval) clearInterval(timerInterval);
+  if(coachStep<coachExs.length-1){
+    document.getElementById('coach-main').style.display='none';
+    document.getElementById('coach-rest').style.display='block';
+    let rest=coachExs[coachStep].rest;
+    const total=rest;
+    document.getElementById('rest-count').textContent=rest;
+    document.getElementById('rest-bar').style.width='100%';
+    restInterval=setInterval(()=>{
+      rest--;
+      document.getElementById('rest-count').textContent=rest;
+      document.getElementById('rest-bar').style.width=(rest/total*100)+'%';
+      if(rest<=0){clearInterval(restInterval);coachStep++;document.getElementById('coach-main').style.display='block';document.getElementById('coach-rest').style.display='none';loadCoachStep();}
+    },1000);
+  } else {
+    document.getElementById('coach-main').style.display='none';
+    document.getElementById('coach-done').style.display='block';
+  }
+}
+
+function skipRest(){
+  if(restInterval) clearInterval(restInterval);
+  coachStep++;
+  document.getElementById('coach-main').style.display='block';
+  document.getElementById('coach-rest').style.display='none';
+  loadCoachStep();
+}
+
+function toggleVideo(){
+  const lbl=document.getElementById('video-lbl');
+  lbl.textContent=lbl.textContent==='Voir la démo'?'● En lecture...':'Voir la démo';
+}
+
+// ---- CALENDAR ----
+function buildCal(){
+  const grid=document.getElementById('cal-grid');
+  grid.innerHTML='';
+  const offset=1;
+  for(let i=0;i<offset;i++) grid.appendChild(document.createElement('div'));
+  for(let d=1;d<=30;d++){
+    const day=document.createElement('div');
+    day.className='cal-day';
+    const num=document.createElement('div');
+    num.className='cal-num'+(d===7?' today':'');
+    num.textContent=d;
+    num.onclick=()=>showCalDetail(d);
+    day.appendChild(num);
+    const dots=document.createElement('div');
+    dots.className='cal-dots';
+    if(calData[d]) calData[d].sessions.forEach(u=>{const dot=document.createElement('span');dot.className='dot dot-'+u;dots.appendChild(dot);});
+    day.appendChild(dots);
+    grid.appendChild(day);
+  }
+}
+
+function showCalDetail(d){
+  const det=document.getElementById('cal-detail');
+  document.getElementById('cal-detail-title').textContent=d+' avril 2025';
+  const body=document.getElementById('cal-detail-body');
+  if(!calData[d]){body.innerHTML='<div style="font-size:13px;color:#888">Pas de séance ce jour.</div>';}
+  else{
+    const map={moi:'Moi',alex:'Alex',sam:'Sam',lea:'Léa'};
+    let html='<div style="font-size:13px;font-weight:700;margin-bottom:8px">'+calData[d].name+'</div>';
+    if(calData[d].sessions.length) html+=calData[d].sessions.map(u=>'<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:13px"><span class="dot dot-'+u+'"></span>'+map[u]+' a complété ✓</div>').join('');
+    if(calData[d].future) html+='<div style="font-size:12px;color:#888">Séance programmée</div>';
+    body.innerHTML=html;
+  }
+  det.style.display='block';
+}
+
+// ---- EXERCISES ----
+function showCat(cat,btn){
+  currentCat=cat;
+  if(btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
+  const list=exercises[cat];
+  const showAll=showingAll[cat];
+  const shown=showAll?list:list.slice(0,4);
+  let html='<div class="card card-sm">';
+  shown.forEach(ex=>{
+    html+='<div class="ex-row"><div class="ex-icon">'+ex.icon+'</div><div class="ex-info"><div class="ex-name">'+ex.name+'</div><div class="ex-detail">'+ex.detail+' · '+(ex.type==='reps'?'Répétitions':'Temps')+'</div></div><span class="badge badge-'+(ex.type==='reps'?'blue':'amber')+'" style="font-size:10px">'+(ex.type==='reps'?'↻ reps':'⏱ temps')+'</span></div>';
+  });
+  if(!showAll&&list.length>4) html+='<div style="text-align:center;padding:8px 0"><button class="btn btn-sm" style="border-color:#ddd" onclick="toggleAllEx(\''+cat+'\')">Voir '+(list.length-4)+' de plus</button></div>';
+  html+='</div>';
+  document.getElementById('ex-list').innerHTML=html;
+}
+
+function toggleAllEx(cat){showingAll[cat]=!showingAll[cat];showCat(cat,null);}
+
+// ---- PROFILE ----
+function updStat(id,val,unit){
+  document.getElementById(id).textContent=val+(unit?' '+unit:' reps');
+}
+function selObj(o){
+  ['forme','end','force'].forEach(k=>{const b=document.getElementById('obj-'+k);b.style.background='';b.style.color='';b.style.borderColor='';});
+  const b=document.getElementById('obj-'+o);b.style.background='#e3f2fd';b.style.color='#1565c0';b.style.borderColor='#1565c0';
+}
+
+// ---- RUNNING ----
+function startRunTimer(){
+  if(runInterval) return;
+  runInterval=setInterval(()=>{
+    if(!runPaused){
+      runSec++;
+      const m=Math.floor(runSec/60),s=runSec%60;
+      document.getElementById('run-time').textContent=m+':'+(s<10?'0':'')+s;
+      document.getElementById('run-dist').textContent=(2.1+runSec*0.003).toFixed(1);
+      document.getElementById('run-hr').textContent=145+Math.round(Math.sin(runSec/8)*6);
+    }
+  },1000);
+}
+function toggleRun(){
+  runPaused=!runPaused;
+  document.getElementById('run-pause-btn').textContent=runPaused?'▶ Reprendre':'⏸ Pause';
+}
+function showRunTab(id,btn){
+  ['live','prog','hist'].forEach(t=>{document.getElementById('rtab-'+t).style.display='none';});
+  document.getElementById('rtab-'+id).style.display='block';
+  if(btn){document.querySelectorAll('#screen-running .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
+}
+function showYogaTab(id,btn){
+  ['session','poses','breath'].forEach(t=>{document.getElementById('ytab-'+t).style.display='none';});
+  document.getElementById('ytab-'+id).style.display='block';
+  if(btn){document.querySelectorAll('#screen-yoga .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
+}
+function selYoga(type,el){
+  ['flex','strength','relax','morning'].forEach(t=>{const c=document.getElementById('ycard-'+t);c.style.border='1.5px solid #eee';});
+  el.style.border='2px solid #7c4dff';
+}
+
+// ---- BREATH ----
+function selBreath(type,btn){
+  ['478','box','ujjayi'].forEach(t=>{const b=document.getElementById('btype-'+t);b.style.background='';b.style.color='';b.style.borderColor='';});
+  btn.style.background='#ede7f6';btn.style.color='#4527a0';btn.style.borderColor='#7c4dff';
+  currentBreath=type;
+  const bt=breathTypes[type];
+  document.getElementById('breath-title').textContent=bt.title;
+  document.getElementById('breath-desc').textContent=bt.desc;
+  resetBreath();
+}
+function toggleBreath(){
+  breathRunning=!breathRunning;
+  document.getElementById('breath-btn').textContent=breathRunning?'⏸ Pause':'▶ Reprendre';
+  if(breathRunning&&!breathInterval) runBreath();
+  if(!breathRunning&&breathInterval){clearInterval(breathInterval);breathInterval=null;}
+}
+function runBreath(){
+  const bt=breathTypes[currentBreath];
+  breathPhaseIdx=0;breathPhaseT=0;
+  breathInterval=setInterval(()=>{
+    if(!breathRunning) return;
+    const phase=bt.phases[breathPhaseIdx];
+    document.getElementById('breath-phase').textContent=phase.name;
+    document.getElementById('breath-count').textContent=phase.dur-breathPhaseT;
+    document.getElementById('breath-circle').style.width=phase.sz;
+    document.getElementById('breath-circle').style.height=phase.sz;
+    document.getElementById('breath-circle').style.background=phase.bg;
+    breathPhaseT++;
+    if(breathPhaseT>=phase.dur){breathPhaseT=0;breathPhaseIdx=(breathPhaseIdx+1)%bt.phases.length;if(breathPhaseIdx===0){breathCycles++;document.getElementById('breath-cycles').textContent=breathCycles+(breathCycles>1?' cycles':' cycle');}}
+  },1000);
+}
+function resetBreath(){
+  breathRunning=false;
+  if(breathInterval){clearInterval(breathInterval);breathInterval=null;}
+  breathCycles=0;breathPhaseIdx=0;breathPhaseT=0;
+  document.getElementById('breath-btn').textContent='▶ Démarrer';
+  document.getElementById('breath-phase').textContent='Prêt';
+  document.getElementById('breath-count').textContent='—';
+  document.getElementById('breath-cycles').textContent='0 cycles';
+  const c=document.getElementById('breath-circle');
+  c.style.width='100px';c.style.height='100px';c.style.background='#f0f0f0';
+}
+
+// ---- INIT ----
+buildCal();
+showCat('pompes',null);
+</script>
+</body>
+</html>
