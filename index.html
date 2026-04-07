@@ -27,6 +27,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .badge-purple{background:#f3e5f5;color:#6a1b9a}
 .badge-gray{background:#f5f5f5;color:#666}
 .badge-pink{background:#fce4ec;color:#880e4f}
+.badge-red{background:#fce4ec;color:#b71c1c}
 .btn{display:block;width:100%;padding:14px;border-radius:12px;border:1.5px solid #ddd;background:#fff;font-size:15px;font-weight:600;cursor:pointer;text-align:center;transition:all .15s;color:#1a1a1a}
 .btn:active{transform:scale(.98)}
 .btn-blue{background:#185FA5;color:#fff;border-color:#185FA5}
@@ -40,21 +41,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .av-quentin{background:#e8f5e9;color:#2e7d32}
 .av-seb{background:#fff8e1;color:#e65100}
 .dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex-shrink:0}
-.dot-mus{background:#e91e63}
-.dot-belaid{background:#1e88e5}
-.dot-quentin{background:#43a047}
-.dot-seb{background:#fb8c00}
+.dot-mus{background:#e91e63}.dot-belaid{background:#1e88e5}.dot-quentin{background:#43a047}.dot-seb{background:#fb8c00}
 .ex-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f0f0f0}
 .ex-row:last-child{border-bottom:none}
 .ex-icon{width:44px;height:44px;border-radius:12px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.ex-info{flex:1}
-.ex-name{font-size:14px;font-weight:600}
-.ex-detail{font-size:12px;color:#888;margin-top:2px}
-.ex-reps{font-size:15px;font-weight:700;color:#185FA5;text-align:right}
-.ex-reps-sub{font-size:10px;color:#aaa;text-align:right}
+.ex-info{flex:1}.ex-name{font-size:14px;font-weight:600}.ex-detail{font-size:12px;color:#888;margin-top:2px}
+.ex-reps{font-size:15px;font-weight:700;color:#185FA5;text-align:right}.ex-reps-sub{font-size:10px;color:#aaa;text-align:right}
 .stat-box{background:#f8f9fa;border-radius:12px;padding:12px;text-align:center}
-.stat-val{font-size:22px;font-weight:700}
-.stat-lbl{font-size:11px;color:#888;margin-top:2px}
+.stat-val{font-size:22px;font-weight:700}.stat-lbl{font-size:11px;color:#888;margin-top:2px}
 .prog-bar{height:5px;background:#eee;border-radius:3px;overflow:hidden}
 .prog-fill{height:100%;border-radius:3px;transition:width .4s}
 .tabs{display:flex;background:#f0f0f0;border-radius:10px;padding:3px;margin-bottom:14px}
@@ -67,7 +61,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
 .cal-day-label{text-align:center;font-size:10px;font-weight:600;color:#aaa;padding:4px 0}
 .cal-day{text-align:center;padding:4px 2px}
-.cal-num{font-size:13px;font-weight:600;padding:5px 3px;border-radius:8px;cursor:pointer;transition:background .1s}
+.cal-num{font-size:13px;font-weight:600;padding:5px 3px;border-radius:8px;cursor:pointer}
 .cal-num:hover{background:#f0f0f0}
 .cal-num.today{background:#185FA5;color:#fff}
 .cal-dots{display:flex;justify-content:center;gap:2px;margin-top:3px;min-height:9px}
@@ -80,19 +74,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .step-dot-el{width:8px;height:8px;border-radius:50%;background:#ddd}
 .step-dot-el.done{background:#185FA5}
 .step-dot-el.current{width:24px;border-radius:4px;background:#185FA5}
-.slider-row{display:flex;align-items:center;gap:10px;margin:8px 0}
-.slider-row label{font-size:13px;color:#888;width:100px;flex-shrink:0}
-.slider-row input[type=range]{flex:1;accent-color:#185FA5}
-.slider-row span{font-size:13px;font-weight:600;min-width:44px;text-align:right}
-.map-box{background:#e8f4f8;border-radius:14px;height:185px;position:relative;overflow:hidden;margin-bottom:12px}
-.zone-bar{height:8px;border-radius:4px;display:flex;overflow:hidden;margin:6px 0}
-.zone-seg{flex:1}
-.breath-circle{width:100px;height:100px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;margin:0 auto;transition:all 3s ease-in-out;border:2px solid #ddd}
-.pose-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
-.pose-card{background:#fff;border:1.5px solid #eee;border-radius:14px;padding:12px;cursor:pointer;transition:all .15s}
-.done-circle{width:80px;height:80px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:36px}
-.run-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f0f0f0}
-.run-row:last-child{border-bottom:none}
 .instr-step{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start}
 .instr-num{width:22px;height:22px;border-radius:50%;background:#185FA5;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px}
 .instr-text{font-size:13px;line-height:1.5}
@@ -111,20 +92,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .bar-label{font-size:10px;color:#aaa;text-align:center;margin-top:4px}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .pulse{animation:pulse 1.2s ease-in-out infinite}
-
-/* ===== MODAL OVERLAY ===== */
-.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:flex-end;justify-content:center}
-.modal-sheet{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:430px;padding:20px 20px 40px;max-height:90vh;overflow-y:auto}
-.modal-handle{width:40px;height:4px;background:#ddd;border-radius:2px;margin:0 auto 20px}
-.modal-title{font-size:18px;font-weight:700;margin-bottom:4px}
-.modal-sub{font-size:13px;color:#888;margin-bottom:20px}
-
-/* ===== FORM STYLES ===== */
+/* FORM */
 .form-group{margin-bottom:16px}
 .form-label{font-size:13px;font-weight:600;color:#555;margin-bottom:6px;display:block}
 .form-input{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid #ddd;font-size:14px;background:#fff;color:#1a1a1a;font-family:inherit;transition:border-color .15s}
 .form-input:focus{outline:none;border-color:#185FA5}
-.form-textarea{resize:vertical;min-height:80px}
+.form-input-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form-textarea{resize:vertical;min-height:70px}
 .form-select{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid #ddd;font-size:14px;background:#fff;color:#1a1a1a;font-family:inherit;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 .form-select:focus{outline:none;border-color:#185FA5}
 .type-toggle{display:flex;gap:8px}
@@ -133,13 +107,34 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .emoji-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:6px}
 .emoji-btn{padding:8px;border-radius:8px;border:1.5px solid #eee;background:#fff;font-size:20px;cursor:pointer;text-align:center;transition:all .15s}
 .emoji-btn.selected{border-color:#185FA5;background:#e3f2fd}
-.muscles-input{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-.muscle-chip{display:flex;align-items:center;gap:4px;padding:4px 10px;border-radius:20px;background:#e3f2fd;color:#1565c0;font-size:12px;font-weight:600}
+.muscle-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:20px;background:#e3f2fd;color:#1565c0;font-size:12px;font-weight:600;margin:2px}
 .muscle-chip button{background:none;border:none;cursor:pointer;color:#1565c0;font-size:14px;padding:0;line-height:1}
 .add-muscle-row{display:flex;gap:8px;margin-top:8px}
 .add-muscle-row input{flex:1;padding:8px 12px;border-radius:8px;border:1.5px solid #ddd;font-size:13px;font-family:inherit}
 .add-muscle-row button{padding:8px 14px;border-radius:8px;border:1.5px solid #185FA5;background:#e3f2fd;color:#185FA5;font-size:13px;font-weight:600;cursor:pointer}
-.perso-badge{background:#fce4ec;color:#880e4f;font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600;margin-left:4px}
+.perso-badge{background:#fce4ec;color:#880e4f;font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600}
+/* ZONE CARD */
+.zone-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f0f0f0}
+.zone-row:last-child{border-bottom:none}
+.zone-color{width:12px;height:36px;border-radius:4px;flex-shrink:0}
+.zone-bar-h{height:8px;border-radius:4px;display:flex;overflow:hidden;margin:6px 0}
+.zone-seg{flex:1}
+/* MODAL */
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:flex-end;justify-content:center}
+.modal-sheet{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:430px;padding:20px 20px 40px;max-height:90vh;overflow-y:auto}
+.modal-handle{width:40px;height:4px;background:#ddd;border-radius:2px;margin:0 auto 20px}
+.modal-title{font-size:18px;font-weight:700;margin-bottom:4px}
+.modal-sub{font-size:13px;color:#888;margin-bottom:20px}
+/* SEANCE BUILDER */
+.ex-pick-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f0f0f0;cursor:pointer}
+.ex-pick-row:last-child{border-bottom:none}
+.ex-pick-row:hover{background:#f9f9f9;margin:0 -14px;padding:10px 14px}
+.check-circle{width:22px;height:22px;border-radius:50%;border:2px solid #ddd;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s}
+.check-circle.checked{border-color:#185FA5;background:#185FA5;color:#fff;font-size:12px}
+.seance-ex-item{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #f0f0f0}
+.seance-ex-item:last-child{border-bottom:none}
+/* IMC COLOR */
+.imc-normal{color:#2e7d32}.imc-surpoids{color:#e65100}.imc-sous{color:#1565c0}
 </style>
 </head>
 <body>
@@ -152,118 +147,80 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <button class="nav-btn" onclick="showScreen('profile')"><span class="nav-icon">👤</span>Profil</button>
 </nav>
 
-<!-- ===== MODAL AJOUT EXERCICE ===== -->
-<div id="modal-add-ex" class="modal-overlay" style="display:none" onclick="closeModalIfBg(event)">
+<!-- MODAL EXERCICE -->
+<div id="modal-add-ex" class="modal-overlay" style="display:none" onclick="closeModalIfBg(event,'modal-add-ex')">
   <div class="modal-sheet">
     <div class="modal-handle"></div>
     <div class="modal-title">Nouvel exercice</div>
-    <div class="modal-sub">Il apparaîtra dans la catégorie choisie</div>
+    <div class="modal-sub">Apparaîtra dans la catégorie choisie</div>
+    <div class="form-group"><label class="form-label">Icône</label><div class="emoji-grid" id="emoji-grid"></div></div>
+    <div class="form-group"><label class="form-label">Nom *</label><input class="form-input" id="ex-nom" type="text" placeholder="ex: Dips sur chaise"></div>
+    <div class="form-group"><label class="form-label">Catégorie *</label><select class="form-select" id="ex-cat"><option value="pompes">💪 Pompes</option><option value="abdos">🔄 Abdos</option><option value="traction">🧗 Tractions</option><option value="kb">🏋️ Kettlebell</option><option value="hiit">🔥 HIIT</option></select></div>
+    <div class="form-group"><label class="form-label">Type</label><div class="type-toggle"><button class="type-btn active" id="type-reps" onclick="selectType('reps')">↻ Répétitions</button><button class="type-btn" id="type-time" onclick="selectType('time')">⏱ Temps (sec)</button></div></div>
+    <div class="form-group"><label class="form-label">Indication courte</label><input class="form-input" id="ex-detail" type="text" placeholder="ex: Dos droit · Descente contrôlée"></div>
+    <div class="form-group"><label class="form-label">Instructions (une par ligne)</label><textarea class="form-input form-textarea" id="ex-instrs" placeholder="Position de départ&#10;Mouvement principal&#10;Retour position"></textarea></div>
+    <div class="form-group"><label class="form-label">Erreur fréquente</label><input class="form-input" id="ex-warn" type="text" placeholder="ex: Ne pas arrondir le dos"></div>
+    <div class="form-group"><label class="form-label">Muscles ciblés</label><div id="muscles-list" style="display:flex;flex-wrap:wrap;gap:4px;min-height:10px"></div><div class="add-muscle-row"><input id="muscle-input" type="text" placeholder="ex: Pectoraux" onkeydown="if(event.key==='Enter'){event.preventDefault();addMuscle()}"><button onclick="addMuscle()">+ Ajouter</button></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px"><button class="btn" onclick="closeModal('modal-add-ex')">Annuler</button><button class="btn btn-blue" onclick="saveExercice()">✓ Enregistrer</button></div>
+  </div>
+</div>
 
-    <!-- Emoji -->
+<!-- MODAL CRÉER SÉANCE -->
+<div id="modal-seance" class="modal-overlay" style="display:none" onclick="closeModalIfBg(event,'modal-seance')">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="ms-title">Créer une séance</div>
+    <div class="modal-sub">Choisis tes exercices · Les reps s'adaptent à ton niveau</div>
+    <div class="form-group"><label class="form-label">Nom de la séance *</label><input class="form-input" id="ms-nom" type="text" placeholder="ex: Full body du lundi"></div>
+    <div class="form-group"><label class="form-label">Icône</label><div style="display:flex;gap:8px;flex-wrap:wrap" id="ms-emoji-grid"></div></div>
     <div class="form-group">
-      <label class="form-label">Icône</label>
-      <div class="emoji-grid" id="emoji-grid"></div>
-    </div>
-
-    <!-- Nom -->
-    <div class="form-group">
-      <label class="form-label">Nom de l'exercice *</label>
-      <input class="form-input" id="ex-nom" type="text" placeholder="ex: Dips sur chaise">
-    </div>
-
-    <!-- Catégorie -->
-    <div class="form-group">
-      <label class="form-label">Catégorie *</label>
-      <select class="form-select" id="ex-cat">
-        <option value="pompes">💪 Pompes</option>
-        <option value="abdos">🔄 Abdos</option>
-        <option value="traction">🧗 Tractions</option>
-        <option value="kb">🏋️ Kettlebell</option>
-        <option value="hiit">🔥 HIIT</option>
-      </select>
-    </div>
-
-    <!-- Type -->
-    <div class="form-group">
-      <label class="form-label">Type</label>
-      <div class="type-toggle">
-        <button class="type-btn active" id="type-reps" onclick="selectType('reps')">↻ Répétitions</button>
-        <button class="type-btn" id="type-time" onclick="selectType('time')">⏱ Temps (sec)</button>
+      <label class="form-label">Exercices · <span id="ms-count" style="color:#185FA5">0 sélectionnés</span></label>
+      <div class="tabs" style="margin-bottom:10px">
+        <button class="tab active" onclick="showPickCat('pompes',this)">Pompes</button>
+        <button class="tab" onclick="showPickCat('abdos',this)">Abdos</button>
+        <button class="tab" onclick="showPickCat('traction',this)">Tract.</button>
+        <button class="tab" onclick="showPickCat('kb',this)">KB</button>
+        <button class="tab" onclick="showPickCat('hiit',this)">HIIT</button>
       </div>
+      <div id="ms-ex-list" class="card card-sm" style="max-height:220px;overflow-y:auto;margin-bottom:0"></div>
     </div>
-
-    <!-- Détail court -->
-    <div class="form-group">
-      <label class="form-label">Indication courte</label>
-      <input class="form-input" id="ex-detail" type="text" placeholder="ex: Dos droit · Descente contrôlée">
+    <div id="ms-selected-preview" style="display:none;margin-bottom:12px">
+      <label class="form-label">Séance prévisualisée</label>
+      <div id="ms-preview-list" class="card card-sm" style="margin-bottom:0"></div>
     </div>
-
-    <!-- Instructions -->
-    <div class="form-group">
-      <label class="form-label">Instructions (une par ligne)</label>
-      <textarea class="form-input form-textarea" id="ex-instrs" placeholder="Position de départ&#10;Mouvement principal&#10;Retour à la position"></textarea>
-    </div>
-
-    <!-- Avertissement -->
-    <div class="form-group">
-      <label class="form-label">Erreur fréquente à éviter</label>
-      <input class="form-input" id="ex-warn" type="text" placeholder="ex: Ne pas arrondir le dos">
-    </div>
-
-    <!-- Muscles -->
-    <div class="form-group">
-      <label class="form-label">Muscles ciblés</label>
-      <div class="muscles-input" id="muscles-list"></div>
-      <div class="add-muscle-row">
-        <input id="muscle-input" type="text" placeholder="ex: Pectoraux" onkeydown="if(event.key==='Enter'){event.preventDefault();addMuscle()}">
-        <button onclick="addMuscle()">+ Ajouter</button>
-      </div>
-    </div>
-
-    <!-- Boutons -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
-      <button class="btn" onclick="closeModal()">Annuler</button>
-      <button class="btn btn-blue" onclick="saveExercice()">✓ Enregistrer</button>
-    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px"><button class="btn" onclick="closeModal('modal-seance')">Annuler</button><button class="btn btn-blue" onclick="saveSeance()">✓ Enregistrer</button></div>
   </div>
 </div>
 
 <!-- ===== HOME ===== -->
 <div id="screen-home" class="screen active">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-    <div>
-      <div class="page-title">Bonjour, Mus 👋</div>
-      <div class="page-sub" id="home-date">Chargement...</div>
-    </div>
+    <div><div class="page-title" id="home-greeting">Bonjour, Mus 👋</div><div class="page-sub" id="home-date"></div></div>
     <div class="avatar av-mus" style="width:44px;height:44px;font-size:16px">MU</div>
   </div>
   <div id="notif-area"></div>
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;color:#185FA5;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">Séance du jour</div>
-        <div style="font-size:18px;font-weight:700">Circuit Force + Cardio</div>
-        <div style="font-size:12px;color:#888;margin-top:3px">6 exercices · ~35 min · Adapté pour toi</div>
-      </div>
+      <div><div style="font-size:11px;font-weight:700;color:#185FA5;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">Séance du jour</div><div style="font-size:18px;font-weight:700" id="home-seance-name">Circuit Force + Cardio</div><div style="font-size:12px;color:#888;margin-top:3px" id="home-seance-sub">6 exercices · ~35 min · Adapté pour toi</div></div>
       <span class="badge" id="seance-badge" style="background:#f5f5f5;color:#666">À faire</span>
     </div>
-    <div style="margin-bottom:14px">
-      <div class="ex-row"><div class="ex-icon">💪</div><div class="ex-info"><div class="ex-name">Pompes classiques</div><div class="ex-detail">Repos 60s</div></div><div><div class="ex-reps">18 reps</div><div class="ex-reps-sub">max: 30</div></div></div>
+    <div style="margin-bottom:14px" id="home-ex-preview">
+      <div class="ex-row"><div class="ex-icon">💪</div><div class="ex-info"><div class="ex-name">Pompes classiques</div><div class="ex-detail">Repos 60s</div></div><div><div class="ex-reps" id="reps-pompes">18 reps</div><div class="ex-reps-sub">max: 30</div></div></div>
       <div class="ex-row"><div class="ex-icon">🏋️</div><div class="ex-info"><div class="ex-name">Kettlebell swing</div><div class="ex-detail">12 kg · Repos 90s</div></div><div><div class="ex-reps">15 reps</div><div class="ex-reps-sub">60%</div></div></div>
       <div class="ex-row"><div class="ex-icon">📐</div><div class="ex-info"><div class="ex-name">Planche</div><div class="ex-detail">Isométrique</div></div><div><div class="ex-reps">45 sec</div><div class="ex-reps-sub">60%</div></div></div>
-      <div class="ex-row" style="opacity:.4;border-bottom:none"><div class="ex-icon" style="font-size:14px">···</div><div class="ex-info"><div class="ex-name" style="font-size:13px;color:#888">3 autres exercices</div><div class="ex-detail">Crunch · Tractions · Burpees</div></div></div>
+      <div class="ex-row" style="opacity:.4;border-bottom:none"><div class="ex-icon" style="font-size:14px">···</div><div class="ex-info"><div class="ex-name" style="font-size:13px;color:#888">3 autres exercices</div></div></div>
     </div>
     <button class="btn btn-blue" id="seance-btn" onclick="showCoach()">🏃 Démarrer la séance</button>
   </div>
   <div class="section-title">Amis aujourd'hui</div>
   <div class="card card-sm">
     <div class="friend-row"><div class="avatar av-belaid" style="width:36px;height:36px;font-size:13px">BE</div><div style="flex:1"><div style="font-weight:600;font-size:14px">Belaid</div><div style="font-size:12px;color:#888">Séance terminée · 1h</div></div><span class="badge badge-green">✓ Fait</span></div>
-    <div class="friend-row"><div class="avatar av-quentin" style="width:36px;height:36px;font-size:13px">QU</div><div style="flex:1"><div style="font-weight:600;font-size:14px">Quentin</div><div style="font-size:12px;color:#888">Pas encore aujourd'hui</div></div><span class="badge badge-gray">En attente</span></div>
-    <div class="friend-row" style="border-bottom:none"><div class="avatar av-seb" style="width:36px;height:36px;font-size:13px">SE</div><div style="flex:1"><div style="font-weight:600;font-size:14px">Seb</div><div style="font-size:12px;color:#888">Pas encore aujourd'hui</div></div><span class="badge badge-gray">En attente</span></div>
+    <div class="friend-row"><div class="avatar av-quentin" style="width:36px;height:36px;font-size:13px">QU</div><div style="flex:1"><div style="font-weight:600;font-size:14px">Quentin</div><div style="font-size:12px;color:#888">Pas encore</div></div><span class="badge badge-gray">En attente</span></div>
+    <div class="friend-row" style="border-bottom:none"><div class="avatar av-seb" style="width:36px;height:36px;font-size:13px">SE</div><div style="flex:1"><div style="font-weight:600;font-size:14px">Seb</div><div style="font-size:12px;color:#888">Pas encore</div></div><span class="badge badge-gray">En attente</span></div>
   </div>
   <div class="section-title">Autres activités</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-    <button class="card card-sm" style="border:none;cursor:pointer;text-align:left" onclick="showScreen('running')"><div style="font-size:28px;margin-bottom:6px">🏃</div><div style="font-weight:700;font-size:14px">Running GPS</div><div style="font-size:12px;color:#888;margin-top:2px">Démarrer une sortie</div></button>
+    <button class="card card-sm" style="border:none;cursor:pointer;text-align:left" onclick="showScreen('running')"><div style="font-size:28px;margin-bottom:6px">🏃</div><div style="font-weight:700;font-size:14px">Running GPS</div><div style="font-size:12px;color:#888;margin-top:2px">Zones cardiaques perso</div></button>
     <button class="card card-sm" style="border:none;cursor:pointer;text-align:left" onclick="showScreen('yoga')"><div style="font-size:28px;margin-bottom:6px">🧘</div><div style="font-weight:700;font-size:14px">Yoga</div><div style="font-size:12px;color:#888;margin-top:2px">Flexibilité · Zen</div></button>
   </div>
 </div>
@@ -271,101 +228,48 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <!-- ===== COACH ===== -->
 <div id="screen-coach" class="screen">
   <div id="coach-main">
-    <div style="text-align:center;margin-bottom:8px">
-      <div style="font-size:12px;color:#888;margin-bottom:8px" id="coach-step-lbl">Exercice 1 / 6</div>
-      <div class="step-dots" id="coach-dots"></div>
-    </div>
+    <div style="text-align:center;margin-bottom:8px"><div style="font-size:12px;color:#888;margin-bottom:8px" id="coach-step-lbl">Exercice 1 / 6</div><div class="step-dots" id="coach-dots"></div></div>
     <div class="card">
-      <div style="text-align:center">
-        <div style="font-size:44px;margin-bottom:8px" id="coach-icon">💪</div>
-        <div style="font-size:20px;font-weight:700;margin-bottom:4px" id="coach-name">Pompes classiques</div>
-        <div style="font-size:13px;color:#888;margin-bottom:4px" id="coach-perc">18 reps · 60% de ton max</div>
-      </div>
+      <div style="text-align:center"><div style="font-size:44px;margin-bottom:8px" id="coach-icon">💪</div><div style="font-size:20px;font-weight:700;margin-bottom:4px" id="coach-name">Pompes classiques</div><div style="font-size:13px;color:#888;margin-bottom:4px" id="coach-perc">18 reps · 60% de ton max</div></div>
       <div style="background:#f0f4f8;border-radius:16px;margin:12px 0;padding:14px" id="coach-instr-content"></div>
       <div style="padding:16px 0 8px;text-align:center">
-        <div class="timer-ring">
-          <svg width="160" height="160" viewBox="0 0 160 160">
-            <circle cx="80" cy="80" r="68" fill="none" stroke="#f0f0f0" stroke-width="10"/>
-            <circle id="timer-arc" cx="80" cy="80" r="68" fill="none" stroke="#185FA5" stroke-width="10" stroke-linecap="round" stroke-dasharray="427" stroke-dashoffset="0" style="transition:stroke-dashoffset 1s linear"/>
-          </svg>
-          <div class="timer-num"><div class="timer-big" id="timer-display">18</div><div class="timer-lbl" id="timer-type">reps</div></div>
-        </div>
+        <div class="timer-ring"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="80" r="68" fill="none" stroke="#f0f0f0" stroke-width="10"/><circle id="timer-arc" cx="80" cy="80" r="68" fill="none" stroke="#185FA5" stroke-width="10" stroke-linecap="round" stroke-dasharray="427" stroke-dashoffset="0" style="transition:stroke-dashoffset 1s linear"/></svg><div class="timer-num"><div class="timer-big" id="timer-display">18</div><div class="timer-lbl" id="timer-type">reps</div></div></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px">
-        <button class="btn" id="start-btn" onclick="startExercise()">▶ Démarrer</button>
-        <button class="btn btn-blue" id="next-btn" onclick="nextExercise()" style="display:none">Suivant →</button>
-      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px"><button class="btn" id="start-btn" onclick="startExercise()">▶ Démarrer</button><button class="btn btn-blue" id="next-btn" onclick="nextExercise()" style="display:none">Suivant →</button></div>
       <button class="btn" style="margin-top:8px;color:#888;font-size:13px" onclick="showScreen('home')">← Quitter</button>
     </div>
   </div>
-  <div id="coach-rest" style="display:none">
-    <div class="card" style="text-align:center;padding:32px 20px">
-      <div style="font-size:44px;margin-bottom:12px">😮‍💨</div>
-      <div style="font-size:20px;font-weight:700;margin-bottom:6px">Repos</div>
-      <div style="font-size:13px;color:#888;margin-bottom:20px">Bien joué ! Prépare-toi pour le suivant.</div>
-      <div style="font-size:52px;font-weight:700;color:#185FA5;margin-bottom:16px" id="rest-count">60</div>
-      <div class="prog-bar"><div class="prog-fill" id="rest-bar" style="width:100%;background:#185FA5"></div></div>
-      <button class="btn btn-blue" style="margin-top:20px" onclick="skipRest()">Passer →</button>
-    </div>
-  </div>
-  <div id="coach-done" style="display:none">
-    <div class="card" style="text-align:center;padding:32px 20px">
-      <div class="done-circle">🎉</div>
-      <div style="font-size:22px;font-weight:700;margin-bottom:6px">Séance terminée !</div>
-      <div style="font-size:14px;color:#888;margin-bottom:24px">Tu as tout déchiré aujourd'hui 💪</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:24px">
-        <div class="stat-box"><div class="stat-val">6</div><div class="stat-lbl">exercices</div></div>
-        <div class="stat-box"><div class="stat-val" id="done-time">34</div><div class="stat-lbl">minutes</div></div>
-        <div class="stat-box"><div class="stat-val">🔥</div><div class="stat-lbl">Série +1</div></div>
-      </div>
-      <div style="font-size:13px;color:#888;margin-bottom:16px">Tes amis sont notifiés 🔔</div>
-      <button class="btn btn-blue" onclick="finishSeance()">Retour à l'accueil</button>
-    </div>
-  </div>
+  <div id="coach-rest" style="display:none"><div class="card" style="text-align:center;padding:32px 20px"><div style="font-size:44px;margin-bottom:12px">😮‍💨</div><div style="font-size:20px;font-weight:700;margin-bottom:6px">Repos</div><div style="font-size:13px;color:#888;margin-bottom:20px">Bien joué ! Prépare-toi.</div><div style="font-size:52px;font-weight:700;color:#185FA5;margin-bottom:16px" id="rest-count">60</div><div class="prog-bar"><div class="prog-fill" id="rest-bar" style="width:100%;background:#185FA5"></div></div><button class="btn btn-blue" style="margin-top:20px" onclick="skipRest()">Passer →</button></div></div>
+  <div id="coach-done" style="display:none"><div class="card" style="text-align:center;padding:32px 20px"><div style="width:80px;height:80px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:36px">🎉</div><div style="font-size:22px;font-weight:700;margin-bottom:6px">Séance terminée !</div><div style="font-size:14px;color:#888;margin-bottom:24px">Tu as tout déchiré 💪</div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:24px"><div class="stat-box"><div class="stat-val" id="done-ex">6</div><div class="stat-lbl">exercices</div></div><div class="stat-box"><div class="stat-val" id="done-time">—</div><div class="stat-lbl">minutes</div></div><div class="stat-box"><div class="stat-val">🔥</div><div class="stat-lbl">Série +1</div></div></div><div style="font-size:13px;color:#888;margin-bottom:16px">Tes amis sont notifiés 🔔</div><button class="btn btn-blue" onclick="finishSeance()">Retour à l'accueil</button></div></div>
 </div>
 
 <!-- ===== CALENDAR ===== -->
 <div id="screen-calendar" class="screen">
-  <div class="page-title">Calendrier</div>
-  <div class="page-sub">Avril 2025</div>
+  <div class="page-title">Calendrier</div><div class="page-sub">Avril 2025</div>
   <div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap">
     <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-mus"></span>Mus</span>
     <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-belaid"></span>Belaid</span>
     <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-quentin"></span>Quentin</span>
     <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span class="dot dot-seb"></span>Seb</span>
   </div>
-  <div class="card card-sm">
-    <div class="cal-header"><div class="cal-day-label">Lu</div><div class="cal-day-label">Ma</div><div class="cal-day-label">Me</div><div class="cal-day-label">Je</div><div class="cal-day-label">Ve</div><div class="cal-day-label">Sa</div><div class="cal-day-label">Di</div></div>
-    <div class="cal-grid" id="cal-grid"></div>
-  </div>
+  <div class="card card-sm"><div class="cal-header"><div class="cal-day-label">Lu</div><div class="cal-day-label">Ma</div><div class="cal-day-label">Me</div><div class="cal-day-label">Je</div><div class="cal-day-label">Ve</div><div class="cal-day-label">Sa</div><div class="cal-day-label">Di</div></div><div class="cal-grid" id="cal-grid"></div></div>
   <div id="cal-detail" class="card card-sm" style="display:none"><div style="font-weight:700;margin-bottom:10px" id="cal-detail-title"></div><div id="cal-detail-body"></div></div>
-  <div class="section-title">À venir</div>
-  <div class="card card-sm">
-    <div class="ex-row"><div class="ex-icon" style="background:#e3f2fd;font-size:14px;font-weight:700;color:#1565c0">7</div><div class="ex-info"><div class="ex-name">Circuit Force + Cardio</div><div class="ex-detail">Aujourd'hui</div></div><span class="badge" id="today-badge" style="background:#f5f5f5;color:#666">À faire</span></div>
-    <div class="ex-row"><div class="ex-icon" style="font-size:14px;font-weight:700">9</div><div class="ex-info"><div class="ex-name">HIIT Interval</div><div class="ex-detail">Jeudi 9 avril</div></div><span class="badge badge-gray">Programmé</span></div>
-    <div class="ex-row" style="border-bottom:none"><div class="ex-icon" style="font-size:14px;font-weight:700">12</div><div class="ex-info"><div class="ex-name">Tractions + Abdos</div><div class="ex-detail">Dimanche 12 avril</div></div><span class="badge badge-gray">Programmé</span></div>
-  </div>
+  <div class="section-title">Mes séances</div>
+  <div class="card card-sm" id="seances-list"></div>
+  <button class="btn" style="margin-top:4px" onclick="openSeanceModal()">+ Créer une séance</button>
 </div>
 
 <!-- ===== EXERCISES ===== -->
 <div id="screen-exercises" class="screen">
-  <div class="page-title">Exercices</div>
-  <div class="page-sub">Base complète · Adapté à ton niveau</div>
-  <div class="tabs">
-    <button class="tab active" onclick="showCat('pompes',this)">💪 Pompes</button>
-    <button class="tab" onclick="showCat('abdos',this)">🔄 Abdos</button>
-    <button class="tab" onclick="showCat('traction',this)">🧗 Tract.</button>
-    <button class="tab" onclick="showCat('kb',this)">🏋️ KB</button>
-    <button class="tab" onclick="showCat('hiit',this)">🔥 HIIT</button>
-  </div>
+  <div class="page-title">Exercices</div><div class="page-sub">Base complète · Adapté à ton niveau</div>
+  <div class="tabs"><button class="tab active" onclick="showCat('pompes',this)">💪 Pompes</button><button class="tab" onclick="showCat('abdos',this)">🔄 Abdos</button><button class="tab" onclick="showCat('traction',this)">🧗 Tract.</button><button class="tab" onclick="showCat('kb',this)">🏋️ KB</button><button class="tab" onclick="showCat('hiit',this)">🔥 HIIT</button></div>
   <div id="ex-list"></div>
-  <button class="btn" style="margin-top:4px" onclick="openModal()">+ Ajouter un exercice</button>
+  <button class="btn" style="margin-top:4px" onclick="openExModal()">+ Ajouter un exercice perso</button>
 </div>
 
 <!-- ===== STATS ===== -->
 <div id="screen-stats" class="screen">
-  <div class="page-title">Mes stats</div>
-  <div class="page-sub">Avril 2025</div>
+  <div class="page-title">Mes stats</div><div class="page-sub">Avril 2025</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px">
     <div class="stat-box"><div class="stat-val" id="stat-seances">5</div><div class="stat-lbl">Séances ce mois</div></div>
     <div class="stat-box"><div class="stat-val">2h47</div><div class="stat-lbl">Temps total</div></div>
@@ -375,35 +279,61 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="section-title">Activité cette semaine</div>
   <div class="card card-sm"><div class="bar-chart" id="week-chart"></div><div style="display:flex;justify-content:space-between" id="week-labels"></div></div>
   <div class="section-title">Régularité · 4 semaines</div>
-  <div class="card card-sm">
-    <div class="streak-grid" id="streak-grid"></div>
-    <div style="display:flex;gap:12px;margin-top:10px">
-      <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:3px;background:#185FA5;display:inline-block"></span>Fait</span>
-      <span style="font-size:12px;display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:3px;background:#f0f0f0;display:inline-block"></span>Repos</span>
-    </div>
-  </div>
+  <div class="card card-sm"><div class="streak-grid" id="streak-grid"></div><div style="display:flex;gap:12px;margin-top:10px"><span style="font-size:12px;display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:3px;background:#185FA5;display:inline-block"></span>Fait</span><span style="font-size:12px;display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:3px;background:#f0f0f0;display:inline-block"></span>Repos</span></div></div>
   <div class="section-title">Records personnels</div>
   <div class="card card-sm">
-    <div class="stat-row"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">💪</span><div><div style="font-size:14px;font-weight:600">Pompes</div><div style="font-size:12px;color:#888">Max en une série</div></div></div><div style="text-align:right"><div style="font-size:18px;font-weight:700">30</div><div style="font-size:11px;color:#888">reps</div></div></div>
-    <div class="stat-row"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">🧗</span><div><div style="font-size:14px;font-weight:600">Tractions</div><div style="font-size:12px;color:#888">Max en une série</div></div></div><div style="text-align:right"><div style="font-size:18px;font-weight:700">6</div><div style="font-size:11px;color:#888">reps</div></div></div>
-    <div class="stat-row"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">🔄</span><div><div style="font-size:14px;font-weight:600">Crunchs</div><div style="font-size:12px;color:#888">Max en une série</div></div></div><div style="text-align:right"><div style="font-size:18px;font-weight:700">50</div><div style="font-size:11px;color:#888">reps</div></div></div>
+    <div class="stat-row"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">💪</span><div><div style="font-size:14px;font-weight:600">Pompes</div><div style="font-size:12px;color:#888">Max série</div></div></div><div style="text-align:right"><div style="font-size:18px;font-weight:700">30</div><div style="font-size:11px;color:#888">reps</div></div></div>
+    <div class="stat-row"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">🧗</span><div><div style="font-size:14px;font-weight:600">Tractions</div><div style="font-size:12px;color:#888">Max série</div></div></div><div style="text-align:right"><div style="font-size:18px;font-weight:700">6</div><div style="font-size:11px;color:#888">reps</div></div></div>
     <div class="stat-row" style="border-bottom:none"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">🏃</span><div><div style="font-size:14px;font-weight:600">Running</div><div style="font-size:12px;color:#888">Distance max</div></div></div><div style="text-align:right"><div style="font-size:18px;font-weight:700">7.2</div><div style="font-size:11px;color:#888">km</div></div></div>
   </div>
   <div class="section-title">Activité du groupe</div>
-  <div class="card card-sm"><div style="font-size:12px;color:#888;margin-bottom:10px">Séances complétées ce mois</div><div id="group-activity"></div></div>
+  <div class="card card-sm"><div style="font-size:12px;color:#888;margin-bottom:10px">Séances ce mois</div><div id="group-activity"></div></div>
 </div>
 
 <!-- ===== PROFILE ===== -->
 <div id="screen-profile" class="screen">
-  <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px"><div class="avatar av-mus" style="width:60px;height:60px;font-size:22px">MU</div><div><div style="font-size:20px;font-weight:700">Mus</div><div style="font-size:13px;color:#888">Membre depuis mars 2025</div></div></div>
-  <div style="font-size:16px;font-weight:700;margin-bottom:10px">Mes capacités</div>
-  <div class="card card-sm">
-    <div class="slider-row"><label>Max pompes</label><input type="range" min="5" max="80" value="30" oninput="updStat('sp',this.value,'reps')"><span id="sp">30 reps</span></div>
-    <div class="slider-row"><label>Max crunchs</label><input type="range" min="5" max="150" value="50" oninput="updStat('sc',this.value,'reps')"><span id="sc">50 reps</span></div>
-    <div class="slider-row"><label>Max tractions</label><input type="range" min="0" max="30" value="6" oninput="updStat('st',this.value,'reps')"><span id="st">6 reps</span></div>
-    <div class="slider-row"><label>Kettlebell</label><input type="range" min="8" max="48" step="4" value="12" oninput="updStat('sk',this.value,'kg')"><span id="sk">12 kg</span></div>
+  <!-- Header profil -->
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+    <div class="avatar av-mus" style="width:60px;height:60px;font-size:22px">MU</div>
+    <div><div style="font-size:20px;font-weight:700">Mus</div><div style="font-size:13px;color:#888">Membre depuis mars 2025</div></div>
   </div>
-  <div style="font-size:16px;font-weight:700;margin:16px 0 10px">Objectif</div>
+
+  <!-- Données physiques -->
+  <div class="section-title" style="margin-top:0">Données physiques</div>
+  <div class="card card-sm">
+    <div class="form-input-row" style="margin-bottom:12px">
+      <div><label class="form-label">Âge</label><div style="display:flex;align-items:center;gap:8px"><input class="form-input" id="p-age" type="number" min="10" max="100" value="47" oninput="updatePhysique()" style="text-align:center"><span style="font-size:13px;color:#888">ans</span></div></div>
+      <div><label class="form-label">Taille</label><div style="display:flex;align-items:center;gap:8px"><input class="form-input" id="p-taille" type="number" min="140" max="220" value="179" oninput="updatePhysique()" style="text-align:center"><span style="font-size:13px;color:#888">cm</span></div></div>
+    </div>
+    <div style="margin-bottom:12px"><label class="form-label">Poids</label><div style="display:flex;align-items:center;gap:8px"><input class="form-input" id="p-poids" type="number" min="30" max="200" value="73" oninput="updatePhysique()" style="text-align:center;max-width:100px"><span style="font-size:13px;color:#888">kg</span></div></div>
+    <!-- Résultats calculés -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:4px">
+      <div class="stat-box" style="padding:10px"><div class="stat-val" style="font-size:18px" id="calc-imc">22.8</div><div class="stat-lbl">IMC</div></div>
+      <div class="stat-box" style="padding:10px"><div class="stat-val" style="font-size:18px" id="calc-fcmax">173</div><div class="stat-lbl">FCmax bpm</div></div>
+      <div class="stat-box" style="padding:10px"><div class="stat-val" style="font-size:14px" id="calc-imc-label" class="imc-normal">Normal</div><div class="stat-lbl">Catégorie</div></div>
+    </div>
+    <div style="font-size:12px;color:#888;margin-top:8px;padding:8px;background:#f8f9fa;border-radius:8px" id="calc-conseil">Programme équilibré recommandé · FCmax 173 bpm</div>
+  </div>
+
+  <!-- Zones cardiaques perso -->
+  <div class="section-title">Mes zones cardiaques</div>
+  <div class="card card-sm" id="zones-card"></div>
+
+  <!-- Capacités physiques -->
+  <div class="section-title">Mes capacités</div>
+  <div class="card card-sm">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><label class="form-label" style="margin-bottom:0">Max pompes</label><span style="font-size:13px;font-weight:700;color:#185FA5" id="val-pompes">30 reps</span></div>
+    <input type="range" min="1" max="80" value="30" oninput="updateCap('pompes',this.value)" style="width:100%;accent-color:#185FA5;margin-bottom:12px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><label class="form-label" style="margin-bottom:0">Max crunchs</label><span style="font-size:13px;font-weight:700;color:#185FA5" id="val-crunchs">50 reps</span></div>
+    <input type="range" min="1" max="150" value="50" oninput="updateCap('crunchs',this.value)" style="width:100%;accent-color:#185FA5;margin-bottom:12px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><label class="form-label" style="margin-bottom:0">Max tractions</label><span style="font-size:13px;font-weight:700;color:#185FA5" id="val-tractions">6 reps</span></div>
+    <input type="range" min="0" max="30" value="6" oninput="updateCap('tractions',this.value)" style="width:100%;accent-color:#185FA5;margin-bottom:12px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><label class="form-label" style="margin-bottom:0">Kettlebell</label><span style="font-size:13px;font-weight:700;color:#185FA5" id="val-kb">12 kg</span></div>
+    <input type="range" min="4" max="48" step="2" value="12" oninput="updateCap('kb',this.value,'kg')" style="width:100%;accent-color:#185FA5">
+  </div>
+
+  <!-- Objectif -->
+  <div class="section-title">Objectif</div>
   <div class="card card-sm">
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="btn btn-sm" id="obj-forme" onclick="selObj('forme')" style="background:#e3f2fd;color:#1565c0;border-color:#1565c0">Remise en forme</button>
@@ -411,25 +341,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <button class="btn btn-sm" id="obj-force" onclick="selObj('force')">Force</button>
     </div>
   </div>
-  <div style="font-size:16px;font-weight:700;margin:16px 0 10px">Exercices perso <span id="perso-count-badge" class="perso-badge">0</span></div>
-  <div class="card card-sm" id="perso-list-profile"><div style="font-size:13px;color:#888;text-align:center;padding:8px">Aucun exercice perso pour l'instant</div></div>
-  <button class="btn" style="margin-top:4px" onclick="openModal()">+ Créer un exercice perso</button>
+
+  <!-- Exercices perso -->
+  <div class="section-title">Exercices perso <span id="perso-count-badge" class="perso-badge">0</span></div>
+  <div class="card card-sm" id="perso-list-profile"><div style="font-size:13px;color:#888;text-align:center;padding:8px">Aucun exercice perso</div></div>
+  <button class="btn" style="margin-top:4px;margin-bottom:8px" onclick="openExModal()">+ Créer un exercice perso</button>
 </div>
 
 <!-- ===== RUNNING ===== -->
 <div id="screen-running" class="screen">
   <button onclick="showScreen('home')" style="background:none;border:none;font-size:13px;color:#888;cursor:pointer;margin-bottom:12px">← Retour</button>
   <div class="page-title">Running GPS 🏃</div>
-  <div class="tabs">
-    <button class="tab active" onclick="showRunTab('live',this)">En direct</button>
-    <button class="tab" onclick="showRunTab('prog',this)">Programmes</button>
-    <button class="tab" onclick="showRunTab('hist',this)">Historique</button>
-  </div>
+  <div class="tabs"><button class="tab active" onclick="showRunTab('live',this)">En direct</button><button class="tab" onclick="showRunTab('prog',this)">Programmes</button><button class="tab" onclick="showRunTab('hist',this)">Historique</button></div>
   <div id="rtab-live">
-    <div class="map-box">
-      <svg width="100%" height="185" viewBox="0 0 400 185"><rect width="400" height="185" fill="#e8f4f8"/><line x1="0" y1="62" x2="400" y2="62" stroke="#cde" stroke-width=".7"/><line x1="0" y1="104" x2="400" y2="104" stroke="#cde" stroke-width=".7"/><line x1="0" y1="146" x2="400" y2="146" stroke="#cde" stroke-width=".7"/><line x1="80" y1="0" x2="80" y2="185" stroke="#cde" stroke-width=".7"/><line x1="200" y1="0" x2="200" y2="185" stroke="#cde" stroke-width=".7"/><line x1="320" y1="0" x2="320" y2="185" stroke="#cde" stroke-width=".7"/><path d="M40 145 C80 125,120 92,160 82 C200 72,240 65,275 72 C310 80,340 100,365 92" fill="none" stroke="#bbdff5" stroke-width="4" stroke-linecap="round"/><path d="M40 145 C80 125,120 92,160 82 C185 75,205 70,218 68" fill="none" stroke="#185FA5" stroke-width="4" stroke-linecap="round"/><circle cx="40" cy="145" r="6" fill="#43a047"/><circle cx="218" cy="68" r="11" fill="#185FA5" opacity=".2"/><circle cx="218" cy="68" r="6" fill="#185FA5"/><circle cx="113" cy="95" r="4" fill="#fff" stroke="#185FA5" stroke-width="2"/><text x="113" y="87" text-anchor="middle" font-size="10" fill="#185FA5" font-family="sans-serif">1km</text><rect x="350" y="84" width="16" height="16" rx="3" fill="#e53935" opacity=".9"/><text x="358" y="95" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">F</text></svg>
+    <div style="background:#e8f4f8;border-radius:14px;height:185px;position:relative;overflow:hidden;margin-bottom:12px">
+      <svg width="100%" height="185" viewBox="0 0 400 185"><rect width="400" height="185" fill="#e8f4f8"/><line x1="0" y1="62" x2="400" y2="62" stroke="#cde" stroke-width=".7"/><line x1="0" y1="104" x2="400" y2="104" stroke="#cde" stroke-width=".7"/><line x1="0" y1="146" x2="400" y2="146" stroke="#cde" stroke-width=".7"/><line x1="80" y1="0" x2="80" y2="185" stroke="#cde" stroke-width=".7"/><line x1="200" y1="0" x2="200" y2="185" stroke="#cde" stroke-width=".7"/><line x1="320" y1="0" x2="320" y2="185" stroke="#cde" stroke-width=".7"/><path d="M40 145 C80 125,120 92,160 82 C200 72,240 65,275 72 C310 80,340 100,365 92" fill="none" stroke="#bbdff5" stroke-width="4" stroke-linecap="round"/><path d="M40 145 C80 125,120 92,160 82 C185 75,205 70,218 68" fill="none" stroke="#185FA5" stroke-width="4" stroke-linecap="round"/><circle cx="40" cy="145" r="6" fill="#43a047"/><circle cx="218" cy="68" r="11" fill="#185FA5" opacity=".2"/><circle cx="218" cy="68" r="6" fill="#185FA5"/><text x="113" y="87" text-anchor="middle" font-size="10" fill="#185FA5" font-family="sans-serif">1km</text><rect x="350" y="84" width="16" height="16" rx="3" fill="#e53935" opacity=".9"/><text x="358" y="95" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">F</text></svg>
       <div style="position:absolute;top:10px;left:10px;background:#fff;border-radius:20px;padding:4px 10px;display:flex;align-items:center;gap:5px;box-shadow:0 1px 3px rgba(0,0,0,.15)"><span class="pulse" style="width:7px;height:7px;border-radius:50%;background:#e53935;display:inline-block"></span><span style="font-size:12px;font-weight:600;color:#c62828">En course</span></div>
-      <div style="position:absolute;bottom:8px;right:10px;font-size:11px;color:#666">↑ +47m dénivelé</div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px">
       <div class="stat-box"><div class="stat-val" style="font-size:20px" id="run-dist">2.1</div><div class="stat-lbl">km</div></div>
@@ -437,16 +364,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="stat-box"><div class="stat-val" style="font-size:20px" id="run-time">12:04</div><div class="stat-lbl">durée</div></div>
       <div class="stat-box"><div class="stat-val" style="font-size:20px" id="run-hr">148</div><div class="stat-lbl">bpm</div></div>
     </div>
+    <!-- Zone cardiaque personnalisée -->
+    <div class="card card-sm" style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:13px;font-weight:600">Zone cardiaque</span><span class="badge" id="run-zone-badge" style="background:#fff8e1;color:#e65100">Zone 3 · Aérobie</span></div>
+      <div style="display:flex;gap:2px;height:10px;border-radius:5px;overflow:hidden;margin-bottom:6px" id="run-zone-bar"></div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:#aaa" id="run-zone-labels"></div>
+      <div style="font-size:12px;color:#888;margin-top:6px" id="run-zone-detail">148 bpm · Zone 3 · 70-80% de ta FCmax (173 bpm)</div>
+    </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="run-pause-btn" onclick="toggleRun()">⏸ Pause</button><button class="btn" style="color:#888" onclick="showScreen('home')">⏹ Arrêter</button></div>
   </div>
   <div id="rtab-prog" style="display:none">
-    <div class="card card-sm" style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Endurance de base</div><div style="font-size:12px;color:#888;margin-top:2px">Course continue · Zone 2</div></div><span class="badge badge-green">Recommandé</span></div><button class="btn btn-blue">Lancer</button></div>
-    <div class="card card-sm" style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Fractionné 30/30</div><div style="font-size:12px;color:#888;margin-top:2px">Sprint 30s · Marche 30s · x10</div></div><span class="badge badge-amber">Intensif</span></div><button class="btn">Lancer</button></div>
-    <div class="card card-sm"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Plan 10 km</div><div style="font-size:12px;color:#888;margin-top:2px">8 semaines</div></div><span class="badge badge-blue">Plan long</span></div><div class="prog-bar" style="margin-bottom:6px"><div class="prog-fill" style="width:35%;background:#185FA5"></div></div><button class="btn">Continuer</button></div>
+    <div class="card card-sm" style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Endurance Z2</div><div style="font-size:12px;color:#888;margin-top:2px" id="prog-z2-detail">104-121 bpm · 5 km</div></div><span class="badge badge-green">Recommandé</span></div><button class="btn btn-blue">Lancer</button></div>
+    <div class="card card-sm" style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Fractionné Z4</div><div style="font-size:12px;color:#888;margin-top:2px" id="prog-z4-detail">138-156 bpm · 30/30</div></div><span class="badge badge-amber">Intensif</span></div><button class="btn">Lancer</button></div>
+    <div class="card card-sm"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><div><div style="font-weight:700;font-size:14px">Plan 10 km</div><div style="font-size:12px;color:#888;margin-top:2px">8 semaines · progression auto</div></div><span class="badge badge-blue">Plan long</span></div><div class="prog-bar" style="margin-bottom:6px"><div class="prog-fill" style="width:35%;background:#185FA5"></div></div><button class="btn">Continuer</button></div>
   </div>
   <div id="rtab-hist" style="display:none">
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px"><div class="stat-box"><div class="stat-val">23.4</div><div class="stat-lbl">km ce mois</div></div><div class="stat-box"><div class="stat-val">5:38</div><div class="stat-lbl">allure moy.</div></div><div class="stat-box"><div class="stat-val" style="color:#43a047">+12%</div><div class="stat-lbl">progression</div></div></div>
-    <div class="card card-sm"><div class="run-row"><div class="ex-icon" style="background:#e3f2fd;font-weight:700;color:#185FA5;font-size:13px">5km</div><div style="flex:1"><div style="font-size:14px;font-weight:600">Endurance</div><div style="font-size:12px;color:#888">Vendredi · 28 min 12s</div></div><div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#185FA5">5:38</div><div style="font-size:10px;color:#aaa">min/km</div></div></div><div class="run-row" style="border-bottom:none"><div class="ex-icon" style="background:#fff8e1;font-weight:700;color:#e65100;font-size:13px">3km</div><div style="flex:1"><div style="font-size:14px;font-weight:600">Fractionné 30/30</div><div style="font-size:12px;color:#888">Mardi · 22 min</div></div><div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#fb8c00">4:52</div><div style="font-size:10px;color:#aaa">min/km</div></div></div></div>
+    <div class="card card-sm">
+      <div class="ex-row"><div class="ex-icon" style="background:#e3f2fd;font-weight:700;color:#185FA5;font-size:13px">5km</div><div style="flex:1"><div style="font-size:14px;font-weight:600">Endurance Z2</div><div style="font-size:12px;color:#888">Vendredi · 28 min</div></div><div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#185FA5">5:38</div><div style="font-size:10px;color:#aaa">min/km</div></div></div>
+      <div class="ex-row" style="border-bottom:none"><div class="ex-icon" style="background:#fff8e1;font-weight:700;color:#e65100;font-size:13px">3km</div><div style="flex:1"><div style="font-size:14px;font-weight:600">Fractionné Z4</div><div style="font-size:12px;color:#888">Mardi · 22 min</div></div><div style="text-align:right"><div style="font-size:14px;font-weight:700;color:#fb8c00">4:52</div><div style="font-size:10px;color:#aaa">min/km</div></div></div>
+    </div>
   </div>
 </div>
 
@@ -454,64 +391,160 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <div id="screen-yoga" class="screen">
   <button onclick="showScreen('home')" style="background:none;border:none;font-size:13px;color:#888;cursor:pointer;margin-bottom:12px">← Retour</button>
   <div class="page-title">Yoga 🧘</div>
-  <div class="tabs">
-    <button class="tab active" onclick="showYogaTab('session',this)">Séance</button>
-    <button class="tab" onclick="showYogaTab('poses',this)">Postures</button>
-    <button class="tab" onclick="showYogaTab('breath',this)">Respiration</button>
-  </div>
-  <div id="ytab-session">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
-      <div onclick="selYoga('flex',this)" id="ycard-flex" class="card card-sm" style="cursor:pointer;border:2px solid #7c4dff"><div style="font-size:26px;margin-bottom:5px">🌿</div><div style="font-weight:700;font-size:13px">Flexibilité</div><div style="font-size:11px;color:#888;margin-top:2px">Hatha · 35 min</div></div>
-      <div onclick="selYoga('strength',this)" id="ycard-strength" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">🔥</div><div style="font-weight:700;font-size:13px">Force</div><div style="font-size:11px;color:#888;margin-top:2px">Vinyasa · 40 min</div></div>
-      <div onclick="selYoga('relax',this)" id="ycard-relax" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">🌙</div><div style="font-weight:700;font-size:13px">Relaxation</div><div style="font-size:11px;color:#888;margin-top:2px">Yin · 30 min</div></div>
-      <div onclick="selYoga('morning',this)" id="ycard-morning" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">☀️</div><div style="font-weight:700;font-size:13px">Réveil</div><div style="font-size:11px;color:#888;margin-top:2px">Salutation · 20 min</div></div>
-    </div>
-    <div class="card card-sm"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><div><div style="font-weight:700">Flexibilité · 35 min</div></div><span class="badge badge-purple">Hatha</span></div><button class="btn btn-purple" style="margin-top:10px">🧘 Démarrer</button></div>
-  </div>
-  <div id="ytab-poses" style="display:none"><div class="pose-grid"><div class="pose-card" style="border-color:#7c4dff;border-width:2px"><div style="font-size:28px;margin-bottom:5px">🧘</div><div style="font-weight:700;font-size:13px">Lotus</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div><div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🌳</div><div style="font-weight:700;font-size:13px">Arbre</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div><div class="pose-card"><div style="font-size:28px;margin-bottom:5px">⚔️</div><div style="font-weight:700;font-size:13px">Guerrier II</div><div style="margin-top:6px"><span class="badge badge-amber" style="font-size:10px">Inter.</span></div></div><div class="pose-card"><div style="font-size:28px;margin-bottom:5px">🐍</div><div style="font-weight:700;font-size:13px">Cobra</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div></div></div>
+  <div class="tabs"><button class="tab active" onclick="showYogaTab('session',this)">Séance</button><button class="tab" onclick="showYogaTab('poses',this)">Postures</button><button class="tab" onclick="showYogaTab('breath',this)">Respiration</button></div>
+  <div id="ytab-session"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"><div onclick="selYoga('flex',this)" id="ycard-flex" class="card card-sm" style="cursor:pointer;border:2px solid #7c4dff"><div style="font-size:26px;margin-bottom:5px">🌿</div><div style="font-weight:700;font-size:13px">Flexibilité</div><div style="font-size:11px;color:#888;margin-top:2px">Hatha · 35 min</div></div><div onclick="selYoga('strength',this)" id="ycard-strength" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">🔥</div><div style="font-weight:700;font-size:13px">Force</div><div style="font-size:11px;color:#888;margin-top:2px">Vinyasa · 40 min</div></div><div onclick="selYoga('relax',this)" id="ycard-relax" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">🌙</div><div style="font-weight:700;font-size:13px">Relaxation</div><div style="font-size:11px;color:#888;margin-top:2px">Yin · 30 min</div></div><div onclick="selYoga('morning',this)" id="ycard-morning" class="card card-sm" style="cursor:pointer"><div style="font-size:26px;margin-bottom:5px">☀️</div><div style="font-weight:700;font-size:13px">Réveil</div><div style="font-size:11px;color:#888;margin-top:2px">Salutation · 20 min</div></div></div><div class="card card-sm"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><div><div style="font-weight:700">Flexibilité · 35 min</div></div><span class="badge badge-purple">Hatha</span></div><button class="btn btn-purple">🧘 Démarrer</button></div></div>
+  <div id="ytab-poses" style="display:none"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px"><div class="card card-sm" style="border:2px solid #7c4dff"><div style="font-size:28px;margin-bottom:5px">🧘</div><div style="font-weight:700;font-size:13px">Lotus</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div><div class="card card-sm"><div style="font-size:28px;margin-bottom:5px">🌳</div><div style="font-weight:700;font-size:13px">Arbre</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div><div class="card card-sm"><div style="font-size:28px;margin-bottom:5px">⚔️</div><div style="font-weight:700;font-size:13px">Guerrier II</div><div style="margin-top:6px"><span class="badge badge-amber" style="font-size:10px">Inter.</span></div></div><div class="card card-sm"><div style="font-size:28px;margin-bottom:5px">🐍</div><div style="font-weight:700;font-size:13px">Cobra</div><div style="margin-top:6px"><span class="badge badge-purple" style="font-size:10px">Débutant</span></div></div></div></div>
   <div id="ytab-breath" style="display:none">
-    <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-      <button class="btn btn-sm" id="btype-478" onclick="selBreath('478',this)" style="background:#ede7f6;color:#4527a0;border-color:#7c4dff">4-7-8</button>
-      <button class="btn btn-sm" id="btype-box" onclick="selBreath('box',this)">Box breathing</button>
-      <button class="btn btn-sm" id="btype-ujjayi" onclick="selBreath('ujjayi',this)">Ujjayi</button>
-    </div>
-    <div class="card" style="text-align:center;padding:24px 20px">
-      <div style="font-size:16px;font-weight:700;margin-bottom:4px" id="breath-title">Respiration 4-7-8</div>
-      <div style="font-size:12px;color:#888;margin-bottom:20px" id="breath-desc">Inspirer 4s · Retenir 7s · Expirer 8s</div>
-      <div class="breath-circle" id="breath-circle"><div style="font-size:13px;font-weight:600;color:#888" id="breath-phase">Prêt</div></div>
-      <div style="font-size:40px;font-weight:700;margin:16px 0 4px;color:#185FA5" id="breath-count">—</div>
-      <div style="font-size:13px;color:#888;margin-bottom:20px" id="breath-cycles">0 cycles</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="breath-btn" onclick="toggleBreath()">▶ Démarrer</button><button class="btn" onclick="resetBreath()">↺ Reset</button></div>
-    </div>
+    <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap"><button class="btn btn-sm" id="btype-478" onclick="selBreath('478',this)" style="background:#ede7f6;color:#4527a0;border-color:#7c4dff">4-7-8</button><button class="btn btn-sm" id="btype-box" onclick="selBreath('box',this)">Box breathing</button><button class="btn btn-sm" id="btype-ujjayi" onclick="selBreath('ujjayi',this)">Ujjayi</button></div>
+    <div class="card" style="text-align:center;padding:24px 20px"><div style="font-size:16px;font-weight:700;margin-bottom:4px" id="breath-title">Respiration 4-7-8</div><div style="font-size:12px;color:#888;margin-bottom:20px" id="breath-desc">Inspirer 4s · Retenir 7s · Expirer 8s</div><div style="width:100px;height:100px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;margin:0 auto;transition:all 3s ease-in-out;border:2px solid #ddd" id="breath-circle"><div style="font-size:13px;font-weight:600;color:#888" id="breath-phase">Prêt</div></div><div style="font-size:40px;font-weight:700;margin:16px 0 4px;color:#185FA5" id="breath-count">—</div><div style="font-size:13px;color:#888;margin-bottom:20px" id="breath-cycles">0 cycles</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="breath-btn" onclick="toggleBreath()">▶ Démarrer</button><button class="btn" onclick="resetBreath()">↺ Reset</button></div></div>
   </div>
 </div>
 
 <script>
-// ---- STATE ----
-const state={seanceDone:false,totalSeances:5,streak:12,
-  streakData:[1,1,0,1,1,0,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1,0,1,1],
-  weekData:[1,0,1,1,0,1,0]};
+// ============================================================
+// STATE & USER DATA
+// ============================================================
+const USER = {
+  nom:'Mus', age:47, taille:179, poids:73,
+  maxPompes:30, maxCrunchs:50, maxTractions:6, kb:12
+};
 
-const calData={
+const state = {
+  seanceDone:false, totalSeances:5, streak:12,
+  streakData:[1,1,0,1,1,0,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1,0,1,1],
+  weekData:[1,0,1,1,0,1,0]
+};
+
+const calData = {
   1:{sessions:['belaid','quentin'],name:'Pompes & Tractions'},
   3:{sessions:['belaid','quentin','seb'],name:'HIIT Circuit'},
   5:{sessions:['mus','belaid'],name:'Kettlebell Focus'},
   7:{sessions:['belaid'],name:'Circuit Force + Cardio',today:true},
   9:{sessions:[],name:'HIIT Interval',future:true},
-  12:{sessions:[],name:'Tractions + Abdos',future:true},
+  12:{sessions:[],name:'Tractions + Abdos',future:true}
 };
 
+// Séances personnalisées
+let customSeances = [];
+try{const s=localStorage.getItem('sportSquadSeances');if(s)customSeances=JSON.parse(s);}catch(e){}
+
+let customExercises = [];
+try{const s=localStorage.getItem('sportSquadCustomEx');if(s)customExercises=JSON.parse(s);}catch(e){}
+
+// ============================================================
+// CALCULS PHYSIQUES
+// ============================================================
+function calcPhysique(age, taille, poids) {
+  const fcmax = 220 - age;
+  const imc = poids / ((taille/100) * (taille/100));
+  const imcLabel = imc < 18.5 ? 'Sous-poids' : imc < 25 ? 'Normal' : imc < 30 ? 'Surpoids' : 'Obésité';
+  const imcColor = imc < 18.5 ? '#1565c0' : imc < 25 ? '#2e7d32' : '#e65100';
+  const zones = [
+    {num:1, nom:'Récupération', pct:[50,60], color:'#81c784'},
+    {num:2, nom:'Endurance',    pct:[60,70], color:'#4caf50'},
+    {num:3, nom:'Aérobie',      pct:[70,80], color:'#fb8c00'},
+    {num:4, nom:'Seuil',        pct:[80,90], color:'#f44336'},
+    {num:5, nom:'Maximum',      pct:[90,100],color:'#b71c1c'},
+  ];
+  zones.forEach(z=>{z.min=Math.round(fcmax*z.pct[0]/100);z.max=Math.round(fcmax*z.pct[1]/100);});
+  const conseil = imc < 18.5 ? 'Renforcement musculaire prioritaire' :
+                  imc < 25   ? 'Programme équilibré recommandé' :
+                  imc < 30   ? 'Cardio + renforcement conseillé' : 'Cardio doux · Consulter un médecin';
+  return {fcmax, imc:Math.round(imc*10)/10, imcLabel, imcColor, zones, conseil};
+}
+
+let physique = calcPhysique(USER.age, USER.taille, USER.poids);
+
+function updatePhysique() {
+  const age = parseInt(document.getElementById('p-age').value)||47;
+  const taille = parseInt(document.getElementById('p-taille').value)||179;
+  const poids = parseInt(document.getElementById('p-poids').value)||73;
+  USER.age=age; USER.taille=taille; USER.poids=poids;
+  physique = calcPhysique(age, taille, poids);
+  // Mise à jour affichage
+  document.getElementById('calc-imc').textContent = physique.imc;
+  document.getElementById('calc-fcmax').textContent = physique.fcmax;
+  document.getElementById('calc-imc-label').textContent = physique.imcLabel;
+  document.getElementById('calc-imc-label').style.color = physique.imcColor;
+  document.getElementById('calc-conseil').textContent = 'FCmax '+physique.fcmax+' bpm · '+physique.conseil;
+  renderZonesCard();
+  updateRunningZones();
+  saveUserData();
+}
+
+function renderZonesCard() {
+  const c = document.getElementById('zones-card');
+  if(!c) return;
+  let html = '';
+  physique.zones.forEach(z=>{
+    html += '<div class="zone-row">';
+    html += '<div class="zone-color" style="background:'+z.color+'"></div>';
+    html += '<div style="flex:1"><div style="font-size:13px;font-weight:600">Z'+z.num+' · '+z.nom+'</div>';
+    html += '<div style="font-size:11px;color:#888;margin-top:2px">'+z.min+' – '+z.max+' bpm ('+z.pct[0]+'-'+z.pct[1]+'% FCmax)</div></div>';
+    html += '<span class="badge" style="font-size:10px;background:'+z.color+'22;color:'+z.color+'">'+z.pct[0]+'-'+z.pct[1]+'%</span>';
+    html += '</div>';
+  });
+  c.innerHTML = html;
+}
+
+function updateRunningZones() {
+  // Barre zones running
+  const bar = document.getElementById('run-zone-bar');
+  const labels = document.getElementById('run-zone-labels');
+  const detail = document.getElementById('run-zone-detail');
+  const z2 = physique.zones[1];
+  const z4 = physique.zones[3];
+  if(bar) {
+    bar.innerHTML = physique.zones.map(z=>'<div style="flex:1;background:'+z.color+'"></div>').join('');
+  }
+  if(labels) {
+    labels.innerHTML = physique.zones.map(z=>'<span>Z'+z.num+'</span>').join('');
+  }
+  const prog2 = document.getElementById('prog-z2-detail');
+  const prog4 = document.getElementById('prog-z4-detail');
+  if(prog2) prog2.textContent = z2.min+'-'+z2.max+' bpm · 5 km';
+  if(prog4) prog4.textContent = z4.min+'-'+z4.max+' bpm · 30/30';
+  if(detail) detail.textContent = '148 bpm · Zone 3 · 70-80% de ta FCmax ('+physique.fcmax+' bpm)';
+}
+
+function updateCap(key, val, unit) {
+  const u = unit||'reps';
+  document.getElementById('val-'+key).textContent = val+' '+u;
+  if(key==='pompes') USER.maxPompes=parseInt(val);
+  if(key==='crunchs') USER.maxCrunchs=parseInt(val);
+  if(key==='tractions') USER.maxTractions=parseInt(val);
+  if(key==='kb') USER.kb=parseInt(val);
+  // Mise à jour reps séance accueil
+  const rp = document.getElementById('reps-pompes');
+  if(rp) rp.textContent = Math.round(USER.maxPompes*0.6)+' reps';
+  saveUserData();
+}
+
+function saveUserData() {
+  try{localStorage.setItem('sportSquadUser',JSON.stringify(USER));}catch(e){}
+}
+
+function loadUserData() {
+  try{
+    const s=localStorage.getItem('sportSquadUser');
+    if(s){const d=JSON.parse(s);Object.assign(USER,d);physique=calcPhysique(USER.age,USER.taille,USER.poids);}
+  }catch(e){}
+}
+
+// ============================================================
+// EXERCISES DATA
+// ============================================================
 const exercises={
   pompes:[
     {name:'Pompes classiques',icon:'💪',detail:'Bras largeur épaules · Dos droit',type:'reps',instrs:['Mains à largeur d\'épaules, bras tendus, corps aligné','Descends lentement jusqu\'au sol','Pousse fort, expire en montant'],warn:'Ne laisse pas les hanches s\'affaisser',muscles:['Pectoraux','Triceps','Épaules']},
     {name:'Pompes diamant',icon:'💎',detail:'Index et pouces se touchent',type:'reps',instrs:['Mains au centre formant un diamant','Coudes près du corps en descendant','Remonte en contractant les triceps'],warn:'Évite d\'ouvrir les coudes',muscles:['Triceps','Pectoraux internes']},
-    {name:'Pompes inclinées',icon:'⬆️',detail:'Mains surélevées',type:'reps',instrs:['Mains sur une surface surélevée','Corps droit, descends la poitrine','Pousse et reviens'],warn:'Garde le dos droit',muscles:['Pectoraux inférieurs','Épaules']},
-    {name:'Pompes déclinées',icon:'⬇️',detail:'Pieds surélevés',type:'reps',instrs:['Pieds sur une surface surélevée','Descends lentement','Pousse fort en expirant'],warn:'Ne creuse pas le dos',muscles:['Pectoraux supérieurs']},
+    {name:'Pompes inclinées',icon:'⬆️',detail:'Mains surélevées',type:'reps',instrs:['Mains sur surface surélevée','Corps droit, descends la poitrine','Pousse et reviens'],warn:'Garde le dos droit',muscles:['Pectoraux inférieurs']},
+    {name:'Pompes déclinées',icon:'⬇️',detail:'Pieds surélevés',type:'reps',instrs:['Pieds sur surface surélevée','Descends lentement','Pousse fort en expirant'],warn:'Ne creuse pas le dos',muscles:['Pectoraux supérieurs']},
     {name:'Pompes archer',icon:'🏹',detail:'Extension latérale alternée',type:'reps',extra:true,instrs:['Mains très écartées','Plie un bras, étends l\'autre','Alterne'],warn:'Mouvement lent',muscles:['Pectoraux','Triceps']},
     {name:'Pompes explosives',icon:'💥',detail:'Décollage des mains',type:'reps',extra:true,instrs:['Position standard','Descends lentement','Pousse fort pour décoller'],warn:'Réception souple',muscles:['Pectoraux','Explosivité']},
   ],
   abdos:[
-    {name:'Crunch',icon:'🔄',detail:'Dos ancré · Montée contrôlée',type:'reps',instrs:['Allongé, genoux pliés, pieds au sol','Mains derrière la tête sans tirer','Lève les épaules, expire en montant'],warn:'Ne tire pas sur le cou',muscles:['Grand droit','Abdos']},
+    {name:'Crunch',icon:'🔄',detail:'Dos ancré · Montée contrôlée',type:'reps',instrs:['Allongé, genoux pliés, pieds au sol','Mains derrière la tête sans tirer','Lève les épaules, expire en montant'],warn:'Ne tire pas sur le cou',muscles:['Grand droit']},
     {name:'Relevés de jambes',icon:'🦵',detail:'Lombaires au sol',type:'reps',instrs:['Allongé, mains sous les fesses','Jambes tendues, monte à 90°','Redescends lentement'],warn:'Lombaires collées au sol',muscles:['Bas abdos']},
     {name:'Planche',icon:'📐',detail:'Corps aligné · Isométrique',type:'time',instrs:['Avant-bras et orteils au sol','Corps aligné tête-talons','Contracte abdos et fessiers'],warn:'Hanches ni trop hautes ni trop basses',muscles:['Gainage','Épaules']},
     {name:'Russian twist',icon:'🔀',detail:'Rotation du buste',type:'reps',instrs:['Assis, genoux pliés, pieds levés','Torse à 45°, mains jointes','Tourne gauche-droite'],warn:'Garde le dos droit',muscles:['Obliques']},
@@ -520,7 +553,7 @@ const exercises={
   ],
   traction:[
     {name:'Pronation',icon:'👐',detail:'Prise large dessus',type:'reps',instrs:['Prise au-dessus, plus large que les épaules','Tire les coudes vers les hanches','Monte jusqu\'au menton'],warn:'Évite de balancer',muscles:['Grand dorsal','Biceps']},
-    {name:'Supination (chin-up)',icon:'🙌',detail:'Prise étroite dessous',type:'reps',instrs:['Prise en dessous, largeur épaules','Tire en contractant les biceps','Menton au-dessus de la barre'],warn:'Amplitude complète',muscles:['Biceps','Grand dorsal']},
+    {name:'Supination',icon:'🙌',detail:'Prise étroite dessous',type:'reps',instrs:['Prise en dessous, largeur épaules','Tire en contractant les biceps','Menton au-dessus de la barre'],warn:'Amplitude complète',muscles:['Biceps','Grand dorsal']},
     {name:'Négatives',icon:'⬇️',detail:'Descente lente · 5 sec',type:'reps',instrs:['Commence en haut (saute ou chaise)','Descends sur 5 secondes','Compte 1,2,3,4,5'],warn:'Idéal si tu ne fais pas encore de tractions',muscles:['Grand dorsal','Biceps']},
     {name:'Assistées élastique',icon:'🟢',detail:'Élastique sous les pieds',type:'reps',instrs:['Accroche un élastique à la barre','Pose les pieds dedans','Effectue des tractions normalement'],warn:'Adapte l\'élastique à ton niveau',muscles:['Grand dorsal']},
     {name:'Isométriques',icon:'🔒',detail:'Tenir le menton au-dessus',type:'time',extra:true,instrs:['Monte en haut de la barre','Tiens la position, menton au-dessus','Respire normalement'],warn:'Descends contrôlé',muscles:['Grand dorsal','Avant-bras']},
@@ -528,10 +561,10 @@ const exercises={
   kb:[
     {name:'Swing',icon:'⚡',detail:'Propulsion des hanches',type:'reps',instrs:['Pieds largeur épaules, KB entre les jambes','Charnière des hanches, descends le KB','Propulse les hanches, KB à hauteur épaules'],warn:'Les bras sont passifs',muscles:['Fessiers','Ischios','Dos']},
     {name:'Goblet squat',icon:'🏆',detail:'KB contre la poitrine',type:'reps',instrs:['KB à deux mains contre la poitrine','Pieds légèrement écartés','Squat profond, dos droit'],warn:'Genoux dans l\'axe des orteils',muscles:['Quadriceps','Fessiers']},
-    {name:'Clean',icon:'🚀',detail:'Montée en rack',type:'reps',instrs:['KB au sol, prise pronation','Propulse les hanches et tire','Amène en rack position'],warn:'Ne laisse pas le KB slapper l\'avant-bras',muscles:['Épaules','Dos','Fessiers']},
+    {name:'Clean',icon:'🚀',detail:'Montée en rack',type:'reps',instrs:['KB au sol, prise pronation','Propulse les hanches et tire','Amène en rack position'],warn:'Ne laisse pas le KB slapper l\'avant-bras',muscles:['Épaules','Dos']},
     {name:'Snatch',icon:'🌟',detail:'Extension complète overhead',type:'reps',instrs:['Comme un swing mais plus haut','Le KB monte au-dessus de la tête','Verrouille le bras tendu'],warn:'Apprends d\'abord le swing',muscles:['Corps entier']},
     {name:'Turkish get-up',icon:'🌀',detail:'Debout/sol avec KB',type:'reps',extra:true,instrs:['Allongé, KB bras tendu','Lève-toi debout en maintenant','Redescends contrôlé'],warn:'Commence sans KB',muscles:['Corps entier']},
-    {name:'Deadlift KB',icon:'📦',detail:'Soulevé de terre',type:'reps',extra:true,instrs:['KB au sol entre les pieds','Charnière hanches, dos droit','Pousse et redresse-toi'],warn:'Ne pas arrondir le dos',muscles:['Ischios','Fessiers','Dos']},
+    {name:'Deadlift KB',icon:'📦',detail:'Soulevé de terre',type:'reps',extra:true,instrs:['KB au sol entre les pieds','Charnière hanches, dos droit','Pousse et redresse-toi'],warn:'Ne pas arrondir le dos',muscles:['Ischios','Fessiers']},
   ],
   hiit:[
     {name:'Burpees',icon:'🔥',detail:'Squat → planche → saut',type:'time',instrs:['Descends les mains au sol','Saute les pieds en planche','Ramène les pieds, saute les bras levés'],warn:'Qualité avant vitesse',muscles:['Corps entier']},
@@ -541,188 +574,157 @@ const exercises={
     {name:'Jump lunges',icon:'⚔️',detail:'Fentes sautées',type:'reps',extra:true,instrs:['Position fente','Saute et échange les jambes','Réception en fente'],warn:'Réception contrôlée',muscles:['Quadriceps','Fessiers']},
     {name:'Skaters',icon:'⛸️',detail:'Sauts latéraux',type:'reps',extra:true,instrs:['Saut latéral sur un pied','Balance l\'autre jambe','Alterne'],warn:'Équilibre 1 sec',muscles:['Fessiers','Équilibre']},
     {name:'Box jumps',icon:'📦',detail:'Saut sur caisse',type:'reps',extra:true,instrs:['Face à la caisse','Saute sur les deux pieds','Réception souple'],warn:'Descends prudemment',muscles:['Quadriceps','Explosivité']},
-    {name:'Plank jacks',icon:'🎿',detail:'Écarts en planche',type:'time',extra:true,instrs:['Planche haute','Écarte les pieds simultanément','Ramène et recommence'],warn:'Hanches stables',muscles:['Gainage','Cardio']},
-  ],
+    {name:'Plank jacks',icon:'🎿',detail:'Écarts en planche',type:'time',extra:true,instrs:['Planche haute','Écarte les pieds','Ramène et recommence'],warn:'Hanches stables',muscles:['Gainage','Cardio']},
+  ]
 };
 
-const coachExs=[
-  {name:'Pompes classiques',icon:'💪',display:'18',type:'reps',rest:60,perc:'18 reps · 60% de ton max (30)',cat:'pompes',idx:0},
-  {name:'Kettlebell swing',icon:'🏋️',display:'15',type:'reps',rest:90,perc:'15 reps · 12 kg',cat:'kb',idx:0},
-  {name:'Planche',icon:'📐',display:'45',type:'time',rest:60,perc:'45 sec · 60% de ton max',cat:'abdos',idx:2},
-  {name:'Crunch',icon:'🔄',display:'30',type:'reps',rest:60,perc:'30 reps · 60% de ton max (50)',cat:'abdos',idx:0},
-  {name:'Tractions négatives',icon:'🧗',display:'4',type:'reps',rest:120,perc:'4 reps · adapté (max: 6)',cat:'traction',idx:2},
-  {name:'Burpees',icon:'🔥',display:'30',type:'time',rest:90,perc:'30 sec · HIIT final',cat:'hiit',idx:0},
+const coachExs = [
+  {name:'Pompes classiques',icon:'💪',display:'18',type:'reps',rest:60,cat:'pompes',idx:0},
+  {name:'Kettlebell swing',icon:'🏋️',display:'15',type:'reps',rest:90,cat:'kb',idx:0},
+  {name:'Planche',icon:'📐',display:'45',type:'time',rest:60,cat:'abdos',idx:2},
+  {name:'Crunch',icon:'🔄',display:'30',type:'reps',rest:60,cat:'abdos',idx:0},
+  {name:'Tractions négatives',icon:'🧗',display:'4',type:'reps',rest:120,cat:'traction',idx:2},
+  {name:'Burpees',icon:'🔥',display:'30',type:'time',rest:90,cat:'hiit',idx:0},
 ];
 
-// Exercices perso (sauvegardés en localStorage)
-let customExercises=[];
-try{const s=localStorage.getItem('sportSquadCustomEx');if(s)customExercises=JSON.parse(s);}catch(e){}
+// ============================================================
+// SEANCE BUILDER
+// ============================================================
+const MS_EMOJIS = ['🏋️','💪','🔥','🧘','🏃','⚡','🎯','🌟','💥','🤸'];
+let msSelected = [];
+let msPickCat = 'pompes';
+let msSeanceEmoji = '🏋️';
+let coachExsCurrent = [...coachExs];
 
-// Modal state
-let selectedEmoji='💪';
-let selectedType='reps';
-let tempMuscles=[];
-
-const EMOJIS=['💪','🏋️','🔄','🧗','🔥','🏃','🧘','⚡','🎯','🦵','📐','🌀','🤸','🏊','🚴','⛹️','🥊','🤼','🎽','🏅','🌟','💥','🔒','🟢','🎿'];
-
-let showingAll={};
-let coachStep=0;
-let timerInterval=null;
-let restInterval=null;
-let runInterval=null;
-let runPaused=false;
-let runSec=724;
-let breathRunning=false;
-let breathInterval=null;
-let breathCycles=0;
-let breathPhaseIdx=0;
-let breathPhaseT=0;
-let currentBreath='478';
-let coachStartTime=null;
-
-const breathTypes={
-  '478':{title:'Respiration 4-7-8',desc:'Inspirer 4s · Retenir 7s · Expirer 8s',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Retenir',dur:7,sz:'140px',bg:'#e3f2fd'},{name:'Expirer',dur:8,sz:'90px',bg:'#e8f5e9'}]},
-  'box':{title:'Box breathing',desc:'Inspirer 4s · Retenir 4s · Expirer 4s · Retenir 4s',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Retenir',dur:4,sz:'140px',bg:'#e3f2fd'},{name:'Expirer',dur:4,sz:'90px',bg:'#e8f5e9'},{name:'Pause',dur:4,sz:'90px',bg:'#f5f5f5'}]},
-  'ujjayi':{title:'Ujjayi · Ocean breath',desc:'Inspirer 4s · Expirer 6s · Contraction légère',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Expirer',dur:6,sz:'90px',bg:'#e8f5e9'}]},
-};
-
-// ---- INIT ----
-function initDate(){
-  const d=new Date();
-  const days=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
-  const months=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
-  const el=document.getElementById('home-date');
-  if(el) el.textContent=days[d.getDay()]+' '+d.getDate()+' '+months[d.getMonth()]+' · Jour 12';
+function openSeanceModal() {
+  msSelected = [];
+  msSeanceEmoji = '🏋️';
+  document.getElementById('ms-nom').value = '';
+  document.getElementById('ms-count').textContent = '0 sélectionnés';
+  document.getElementById('ms-selected-preview').style.display = 'none';
+  // Emoji grid séance
+  let eg = '';
+  MS_EMOJIS.forEach(e => {eg += '<button class="emoji-btn'+(e==='🏋️'?' selected':'')+'" onclick="selectMsEmoji(\''+e+'\',this)" style="padding:6px;font-size:18px;border-radius:8px;border:1.5px solid #eee;background:#fff;cursor:pointer">'+e+'</button>';});
+  document.getElementById('ms-emoji-grid').innerHTML = eg;
+  showPickCat('pompes', document.querySelector('#modal-seance .tab'));
+  document.getElementById('modal-seance').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
 }
 
-// ---- SCREENS ----
-function showScreen(id){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('screen-'+id).classList.add('active');
-  const map={home:0,calendar:1,exercises:2,stats:3,profile:4};
-  if(map[id]!==undefined) document.querySelectorAll('.nav-btn')[map[id]].classList.add('active');
-  if(id==='calendar') buildCal();
-  if(id==='exercises') showCat('pompes',document.querySelector('#screen-exercises .tab'));
-  if(id==='stats') buildStats();
-  if(id==='running') startRunTimer();
-  if(id==='profile') refreshProfilePerso();
-  updateHomeNotif();
-}
-
-function updateHomeNotif(){
-  const area=document.getElementById('notif-area');
-  if(!area) return;
-  if(state.seanceDone){
-    area.innerHTML='<div class="notif-banner" style="background:#e8f5e9"><span style="font-size:18px">✅</span><div style="flex:1;font-size:13px;color:#2e7d32">Tu as terminé ta séance aujourd\'hui 💪</div></div>';
-  } else {
-    area.innerHTML='<div class="notif-banner"><div class="avatar av-belaid" style="width:30px;height:30px;font-size:12px">BE</div><div style="flex:1;font-size:13px;color:#1565c0">Belaid a terminé sa séance <strong>il y a 1h</strong> 💪</div></div>';
-  }
-}
-
-// ---- MODAL ----
-function openModal(){
-  selectedEmoji='💪';selectedType='reps';tempMuscles=[];
-  document.getElementById('ex-nom').value='';
-  document.getElementById('ex-detail').value='';
-  document.getElementById('ex-instrs').value='';
-  document.getElementById('ex-warn').value='';
-  document.getElementById('ex-cat').value='pompes';
-  document.getElementById('muscles-list').innerHTML='';
-  document.getElementById('type-reps').classList.add('active');
-  document.getElementById('type-time').classList.remove('active');
-  // Emoji grid
-  let html='';
-  EMOJIS.forEach(e=>{html+='<button class="emoji-btn'+(e==='💪'?' selected':'')+'" onclick="selectEmoji(\''+e+'\',this)">'+e+'</button>';});
-  document.getElementById('emoji-grid').innerHTML=html;
-  document.getElementById('modal-add-ex').style.display='flex';
-  document.body.style.overflow='hidden';
-}
-
-function closeModal(){
-  document.getElementById('modal-add-ex').style.display='none';
-  document.body.style.overflow='';
-}
-
-function closeModalIfBg(e){if(e.target===document.getElementById('modal-add-ex'))closeModal();}
-
-function selectEmoji(emoji,btn){
-  selectedEmoji=emoji;
-  document.querySelectorAll('.emoji-btn').forEach(b=>b.classList.remove('selected'));
+function selectMsEmoji(e, btn) {
+  msSeanceEmoji = e;
+  document.querySelectorAll('#ms-emoji-grid .emoji-btn').forEach(b=>b.classList.remove('selected'));
   btn.classList.add('selected');
 }
 
-function selectType(type){
-  selectedType=type;
-  document.getElementById('type-reps').classList.toggle('active',type==='reps');
-  document.getElementById('type-time').classList.toggle('active',type==='time');
+function showPickCat(cat, btn) {
+  msPickCat = cat;
+  if(btn){document.querySelectorAll('#modal-seance .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
+  const list = exercises[cat];
+  let html = '';
+  list.forEach((ex, i) => {
+    const key = cat+'_'+i;
+    const checked = msSelected.includes(key);
+    html += '<div class="ex-pick-row" onclick="togglePickEx(\''+cat+'\','+i+')">';
+    html += '<div class="check-circle'+(checked?' checked':'')+'">'+( checked?'✓':'')+'</div>';
+    html += '<div class="ex-icon" style="width:36px;height:36px;font-size:16px">'+ex.icon+'</div>';
+    html += '<div class="ex-info"><div class="ex-name" style="font-size:13px">'+ex.name+'</div><div class="ex-detail">'+ex.detail+'</div></div>';
+    html += '<span class="badge badge-'+(ex.type==='reps'?'blue':'amber')+'" style="font-size:10px">'+(ex.type==='reps'?'reps':'temps')+'</span>';
+    html += '</div>';
+  });
+  document.getElementById('ms-ex-list').innerHTML = html || '<div style="font-size:13px;color:#888;padding:8px">Aucun exercice</div>';
 }
 
-function addMuscle(){
-  const input=document.getElementById('muscle-input');
-  const val=input.value.trim();
-  if(!val) return;
-  tempMuscles.push(val);
-  input.value='';
-  refreshMuscleChips();
+function togglePickEx(cat, idx) {
+  const key = cat+'_'+idx;
+  if(msSelected.includes(key)) msSelected = msSelected.filter(k=>k!==key);
+  else msSelected.push(key);
+  document.getElementById('ms-count').textContent = msSelected.length+' sélectionné'+(msSelected.length>1?'s':'');
+  // Update check circles
+  showPickCat(msPickCat, null);
+  // Preview
+  updateMsPreview();
 }
 
-function removeMuscle(i){
-  tempMuscles.splice(i,1);
-  refreshMuscleChips();
+function updateMsPreview() {
+  const preview = document.getElementById('ms-selected-preview');
+  const list = document.getElementById('ms-preview-list');
+  if(!msSelected.length){preview.style.display='none';return;}
+  preview.style.display='block';
+  let html='';
+  msSelected.forEach(key=>{
+    const [cat,idx]=key.split('_');
+    const ex=exercises[cat][parseInt(idx)];
+    if(!ex) return;
+    const maxVal = cat==='pompes'?USER.maxPompes:cat==='abdos'&&parseInt(idx)===0?USER.maxCrunchs:cat==='traction'?USER.maxTractions:20;
+    const reps = ex.type==='reps'?Math.round(maxVal*0.6)+' reps':'45 sec';
+    html+='<div class="seance-ex-item"><span style="font-size:18px">'+ex.icon+'</span><div style="flex:1"><div style="font-size:13px;font-weight:600">'+ex.name+'</div></div><span style="font-size:12px;font-weight:700;color:#185FA5">'+reps+'</span></div>';
+  });
+  list.innerHTML=html;
 }
 
-function refreshMuscleChips(){
-  const list=document.getElementById('muscles-list');
-  list.innerHTML=tempMuscles.map((m,i)=>'<div class="muscle-chip">'+m+'<button onclick="removeMuscle('+i+')">×</button></div>').join('');
-}
-
-function saveExercice(){
-  const nom=document.getElementById('ex-nom').value.trim();
-  if(!nom){alert('Donne un nom à ton exercice !');return;}
-  const cat=document.getElementById('ex-cat').value;
-  const detail=document.getElementById('ex-detail').value.trim();
-  const instrRaw=document.getElementById('ex-instrs').value.trim();
-  const instrs=instrRaw?instrRaw.split('\n').filter(l=>l.trim()):[nom+' · exécution standard'];
-  const warn=document.getElementById('ex-warn').value.trim();
-
-  const newEx={
-    name:nom,icon:selectedEmoji,detail:detail||'Exercice personnalisé',
-    type:selectedType,instrs,warn:warn||null,muscles:tempMuscles.length?[...tempMuscles]:['Personnalisé'],
+function saveSeance() {
+  const nom = document.getElementById('ms-nom').value.trim();
+  if(!nom){alert('Donne un nom à ta séance !');return;}
+  if(!msSelected.length){alert('Sélectionne au moins un exercice !');return;}
+  const seance = {
+    nom, icon:msSeanceEmoji,
+    exercices: msSelected.map(key=>{
+      const [cat,idx]=key.split('_');
+      return {cat, idx:parseInt(idx)};
+    }),
     custom:true
   };
-
-  // Ajoute dans la catégorie
-  exercises[cat].push(newEx);
-  // Sauvegarde perso
-  customExercises.push({...newEx,cat});
-  try{localStorage.setItem('sportSquadCustomEx',JSON.stringify(customExercises));}catch(e){}
-
-  closeModal();
-  // Rafraîchit si on est sur l'écran exercices
-  if(document.getElementById('screen-exercises').classList.contains('active')){
-    showCat(cat,null);
-    // Sélectionne le bon onglet
-    const tabs=document.querySelectorAll('#screen-exercises .tab');
-    const catIdx={pompes:0,abdos:1,traction:2,kb:3,hiit:4};
-    tabs.forEach(t=>t.classList.remove('active'));
-    if(catIdx[cat]!==undefined) tabs[catIdx[cat]].classList.add('active');
-  }
-  refreshProfilePerso();
-  showToast('Exercice "'+nom+'" ajouté ! ✓');
+  customSeances.push(seance);
+  try{localStorage.setItem('sportSquadSeances',JSON.stringify(customSeances));}catch(e){}
+  closeModal('modal-seance');
+  refreshSeancesList();
+  showToast('Séance "'+nom+'" créée ! ✓');
 }
 
-// ---- TOAST ----
-function showToast(msg){
-  let t=document.getElementById('toast');
-  if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:12px 20px;border-radius:20px;font-size:13px;font-weight:600;z-index:300;transition:opacity .3s';document.body.appendChild(t);}
-  t.textContent=msg;t.style.opacity='1';
-  setTimeout(()=>t.style.opacity='0',2500);
+function refreshSeancesList() {
+  const el = document.getElementById('seances-list');
+  if(!el) return;
+  // Séances par défaut
+  let html = '<div class="ex-row" style="cursor:pointer" onclick="showCoach()"><div class="ex-icon" style="background:#e3f2fd;color:#1565c0;font-weight:700;font-size:14px">7</div><div class="ex-info"><div class="ex-name">Circuit Force + Cardio</div><div class="ex-detail">6 exercices · Aujourd\'hui · Auto-générée</div></div><span class="badge" id="today-badge" style="background:#f5f5f5;color:#666">À faire</span></div>';
+  customSeances.forEach((s, i) => {
+    html += '<div class="ex-row" style="cursor:pointer"><div class="ex-icon">'+s.icon+'</div><div class="ex-info"><div class="ex-name">'+s.nom+'</div><div class="ex-detail">'+s.exercices.length+' exercices · Personnalisée</div></div><button onclick="startCustomSeance('+i+')" class="btn btn-sm btn-blue" style="font-size:11px;padding:5px 10px">▶</button></div>';
+  });
+  if(!customSeances.length) html += '<div style="font-size:13px;color:#888;text-align:center;padding:8px">Crée ta première séance ↓</div>';
+  el.innerHTML = html;
 }
 
-// ---- COACH ----
-function showCoach(){
-  coachStep=0;coachStartTime=Date.now();
+function startCustomSeance(idx) {
+  const s = customSeances[idx];
+  coachExsCurrent = s.exercices.map(e => {
+    const ex = exercises[e.cat][e.idx];
+    const maxVal = e.cat==='pompes'?USER.maxPompes:e.cat==='abdos'&&e.idx===0?USER.maxCrunchs:e.cat==='traction'?USER.maxTractions:20;
+    return {
+      name:ex.name, icon:ex.icon,
+      display: ex.type==='reps'?String(Math.round(maxVal*0.6)):'45',
+      type:ex.type, rest:60, cat:e.cat, idx:e.idx,
+      perc: ex.type==='reps'?Math.round(maxVal*0.6)+' reps · 60% de ton max':''
+    };
+  });
+  document.getElementById('home-seance-name').textContent = s.nom;
+  showCoachWith(coachExsCurrent);
+}
+
+// ============================================================
+// COACH
+// ============================================================
+let coachStep=0, timerInterval=null, restInterval=null, coachStartTime=null;
+
+function showCoach() {
+  coachExsCurrent = coachExs.map(e=>({...e, perc:
+    e.type==='reps'?e.display+' reps · 60% de ton max':e.display+' sec'
+  }));
+  showCoachWith(coachExsCurrent);
+}
+
+function showCoachWith(exs) {
+  coachExsCurrent = exs;
+  coachStep=0; coachStartTime=Date.now();
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById('screen-coach').classList.add('active');
   document.getElementById('coach-rest').style.display='none';
@@ -731,19 +733,19 @@ function showCoach(){
   loadCoachStep();
 }
 
-function loadCoachStep(){
+function loadCoachStep() {
   if(timerInterval) clearInterval(timerInterval);
-  const ex=coachExs[coachStep];
-  document.getElementById('coach-step-lbl').textContent='Exercice '+(coachStep+1)+' / '+coachExs.length;
+  const ex = coachExsCurrent[coachStep];
+  document.getElementById('coach-step-lbl').textContent='Exercice '+(coachStep+1)+' / '+coachExsCurrent.length;
   document.getElementById('coach-icon').textContent=ex.icon;
   document.getElementById('coach-name').textContent=ex.name;
-  document.getElementById('coach-perc').textContent=ex.perc;
+  document.getElementById('coach-perc').textContent=ex.perc||'';
   document.getElementById('timer-display').textContent=ex.display;
   document.getElementById('timer-type').textContent=ex.type==='reps'?'reps':'sec';
   document.getElementById('timer-arc').style.strokeDashoffset=0;
   document.getElementById('start-btn').style.display='';
   document.getElementById('next-btn').style.display='none';
-  const exData=exercises[ex.cat][ex.idx];
+  const exData = exercises[ex.cat] && exercises[ex.cat][ex.idx];
   if(exData){
     let html='';
     exData.instrs.forEach((s,i)=>{html+='<div class="instr-step"><div class="instr-num">'+(i+1)+'</div><div class="instr-text">'+s+'</div></div>';});
@@ -752,7 +754,7 @@ function loadCoachStep(){
     document.getElementById('coach-instr-content').innerHTML=html;
   }
   let dots='';
-  coachExs.forEach((_,i)=>{
+  coachExsCurrent.forEach((_,i)=>{
     if(i<coachStep) dots+='<div class="step-dot-el done"></div>';
     else if(i===coachStep) dots+='<div class="step-dot-el current"></div>';
     else dots+='<div class="step-dot-el"></div>';
@@ -761,7 +763,7 @@ function loadCoachStep(){
 }
 
 function startExercise(){
-  const ex=coachExs[coachStep];
+  const ex=coachExsCurrent[coachStep];
   document.getElementById('start-btn').style.display='none';
   if(ex.type==='time'){
     let t=parseInt(ex.display);const total=t;
@@ -771,16 +773,17 @@ function startExercise(){
 
 function nextExercise(){
   if(timerInterval) clearInterval(timerInterval);
-  if(coachStep<coachExs.length-1){
+  if(coachStep<coachExsCurrent.length-1){
     document.getElementById('coach-main').style.display='none';
     document.getElementById('coach-rest').style.display='block';
-    let rest=coachExs[coachStep].rest;const total=rest;
+    let rest=coachExsCurrent[coachStep].rest||60;const total=rest;
     document.getElementById('rest-count').textContent=rest;
     document.getElementById('rest-bar').style.width='100%';
     restInterval=setInterval(()=>{rest--;document.getElementById('rest-count').textContent=rest;document.getElementById('rest-bar').style.width=(rest/total*100)+'%';if(rest<=0){clearInterval(restInterval);coachStep++;document.getElementById('coach-main').style.display='block';document.getElementById('coach-rest').style.display='none';loadCoachStep();}},1000);
   } else {
     const elapsed=coachStartTime?Math.round((Date.now()-coachStartTime)/60000):34;
     document.getElementById('done-time').textContent=elapsed;
+    document.getElementById('done-ex').textContent=coachExsCurrent.length;
     document.getElementById('coach-main').style.display='none';
     document.getElementById('coach-done').style.display='block';
   }
@@ -798,19 +801,17 @@ function finishSeance(){
   state.seanceDone=true;state.totalSeances++;state.streak++;
   const today=new Date().getDate();
   if(calData[today]){if(!calData[today].sessions.includes('mus'))calData[today].sessions.push('mus');}
-  else{calData[today]={sessions:['mus'],name:'Circuit Force + Cardio'};}
-  const badge=document.getElementById('seance-badge');
-  if(badge){badge.textContent='✓ Fait';badge.style.background='#e8f5e9';badge.style.color='#2e7d32';}
-  const btn=document.getElementById('seance-btn');
-  if(btn){btn.textContent='✅ Séance terminée';btn.style.background='#e8f5e9';btn.style.color='#2e7d32';btn.style.border='none';btn.disabled=true;}
-  const tb=document.getElementById('today-badge');
-  if(tb){tb.textContent='✓ Fait';tb.style.background='#e8f5e9';tb.style.color='#2e7d32';}
+  else{calData[today]={sessions:['mus'],name:'Séance terminée'};}
+  const b=document.getElementById('seance-badge');if(b){b.textContent='✓ Fait';b.style.background='#e8f5e9';b.style.color='#2e7d32';}
+  const btn=document.getElementById('seance-btn');if(btn){btn.textContent='✅ Terminée';btn.style.background='#e8f5e9';btn.style.color='#2e7d32';btn.style.border='none';btn.disabled=true;}
   showScreen('home');
 }
 
-// ---- CALENDAR ----
+// ============================================================
+// CALENDAR
+// ============================================================
 function buildCal(){
-  const grid=document.getElementById('cal-grid');if(!grid) return;
+  const grid=document.getElementById('cal-grid');if(!grid)return;
   grid.innerHTML='';
   const today=new Date().getDate();
   for(let i=0;i<1;i++) grid.appendChild(document.createElement('div'));
@@ -838,12 +839,13 @@ function showCalDetail(d){
   document.getElementById('cal-detail').style.display='block';
 }
 
-// ---- EXERCISES ----
+// ============================================================
+// EXERCISES LIST
+// ============================================================
+let showingAll={};
 function showCat(cat,btn){
   if(btn){document.querySelectorAll('#screen-exercises .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}
-  const list=exercises[cat];
-  const showAll=showingAll[cat];
-  const shown=showAll?list:list.slice(0,4);
+  const list=exercises[cat];const showAll=showingAll[cat];const shown=showAll?list:list.slice(0,4);
   let html='<div class="card card-sm">';
   shown.forEach((ex,i)=>{
     html+='<div class="ex-row" style="cursor:pointer" onclick="showExDetail(\''+cat+'\','+i+')">';
@@ -859,14 +861,14 @@ function showCat(cat,btn){
 
 function showExDetail(cat,idx){
   const ex=exercises[cat][idx];
+  const maxVal=cat==='pompes'?USER.maxPompes:cat==='abdos'&&idx===0?USER.maxCrunchs:cat==='traction'?USER.maxTractions:20;
   let html='<div class="card"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:36px">'+ex.icon+'</div><div><div style="font-size:18px;font-weight:700">'+ex.name+(ex.custom?'<span class="perso-badge" style="margin-left:6px">perso</span>':'')+'</div><div style="font-size:12px;color:#888;margin-top:2px">'+ex.detail+'</div></div></div>';
   html+='<div style="font-size:13px;font-weight:600;margin-bottom:8px">Comment faire :</div>';
   ex.instrs.forEach((s,i)=>{html+='<div class="instr-step"><div class="instr-num">'+(i+1)+'</div><div class="instr-text">'+s+'</div></div>';});
   if(ex.warn) html+='<div class="instr-warn" style="margin-top:8px">⚠️ '+ex.warn+'</div>';
   if(ex.muscles) html+='<div class="muscles" style="margin-top:10px">'+ex.muscles.map(m=>'<span class="muscle-tag">'+m+'</span>').join('')+'</div>';
-  if(ex.custom){
-    html+='<button class="btn btn-red" style="margin-top:12px;font-size:13px" onclick="deleteCustomEx(\''+cat+'\','+idx+')">🗑 Supprimer cet exercice</button>';
-  }
+  if(ex.type==='reps') html+='<div style="background:#e3f2fd;border-radius:10px;padding:10px 12px;margin-top:12px;font-size:13px;color:#1565c0"><strong>Ton objectif :</strong> '+Math.round(maxVal*0.6)+' reps (60% de ton max: '+maxVal+')</div>';
+  if(ex.custom) html+='<button class="btn btn-red" style="margin-top:12px;font-size:13px" onclick="deleteCustomEx(\''+cat+'\','+idx+')">🗑 Supprimer</button>';
   html+='<button class="btn" style="margin-top:8px" onclick="showCat(\''+cat+'\',null)">← Retour</button></div>';
   document.getElementById('ex-list').innerHTML=html;
 }
@@ -877,89 +879,149 @@ function deleteCustomEx(cat,idx){
   exercises[cat].splice(idx,1);
   customExercises=customExercises.filter(e=>!(e.cat===cat&&e.name===name));
   try{localStorage.setItem('sportSquadCustomEx',JSON.stringify(customExercises));}catch(e){}
-  showCat(cat,null);
-  refreshProfilePerso();
-  showToast('Exercice supprimé');
+  showCat(cat,null);refreshProfilePerso();showToast('Exercice supprimé');
 }
 
 function toggleAllEx(cat){showingAll[cat]=!showingAll[cat];showCat(cat,null);}
 
-// ---- PROFILE PERSO ----
-function refreshProfilePerso(){
-  const badge=document.getElementById('perso-count-badge');
-  if(badge) badge.textContent=customExercises.length;
-  const list=document.getElementById('perso-list-profile');
-  if(!list) return;
-  if(!customExercises.length){
-    list.innerHTML='<div style="font-size:13px;color:#888;text-align:center;padding:8px">Aucun exercice perso pour l\'instant</div>';
-    return;
-  }
-  let html='';
-  customExercises.forEach((ex,i)=>{
-    html+='<div class="ex-row"><div class="ex-icon">'+ex.icon+'</div><div class="ex-info"><div class="ex-name">'+ex.name+'</div><div class="ex-detail">'+ex.cat+' · '+(ex.type==='reps'?'reps':'temps')+'</div></div><span class="perso-badge">perso</span></div>';
-  });
-  list.innerHTML=html;
+// ============================================================
+// MODAL EXERCICE PERSO
+// ============================================================
+const EMOJIS=['💪','🏋️','🔄','🧗','🔥','🏃','🧘','⚡','🎯','🦵','📐','🌀','🤸','🏊','🚴','⛹️','🥊','🤼','🎽','🏅','🌟','💥','🔒','🟢','🎿'];
+let selectedEmoji='💪',selectedType='reps',tempMuscles=[];
+
+function openExModal(){
+  selectedEmoji='💪';selectedType='reps';tempMuscles=[];
+  document.getElementById('ex-nom').value='';document.getElementById('ex-detail').value='';
+  document.getElementById('ex-instrs').value='';document.getElementById('ex-warn').value='';
+  document.getElementById('ex-cat').value='pompes';
+  document.getElementById('muscles-list').innerHTML='';
+  document.getElementById('type-reps').classList.add('active');document.getElementById('type-time').classList.remove('active');
+  let html='';EMOJIS.forEach(e=>{html+='<button class="emoji-btn'+(e==='💪'?' selected':'')+'" onclick="selectEmoji(\''+e+'\',this)">'+e+'</button>';});
+  document.getElementById('emoji-grid').innerHTML=html;
+  document.getElementById('modal-add-ex').style.display='flex';document.body.style.overflow='hidden';
 }
 
-// ---- STATS ----
+function selectEmoji(emoji,btn){selectedEmoji=emoji;document.querySelectorAll('.emoji-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');}
+function selectType(type){selectedType=type;document.getElementById('type-reps').classList.toggle('active',type==='reps');document.getElementById('type-time').classList.toggle('active',type==='time');}
+function addMuscle(){const i=document.getElementById('muscle-input');const v=i.value.trim();if(!v)return;tempMuscles.push(v);i.value='';refreshMuscleChips();}
+function removeMuscle(i){tempMuscles.splice(i,1);refreshMuscleChips();}
+function refreshMuscleChips(){document.getElementById('muscles-list').innerHTML=tempMuscles.map((m,i)=>'<div class="muscle-chip">'+m+'<button onclick="removeMuscle('+i+')">×</button></div>').join('');}
+
+function saveExercice(){
+  const nom=document.getElementById('ex-nom').value.trim();
+  if(!nom){alert('Donne un nom à ton exercice !');return;}
+  const cat=document.getElementById('ex-cat').value;
+  const instrs=document.getElementById('ex-instrs').value.trim().split('\n').filter(l=>l.trim());
+  const newEx={name:nom,icon:selectedEmoji,detail:document.getElementById('ex-detail').value.trim()||'Exercice personnalisé',type:selectedType,instrs:instrs.length?instrs:[nom+' · exécution standard'],warn:document.getElementById('ex-warn').value.trim()||null,muscles:tempMuscles.length?[...tempMuscles]:['Personnalisé'],custom:true};
+  exercises[cat].push(newEx);customExercises.push({...newEx,cat});
+  try{localStorage.setItem('sportSquadCustomEx',JSON.stringify(customExercises));}catch(e){}
+  closeModal('modal-add-ex');
+  if(document.getElementById('screen-exercises').classList.contains('active')) showCat(cat,null);
+  refreshProfilePerso();showToast('Exercice "'+nom+'" ajouté ! ✓');
+}
+
+function refreshProfilePerso(){
+  const badge=document.getElementById('perso-count-badge');if(badge)badge.textContent=customExercises.length;
+  const list=document.getElementById('perso-list-profile');if(!list)return;
+  if(!customExercises.length){list.innerHTML='<div style="font-size:13px;color:#888;text-align:center;padding:8px">Aucun exercice perso</div>';return;}
+  list.innerHTML=customExercises.map(ex=>'<div class="ex-row"><div class="ex-icon">'+ex.icon+'</div><div class="ex-info"><div class="ex-name">'+ex.name+'</div><div class="ex-detail">'+ex.cat+' · '+(ex.type==='reps'?'reps':'temps')+'</div></div><span class="perso-badge">perso</span></div>').join('');
+}
+
+// ============================================================
+// MODAL HELPERS
+// ============================================================
+function closeModal(id){document.getElementById(id).style.display='none';document.body.style.overflow='';}
+function closeModalIfBg(e,id){if(e.target===document.getElementById(id))closeModal(id);}
+
+// ============================================================
+// STATS
+// ============================================================
 function buildStats(){
-  const days=['Lu','Ma','Me','Je','Ve','Sa','Di'];
-  const heights=[40,0,65,80,0,50,0];
+  const days=['Lu','Ma','Me','Je','Ve','Sa','Di'];const heights=[40,0,65,80,0,50,0];
   const today=new Date().getDay();const todayIdx=today===0?6:today-1;
   let bars='',labels='';
-  days.forEach((d,i)=>{
-    const h=state.weekData[i]?heights[i]:0;
-    bars+='<div class="bar'+(i===todayIdx?' active-bar':'')+'" style="height:'+(h||4)+'px"></div>';
-    labels+='<div class="bar-label">'+d+'</div>';
-  });
+  days.forEach((d,i)=>{const h=state.weekData[i]?heights[i]:0;bars+='<div class="bar'+(i===todayIdx?' active-bar':'')+'" style="height:'+(h||4)+'px"></div>';labels+='<div class="bar-label">'+d+'</div>';});
   const wc=document.getElementById('week-chart');const wl=document.getElementById('week-labels');
   if(wc)wc.innerHTML=bars;if(wl)wl.innerHTML=labels;
   const sg=document.getElementById('streak-grid');
-  if(sg){let html='';state.streakData.forEach((done,i)=>{html+='<div class="streak-day'+(done?' done':'')+(i===state.streakData.length-1?' today':'')+'"></div>';});sg.innerHTML=html;}
+  if(sg){let h='';state.streakData.forEach((done,i)=>{h+='<div class="streak-day'+(done?' done':'')+(i===state.streakData.length-1?' today':'')+'"></div>';});sg.innerHTML=h;}
   const ss=document.getElementById('stat-seances');if(ss)ss.textContent=state.totalSeances;
   const sk=document.getElementById('stat-streak');if(sk)sk.textContent=state.streak+'🔥';
   const ga=document.getElementById('group-activity');
   if(ga){
     const members=[{name:'Mus',init:'MU',cls:'av-mus',seances:state.totalSeances,color:'#e91e63'},{name:'Belaid',init:'BE',cls:'av-belaid',seances:5,color:'#1e88e5'},{name:'Quentin',init:'QU',cls:'av-quentin',seances:4,color:'#43a047'},{name:'Seb',init:'SE',cls:'av-seb',seances:3,color:'#fb8c00'}];
     const maxS=Math.max(...members.map(m=>m.seances));
-    let html='';
-    members.forEach(m=>{const pct=Math.round(m.seances/maxS*100);html+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div class="avatar '+m.cls+'" style="width:32px;height:32px;font-size:11px">'+m.init+'</div><div style="flex:1"><div style="font-size:13px;font-weight:600;margin-bottom:4px">'+m.name+' · '+m.seances+' séances</div><div class="prog-bar"><div class="prog-fill" style="width:'+pct+'%;background:'+m.color+'"></div></div></div></div>';});
-    ga.innerHTML=html;
+    ga.innerHTML=members.map(m=>'<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div class="avatar '+m.cls+'" style="width:32px;height:32px;font-size:11px">'+m.init+'</div><div style="flex:1"><div style="font-size:13px;font-weight:600;margin-bottom:4px">'+m.name+' · '+m.seances+' séances</div><div class="prog-bar"><div class="prog-fill" style="width:'+Math.round(m.seances/maxS*100)+'%;background:'+m.color+'"></div></div></div></div>').join('');
   }
 }
 
-// ---- PROFILE ----
-function updStat(id,val,unit){document.getElementById(id).textContent=val+' '+unit;}
+// ============================================================
+// PROFILE
+// ============================================================
 function selObj(o){['forme','end','force'].forEach(k=>{const b=document.getElementById('obj-'+k);if(b){b.style.background='';b.style.color='';b.style.borderColor='';}});const b=document.getElementById('obj-'+o);if(b){b.style.background='#e3f2fd';b.style.color='#1565c0';b.style.borderColor='#1565c0';}}
 
-// ---- RUNNING ----
+// ============================================================
+// RUNNING
+// ============================================================
+let runInterval=null,runPaused=false,runSec=724;
 function startRunTimer(){if(runInterval)return;runInterval=setInterval(()=>{if(!runPaused){runSec++;const m=Math.floor(runSec/60),s=runSec%60;const rt=document.getElementById('run-time');if(rt)rt.textContent=m+':'+(s<10?'0':'')+s;const rd=document.getElementById('run-dist');if(rd)rd.textContent=(2.1+runSec*0.003).toFixed(1);const rh=document.getElementById('run-hr');if(rh)rh.textContent=145+Math.round(Math.sin(runSec/8)*6);}},1000);}
 function toggleRun(){runPaused=!runPaused;const btn=document.getElementById('run-pause-btn');if(btn)btn.textContent=runPaused?'▶ Reprendre':'⏸ Pause';}
 function showRunTab(id,btn){['live','prog','hist'].forEach(t=>{const el=document.getElementById('rtab-'+t);if(el)el.style.display='none';});const el=document.getElementById('rtab-'+id);if(el)el.style.display='block';if(btn){document.querySelectorAll('#screen-running .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}}
 
-// ---- YOGA ----
+// ============================================================
+// YOGA / BREATH
+// ============================================================
 function showYogaTab(id,btn){['session','poses','breath'].forEach(t=>{const el=document.getElementById('ytab-'+t);if(el)el.style.display='none';});const el=document.getElementById('ytab-'+id);if(el)el.style.display='block';if(btn){document.querySelectorAll('#screen-yoga .tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');}}
 function selYoga(type,el){['flex','strength','relax','morning'].forEach(t=>{const c=document.getElementById('ycard-'+t);if(c)c.style.border='1.5px solid #eee';});el.style.border='2px solid #7c4dff';}
-
-// ---- BREATH ----
+const breathTypes={'478':{title:'Respiration 4-7-8',desc:'Inspirer 4s · Retenir 7s · Expirer 8s',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Retenir',dur:7,sz:'140px',bg:'#e3f2fd'},{name:'Expirer',dur:8,sz:'90px',bg:'#e8f5e9'}]},'box':{title:'Box breathing',desc:'Inspirer 4s · Retenir 4s · Expirer 4s · Retenir 4s',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Retenir',dur:4,sz:'140px',bg:'#e3f2fd'},{name:'Expirer',dur:4,sz:'90px',bg:'#e8f5e9'},{name:'Pause',dur:4,sz:'90px',bg:'#f5f5f5'}]},'ujjayi':{title:'Ujjayi · Ocean breath',desc:'Inspirer 4s · Expirer 6s · Contraction légère',phases:[{name:'Inspirer',dur:4,sz:'140px',bg:'#ede7f6'},{name:'Expirer',dur:6,sz:'90px',bg:'#e8f5e9'}]}};
+let breathRunning=false,breathInterval=null,breathCycles=0,breathPhaseIdx=0,breathPhaseT=0,currentBreath='478';
 function selBreath(type,btn){['478','box','ujjayi'].forEach(t=>{const b=document.getElementById('btype-'+t);if(b){b.style.background='';b.style.color='';b.style.borderColor='';}});btn.style.background='#ede7f6';btn.style.color='#4527a0';btn.style.borderColor='#7c4dff';currentBreath=type;const bt=breathTypes[type];document.getElementById('breath-title').textContent=bt.title;document.getElementById('breath-desc').textContent=bt.desc;resetBreath();}
 function toggleBreath(){breathRunning=!breathRunning;document.getElementById('breath-btn').textContent=breathRunning?'⏸ Pause':'▶ Reprendre';if(breathRunning&&!breathInterval)runBreath();if(!breathRunning&&breathInterval){clearInterval(breathInterval);breathInterval=null;}}
 function runBreath(){const bt=breathTypes[currentBreath];breathPhaseIdx=0;breathPhaseT=0;breathInterval=setInterval(()=>{if(!breathRunning)return;const phase=bt.phases[breathPhaseIdx];document.getElementById('breath-phase').textContent=phase.name;document.getElementById('breath-count').textContent=phase.dur-breathPhaseT;document.getElementById('breath-circle').style.width=phase.sz;document.getElementById('breath-circle').style.height=phase.sz;document.getElementById('breath-circle').style.background=phase.bg;breathPhaseT++;if(breathPhaseT>=phase.dur){breathPhaseT=0;breathPhaseIdx=(breathPhaseIdx+1)%bt.phases.length;if(breathPhaseIdx===0){breathCycles++;document.getElementById('breath-cycles').textContent=breathCycles+(breathCycles>1?' cycles':' cycle');}}},1000);}
-function resetBreath(){breathRunning=false;if(breathInterval){clearInterval(breathInterval);breathInterval=null;}breathCycles=0;breathPhaseIdx=0;breathPhaseT=0;const btn=document.getElementById('breath-btn');if(btn)btn.textContent='▶ Démarrer';const bp=document.getElementById('breath-phase');if(bp)bp.textContent='Prêt';const bc=document.getElementById('breath-count');if(bc)bc.textContent='—';const bcy=document.getElementById('breath-cycles');if(bcy)bcy.textContent='0 cycles';const c=document.getElementById('breath-circle');if(c){c.style.width='100px';c.style.height='100px';c.style.background='#f0f0f0';}}
+function resetBreath(){breathRunning=false;if(breathInterval){clearInterval(breathInterval);breathInterval=null;}breathCycles=0;breathPhaseIdx=0;breathPhaseT=0;const btn=document.getElementById('breath-btn');if(btn)btn.textContent='▶ Démarrer';['breath-phase','breath-count','breath-cycles'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=['Prêt','—','0 cycles'][i];});const c=document.getElementById('breath-circle');if(c){c.style.width='100px';c.style.height='100px';c.style.background='#f0f0f0';}}
 
-// ---- LOAD CUSTOM EXERCISES ----
-function loadCustomExercises(){
-  customExercises.forEach(ex=>{
-    if(exercises[ex.cat]&&!exercises[ex.cat].find(e=>e.name===ex.name)){
-      exercises[ex.cat].push({...ex});
-    }
-  });
+// ============================================================
+// SCREENS
+// ============================================================
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('screen-'+id).classList.add('active');
+  const map={home:0,calendar:1,exercises:2,stats:3,profile:4};
+  if(map[id]!==undefined) document.querySelectorAll('.nav-btn')[map[id]].classList.add('active');
+  if(id==='calendar'){buildCal();refreshSeancesList();}
+  if(id==='exercises') showCat('pompes',document.querySelector('#screen-exercises .tab'));
+  if(id==='stats') buildStats();
+  if(id==='running'){startRunTimer();updateRunningZones();}
+  if(id==='profile'){renderZonesCard();refreshProfilePerso();}
+  updateHomeNotif();
 }
 
-// ---- START ----
-initDate();
-updateHomeNotif();
-loadCustomExercises();
+function updateHomeNotif(){
+  const area=document.getElementById('notif-area');if(!area)return;
+  area.innerHTML=state.seanceDone?'<div class="notif-banner" style="background:#e8f5e9"><span style="font-size:18px">✅</span><div style="flex:1;font-size:13px;color:#2e7d32">Tu as terminé ta séance 💪</div></div>':'<div class="notif-banner"><div class="avatar av-belaid" style="width:30px;height:30px;font-size:12px">BE</div><div style="flex:1;font-size:13px;color:#1565c0">Belaid a terminé sa séance <strong>il y a 1h</strong> 💪</div></div>';
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(msg){let t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:12px 20px;border-radius:20px;font-size:13px;font-weight:600;z-index:300;transition:opacity .3s';document.body.appendChild(t);}t.textContent=msg;t.style.opacity='1';setTimeout(()=>t.style.opacity='0',2500);}
+
+// ============================================================
+// INIT
+// ============================================================
+(function init(){
+  loadUserData();
+  physique = calcPhysique(USER.age, USER.taille, USER.poids);
+  customExercises.forEach(ex=>{if(exercises[ex.cat]&&!exercises[ex.cat].find(e=>e.name===ex.name))exercises[ex.cat].push({...ex});});
+  // Date
+  const d=new Date();const days=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];const months=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  const dateEl=document.getElementById('home-date');if(dateEl)dateEl.textContent=days[d.getDay()]+' '+d.getDate()+' '+months[d.getMonth()];
+  updateHomeNotif();
+  renderZonesCard();
+  updateRunningZones();
+})();
 </script>
 </body>
 </html>
